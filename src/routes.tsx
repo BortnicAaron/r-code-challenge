@@ -1,15 +1,14 @@
 import { QueryClient } from "@tanstack/react-query"
 import { createBrowserRouter } from "react-router-dom"
 import { queries } from "./controllers/queries"
-import App from "./pages/App"
-import CharacterType from "./pages/Character"
+import { CharacterPage } from "./features/CharacterPage"
+import { HomePage } from "./features/HomePage"
 
 
 
 export const queryClient = new QueryClient()
 
 
-// ⬇️ needs access to queryClient
 export const loader =
   (queryClient: QueryClient) =>
     async () => {
@@ -24,20 +23,18 @@ export const loader =
 export const router = createBrowserRouter([
   {
     path: "/",
-    loader: loader(queryClient),
-
     children: [
       {
         path: "",
         element: (
-          <App />
+          <HomePage />
         ),
         loader: loader(queryClient),
       },
       {
         path: ':id',
         element: (
-          <CharacterType />
+          <CharacterPage />
         )
       }
     ]

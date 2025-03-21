@@ -4,7 +4,7 @@
 .characterItem{
     display: flex;
     flex-direction: column;
-    max-width: 12rem;
     position: relative;
     margin: auto;
+    height: 100%;
 }

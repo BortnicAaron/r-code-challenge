@@ -1,0 +1,6 @@
+enum ERROR_TYPES {
+    INTERNAL = 'INTERNAL',
+    NOT_FOUND = 'NOT_FOUND'
+}
+
+export { ERROR_TYPES }

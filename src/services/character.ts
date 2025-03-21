@@ -1,6 +1,7 @@
 import api from '../config/api'
-import { Character } from '../interfaces/character'
-import { PaginatedResponse } from '../interfaces/pagination'
+import { Character } from '../interfaces/Character'
+import { PaginatedResponse } from '../interfaces/PaginatedResponse'
+import { httpErrorHandler } from './httpErrorHandler'
 
 const BASE_PATH = '/character'
 
@@ -15,7 +16,7 @@ export const getPaginatedCharacters = ({ page, name }: GetPaginatedCharacters) =
       page: page || undefined,
       name: name || undefined
     }
-  })
+  }).catch(httpErrorHandler)
 
 export const getCharacter = (id: number) =>
-  api.get<Character>(`${BASE_PATH}/${id}`)
+  api.get<Character>(`${BASE_PATH}/${id}`).catch(httpErrorHandler)

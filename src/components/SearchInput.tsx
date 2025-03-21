@@ -47,7 +47,7 @@ function SearchInput<N extends Path<T>, T extends FieldValues>({
                 name={controller.field.name}
                 onChange={controller.field.onChange}
                 onBlur={controller.field.onBlur}
-                ref={controller.field.ref}
+                inputRef={controller.field.ref}
             />
             <IconButton
                 type="submit"

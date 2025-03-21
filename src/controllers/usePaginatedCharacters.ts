@@ -1,4 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
+import { NotFound } from '../interfaces/Errors/NotFound'
 import { getPaginatedCharacters } from '../services/character'
 import { queries } from './queries'
 
@@ -31,7 +32,7 @@ const usePaginatedCharacters = (page: number | undefined, nameCharacter: string 
         ...configInput
     }
 
-    const { data, isFetching, status } = useQuery({
+    const { data, isFetching, status, error, isRefetching } = useQuery({
         queryKey: queries.getPaginatedCharacters(page, nameCharacter),
         queryFn: () => getPaginatedCharacters({ page, name: nameCharacter }),
         ...config
@@ -40,7 +41,9 @@ const usePaginatedCharacters = (page: number | undefined, nameCharacter: string 
     return {
         data,
         isFetching,
-        status
+        isRefetching,
+        status,
+        isNotFound: error instanceof NotFound
     }
 }
 export { usePaginatedCharacters }

@@ -1,4 +1,4 @@
-import { Character } from "../interfaces/character"
+import { Character } from "../interfaces/Character"
 
 
 

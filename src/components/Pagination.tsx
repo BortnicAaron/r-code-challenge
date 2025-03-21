@@ -1,16 +1,20 @@
+import PaginationMUI from "@mui/material/Pagination"
 
-function Pagination({ page, setPage }: { page: number, setPage: (page: number) => void }) {
+
+function Pagination({ count, page, disabled, onPageChange }: { count?: number, page: number, disabled?: boolean, onPageChange?: (n: number) => void }) {
+    const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+        onPageChange && onPageChange(value)
+    }
     return (
-        <div>
-            <p>Page: {page}</p>
-            {page > 1 && <button onClick={() => setPage(page - 1)} >
-                anterior
-            </button>}
-            <button onClick={() => setPage(page + 1)} >
-                siguiente
-            </button>
-        </div>
+        <PaginationMUI
+            page={page}
+            count={count}
+            disabled={disabled}
+            onChange={handleChange}
+            size='small'
+        />
     )
 }
 
 export { Pagination }
+

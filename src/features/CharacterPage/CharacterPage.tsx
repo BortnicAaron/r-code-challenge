@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { CharacterDetails } from '../components/CharacterDetails'
-import { Character as CharacterType } from '../interfaces/character'
-import { getCharacter } from '../services/character'
-import './App.css'
+import { CharacterDetails } from '../../components/CharacterDetails'
+import { Character as CharacterType } from '../../interfaces/Character'
+import { getCharacter } from '../../services/character'
 
-function Character() {
+function CharacterPage() {
   const [loading, setLoading] = useState(true)
   const [character, setCharacter] = useState<CharacterType | undefined>()
   let { id } = useParams()
@@ -38,4 +37,4 @@ function Character() {
   )
 }
 
-export default Character
+export { CharacterPage }
