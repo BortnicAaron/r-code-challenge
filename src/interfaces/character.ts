@@ -6,4 +6,9 @@ export interface Character {
     type: string,
     gender: string,
     image: string,
+    episode: string[]
+    location: {
+        name: string
+        url: string
+    }
 }

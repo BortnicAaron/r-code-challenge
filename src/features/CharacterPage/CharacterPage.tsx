@@ -1,8 +1,9 @@
+import { Container } from '@mui/material'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { CharacterDetails } from '../../components/CharacterDetails'
 import { Character as CharacterType } from '../../interfaces/Character'
 import { getCharacter } from '../../services/character'
+import { CharacterDetails } from './CharacterDetails'
 
 function CharacterPage() {
   const [loading, setLoading] = useState(true)
@@ -24,16 +25,13 @@ function CharacterPage() {
   }, [id])
 
   return (
-    <>
-      <h1>
-        Character Page
-      </h1>
+    <Container maxWidth="lg" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: '3rem', padding: '3rem' }}>
       {loading ? (
         <div>Loading</div>
       ) : (
         <CharacterDetails {...character} />
       )}
-    </>
+    </Container>
   )
 }
 

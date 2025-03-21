@@ -1,12 +1,12 @@
 import { Character as ICharacter } from "../../interfaces/Character"
 
 
-import Button from "@mui/material/Button"
 import Card from '@mui/material/Card'
 import CardActionArea from '@mui/material/CardActionArea'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
+import { Link } from "react-router-dom"
 import styles from './CharacterItem.module.css'
 
 /*
@@ -27,13 +27,16 @@ function CharacterItem(character: CharacterType) {
 const CharacterItem = (character: ICharacter) => {
 
     return (
-        <Card sx={{ maxWidth: 345 }} className={styles.characterItem}>
+        <Card
+            component={Link}
+            to={`/${character.id}`}
+            sx={{ maxWidth: 345 }} className={styles.characterItem}>
             <CardActionArea>
                 <CardMedia
                     component="img"
                     image={character.image}
                     height={300}
-                    alt="green iguana"
+                    alt="character"
                 />
                 <CardContent style={{ height: 'max-content' }}>
                     <Typography gutterBottom variant="h5" component="div">
@@ -42,9 +45,6 @@ const CharacterItem = (character: ICharacter) => {
                     {character.species && <Typography gutterBottom variant="h6" component="div">
                         {character.species}
                     </Typography>}
-                    <Button style={{ height: '100%' }}>
-                        Ver mas
-                    </Button>
                 </CardContent>
             </CardActionArea>
         </Card>
