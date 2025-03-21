@@ -1,53 +1,25 @@
-import { isAxiosError } from 'axios'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { CharacterItem } from '../components/CharacterItem'
 import { Pagination } from '../components/Pagination'
 import { SearchInput } from '../components/SearchInput'
-import { Character } from '../interfaces/character'
-import { getCharacters } from '../services/character'
+import { usePaginatedCharacters } from '../controllers/usePaginatedCharacters'
 import './App.css'
 
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true)
-  const [isNotFound, setIsNotFound] = useState(false)
-  const [characters, setCharacters] = useState<Character[]>([])
+
   const [page, setPage] = useState(1)
   const [nameCharacter, setNameCharacter] = useState('')
+
+  const paginatedCharactersQuery = usePaginatedCharacters(page, nameCharacter, { retry: false, refetchOnMount: false, keepPreviousData: true })
+
 
   const {
     control,
     handleSubmit,
     formState
   } = useForm<{ search: string }>()
-
-  useEffect(() => {
-    async function fetchData() {
-      setIsLoading(true)
-      try {
-
-        setCharacters([])
-        const paginatedResponse = await getCharacters({ page, name: nameCharacter })
-        const characterPaginated = paginatedResponse.data
-        setCharacters(characterPaginated.results)
-      } catch (error) {
-        if (isAxiosError(error)) {
-          if (error.response?.status === 404) {
-            setIsNotFound(true)
-          }
-        }
-      }
-      setIsLoading(false)
-    }
-
-    fetchData()
-
-
-    return () => {
-      setIsNotFound(false)
-    }
-  }, [page, nameCharacter])
 
   const onSubmit = async (fieldValues: { search: string }) => {
     setNameCharacter(fieldValues.search)
@@ -66,11 +38,11 @@ function App() {
         />
       </form>
       <Pagination page={page} setPage={setPage} />
-      {isNotFound && <h1>No se encontro ningun personaje</h1>}
-      {isLoading && <h1>Cargando</h1>}
-      {!isNotFound && !isLoading && characters.length > 0 && (
+      {false && <h1>No se encontro ningun personaje</h1>}
+      {paginatedCharactersQuery.isFetching && <h1>Cargando</h1>}
+      {!paginatedCharactersQuery.isFetching && paginatedCharactersQuery.data?.data?.results && paginatedCharactersQuery.data?.data?.results?.length > 0 && (
         <div >
-          {characters.map((character) => (
+          {paginatedCharactersQuery.data?.data?.results.map((character) => (
             <div key={character.id}>
               <CharacterItem
                 {...character}

@@ -4,16 +4,16 @@ import { PaginatedResponse } from '../interfaces/pagination'
 
 const BASE_PATH = '/character'
 
-interface IGetCharacters {
+export interface GetPaginatedCharacters {
   page?: number,
   name?: string
 }
 
-export const getCharacters = ({ page, name }: IGetCharacters) =>
+export const getPaginatedCharacters = ({ page, name }: GetPaginatedCharacters) =>
   api.get<PaginatedResponse<Character[]>>(BASE_PATH, {
     params: {
-      page: page,
-      name: name
+      page: page || undefined,
+      name: name || undefined
     }
   })
 
