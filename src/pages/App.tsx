@@ -1,5 +1,6 @@
 import { isAxiosError } from 'axios'
 import { useEffect, useState } from 'react'
+import { useForm } from 'react-hook-form'
 import { CharacterItem } from '../components/CharacterItem'
 import { Pagination } from '../components/Pagination'
 import { SearchInput } from '../components/SearchInput'
@@ -14,6 +15,12 @@ function App() {
   const [characters, setCharacters] = useState<Character[]>([])
   const [page, setPage] = useState(1)
   const [nameCharacter, setNameCharacter] = useState('')
+
+  const {
+    control,
+    handleSubmit,
+    formState
+  } = useForm<{ search: string }>()
 
   useEffect(() => {
     async function fetchData() {
@@ -42,9 +49,22 @@ function App() {
     }
   }, [page, nameCharacter])
 
+  const onSubmit = async (fieldValues: { search: string }) => {
+    setNameCharacter(fieldValues.search)
+  }
+
+
   return (
     <div className='App'>
-      <SearchInput setValue={setNameCharacter} />
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <SearchInput
+          control={control}
+          label='search'
+          name='search'
+          disabled={formState.isSubmitting}
+          required={true}
+        />
+      </form>
       <Pagination page={page} setPage={setPage} />
       {isNotFound && <h1>No se encontro ningun personaje</h1>}
       {isLoading && <h1>Cargando</h1>}
