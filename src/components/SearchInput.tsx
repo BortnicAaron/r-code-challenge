@@ -1,3 +1,4 @@
+import CloseIcon from '@mui/icons-material/Close'
 import SearchIcon from '@mui/icons-material/Search'
 import FormHelperText from '@mui/material/FormHelperText'
 import IconButton from "@mui/material/IconButton"
@@ -25,7 +26,6 @@ function SearchInput<N extends Path<T>, T extends FieldValues>({
     inputAriaLabel,
     buttonAriaLabel
 }: ISearchInput<N, T>) {
-
     const controller = useController<T>({
         name,
         control,
@@ -50,15 +50,22 @@ function SearchInput<N extends Path<T>, T extends FieldValues>({
                 inputRef={controller.field.ref}
             />
             <IconButton
+                type="button"
+                sx={{ p: '4px' }}
+                onClick={() => controller.field.onChange('')}
+                disabled={controller.field.value === '' || disabled}
+            >
+                <CloseIcon />
+            </IconButton>
+            <IconButton
                 type="submit"
-                sx={{ p: '10px' }}
+                sx={{ p: '8px' }}
                 aria-label={buttonAriaLabel}
                 onSubmit={(event) => event.preventDefault()}
                 disabled={disabled}
             >
                 <SearchIcon />
             </IconButton>
-
         </Paper>
         {controller.fieldState.error && <FormHelperText error > {controller.fieldState.error.message}</FormHelperText>}
     </div>
