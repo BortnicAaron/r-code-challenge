@@ -2,6 +2,7 @@
 
 const features = {
     CHARACTERS: 'CHARACTERS',
+    CHARACTER: 'CHARACTER',
 } as const
 
 // types
@@ -42,6 +43,12 @@ const queries = {
         state: {
             page,
             name
+        }
+    }),
+    getCharacter: (id?: string) => createKey({
+        feature: features.CHARACTERS,
+        state: {
+            id
         }
     }),
 }

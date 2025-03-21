@@ -5,4 +5,10 @@ const api = axios.create({
   timeout: 15000,
 })
 
-export default api
+
+const localApi = axios.create({
+  baseURL: 'http://localhost:3004',
+  timeout: 15000,
+})
+
+export { api, localApi }

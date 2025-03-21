@@ -1,5 +1,8 @@
-import { Box, Card, CardContent, Typography } from "@mui/material"
+import DeleteIcon from '@mui/icons-material/Delete'
+import EditIcon from '@mui/icons-material/Edit'
+import { Box, Button, Card, CardContent, Typography } from "@mui/material"
 import { useMemo } from "react"
+import { Link } from 'react-router-dom'
 import { Character } from "../../interfaces/Character"
 
 function getEpisodeNumberFromUrl(url: string) {
@@ -29,6 +32,19 @@ const CharacterDetails = (character: Partial<Character>) => {
         <CardContent>
             <Box display="flex" flexDirection="column" alignItems="center" gap='1rem'>
                 <img src={character.image} alt={character.name} style={{ width: '100%', borderRadius: '50%' }} />
+                <div style={{ display: 'flex', gap: '3rem' }}>
+                    <Button
+                        component={Link}
+                        to={`edit`}
+                        variant="outlined"
+                        endIcon={<EditIcon />}
+                    >
+                        Editar
+                    </Button>
+                    <Button variant="outlined" endIcon={<DeleteIcon />}>
+                        Eliminar
+                    </Button>
+                </div>
                 <Typography variant="h5" component="div" gutterBottom>
                     {character.name}
                 </Typography>

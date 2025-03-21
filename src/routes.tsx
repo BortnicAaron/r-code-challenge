@@ -1,6 +1,7 @@
 import { QueryClient } from "@tanstack/react-query"
 import { createBrowserRouter } from "react-router-dom"
 import { queries } from "./controllers/queries"
+import { CharacterEditPage } from "./features/CharacterEditPage"
 import { CharacterPage } from "./features/CharacterPage"
 import { HomePage } from "./features/HomePage"
 
@@ -35,7 +36,13 @@ export const router = createBrowserRouter([
         path: ':id',
         element: (
           <CharacterPage />
-        )
+        ),
+      },
+      {
+        path: ":id/edit",
+        element: (
+          <CharacterEditPage />
+        ),
       }
     ]
   }
