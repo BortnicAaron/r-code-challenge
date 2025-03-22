@@ -56,7 +56,7 @@ const buildCharacter = (characterLocally: CharacterLocally): Character => {
 }
 
 export const LocalCharacterRepository = {
-    getCharacters: async (): Promise<Character[]> => {
+    getHistory: async (): Promise<Character[]> => {
         try {
             const { data } = await localApi.get<CharacterLocally[]>('/character').catch(httpErrorHandler)
 
@@ -65,53 +65,5 @@ export const LocalCharacterRepository = {
         } catch (error) {
             throw httpErrorHandler(error)
         }
-    },
-
-    getCharacter: async (id: number): Promise<Character> => {
-        try {
-            const { data } = await localApi.get<CharacterLocally>(`/character/${id}`)
-            return buildCharacter(data)
-        } catch (error) {
-            throw httpErrorHandler(error)
-        }
-    },
-
-    createCharacter: async (character: Character): Promise<Character> => {
-        try {
-            const { data } = await localApi.post<CharacterLocally>('/character', character)
-            return buildCharacter(data)
-        } catch (error) {
-            throw httpErrorHandler(error)
-        }
-    },
-
-    updateCharacter: async (id: number, character: UpdateCharacterLocally): Promise<Character> => {
-        try {
-            const { data } = await localApi.patch<CharacterLocally>(`/character/${id}`, {
-                name: character.name,
-                type: character.type,
-                species: character.species,
-                status: character.status,
-                location: character.location
-            })
-            return buildCharacter(data)
-        } catch (error) {
-            throw httpErrorHandler(error)
-        }
-
-    },
-
-    deleteCharacter: async (id: number): Promise<Character> => {
-        try {
-            const { data } = await localApi.patch<CharacterLocally>(`/character/${id}`, {
-                deletedAt: new Date().toISOString()
-            })
-            return buildCharacter(data)
-        } catch (error) {
-            throw httpErrorHandler(error)
-        }
     }
-
 }
-
-

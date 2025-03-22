@@ -1,7 +1,8 @@
 import { Typography } from '@mui/material'
 import Grid2 from '@mui/material/Grid2'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { Pagination } from '../../components/Pagination'
 import { SearchInput } from '../../components/SearchInput'
 import { usePaginatedCharacters } from '../../controllers/usePaginatedCharacters'
@@ -9,10 +10,14 @@ import { CharacterItem } from './CharacterItem'
 
 
 function HomePage() {
-  const [nameCharacter, setNameCharacter] = useState('')
-  const [page, setPage] = useState(1)
+  const location = useLocation()
+  const queryParams = new URLSearchParams(location.search)
+  const page = parseInt(queryParams.get('page')!) || 1
 
-  const paginatedCharactersQuery = usePaginatedCharacters(page, nameCharacter, { retry: false, refetchOnMount: false, keepPreviousData: true })
+  const [nameCharacter, setNameCharacter] = useState('')
+  const navigate = useNavigate()
+
+  const paginatedCharactersQuery = usePaginatedCharacters(Number(page), nameCharacter, { retry: false, refetchOnMount: true, keepPreviousData: true })
 
   const {
     control,
@@ -22,11 +27,14 @@ function HomePage() {
   } = useForm<{ search: string }>()
   const search = watch('search')
 
-
-  const changeNameCharacter = (value: string) => {
-    setPage(1)
-    setNameCharacter(value)
+  const handlePageChange = (page: number) => {
+    navigate(`?page=${page}`)
   }
+
+  const changeNameCharacter = useCallback((value: string) => {
+    navigate(`?page=${page}`)
+    setNameCharacter(value)
+  }, [navigate, page])
 
 
   const onSubmit = async (fieldValues: { search: string }) => {
@@ -35,7 +43,7 @@ function HomePage() {
 
   useEffect(() => {
     if (search === '') changeNameCharacter(search)
-  }, [search])
+  }, [search, changeNameCharacter])
 
 
 
@@ -63,7 +71,7 @@ function HomePage() {
       </form>
       {/*<Pagination page={page} setPage={setPage} />*/}
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Pagination count={paginationCount} page={page} disabled={paginatedCharactersQuery.isNotFound} onPageChange={setPage} />
+        <Pagination count={paginationCount} page={Number(page)} disabled={paginatedCharactersQuery.isNotFound} onPageChange={handlePageChange} />
       </div>
       {paginatedCharactersQuery.isNotFound && <h1>No se encontro ningun personaje</h1>}
       {paginatedCharactersQuery.isFetching && !paginatedCharactersQuery.isRefetching && <h1>Cargando</h1>}

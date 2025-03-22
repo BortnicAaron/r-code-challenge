@@ -41,7 +41,7 @@ const queries = {
     getPaginatedCharacters: (page?: number, name?: string) => createKey({
         feature: features.CHARACTERS,
         state: {
-            page,
+            page: String(page),
             name
         }
     }),

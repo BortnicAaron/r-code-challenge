@@ -1,7 +1,7 @@
-import { Save } from "@mui/icons-material"
+import { ArrowBack, Save } from "@mui/icons-material"
 import { Box, Button, Card, CardContent, Typography } from "@mui/material"
 import { useForm } from "react-hook-form"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { Select } from "../../components/Select"
 import { TextInput } from "../../components/TextInput"
 import { useUptadeCharacter } from "../../controllers/useUptadeCharacter"
@@ -19,6 +19,7 @@ interface FieldValues {
 
 const CharacterForm = (character: Partial<Character>) => {
     const navigate = useNavigate()
+    const isFormDisabled = Boolean(!character || character.deletedAt)
 
     const form = useForm<FieldValues>({
         values: {
@@ -27,7 +28,8 @@ const CharacterForm = (character: Partial<Character>) => {
             status: character.status || 'unknown',
             type: character.type || '',
             locationName: character.location?.name || ''
-        }
+        },
+        disabled: isFormDisabled
     })
     const uptadeCharacter = useUptadeCharacter(character.id)
 
@@ -47,12 +49,18 @@ const CharacterForm = (character: Partial<Character>) => {
 
     }
 
+
+
     return <Card sx={{ maxWidth: '20rem', width: '100%' }} >
         <CardContent >
             <Box onSubmit={form.handleSubmit(onChange)} component={'form'} display="flex" flexDirection="column" alignItems="start" gap='1rem'>
-                <Typography variant="h5" component={'h1'}>
+
+                <Typography variant="h5" component={'h1'} color={isFormDisabled ? 'textDisabled' : 'primary'}>
                     Editar personaje
                 </Typography>
+                {Boolean(character.deletedAt) && <Typography variant="subtitle1" component="div" gutterBottom color='error'>
+                    El personaje no se puede editar porque esta eliminado.
+                </Typography>}
                 <TextInput
                     control={form.control}
                     label="Nombre:"
@@ -100,12 +108,22 @@ const CharacterForm = (character: Partial<Character>) => {
                         value: 'unknown'
                     }]}
                 />
-                <Button
-                    type='submit'
-                    endIcon={<Save />}
-                    variant="outlined"
-                    loading={form.formState.isSubmitting}
-                >Guardar</Button>
+                <Box display="flex" width={'100%'} flexDirection="row" justifyContent={'space-between'}>
+                    <Button
+                        component={Link}
+                        to={`/${character.id}`}
+                        startIcon={<ArrowBack />}
+                        variant="outlined"
+                        loading={form.formState.isSubmitting}
+                    >Volver</Button>
+                    <Button
+                        type='submit'
+                        endIcon={<Save />}
+                        variant="outlined"
+                        loading={form.formState.isSubmitting}
+                        disabled={isFormDisabled}
+                    >Guardar</Button>
+                </Box>
             </Box>
         </CardContent>
     </Card>
