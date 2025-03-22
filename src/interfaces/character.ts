@@ -1,7 +1,9 @@
+export type Status = 'Alive' | 'Dead' | 'unknown'
+
 export interface Character {
     id: string,
     name: string
-    status: string,
+    status: Status,
     species: string,
     type: string,
     gender: string,

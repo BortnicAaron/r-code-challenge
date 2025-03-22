@@ -26,3 +26,6 @@ export const createCharacterLocally = (character: Character) =>
 
 export const getCharacterLocally = (id: string) =>
   localApi.get<Character>(`/characters/${id}`).catch(httpErrorHandler)
+
+export const uptadeCharacterLocally = (id: string, character: Pick<Character, 'name' | 'type' | 'species' | 'status'>) =>
+  localApi.patch<Character>(`/characters/${id}`, character).catch(httpErrorHandler)

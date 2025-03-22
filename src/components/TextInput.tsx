@@ -8,6 +8,9 @@ interface ITextInput<N extends string, T extends FieldValues> {
     label: string
     control: Control<T>
     required?: boolean
+    errorMessages?: {
+        required?: string
+    }
     disabled?: boolean
     placeholder?: string
     ariaDescribedby?: string
@@ -21,15 +24,20 @@ function TextInput<N extends Path<T>, T extends FieldValues>({
     disabled = false,
     placeholder = '',
     ariaDescribedby,
+    required,
+    errorMessages
 }: ITextInput<N, T>) {
     const ID = useId()
     const controller = useController<T>({
         name,
         control,
         disabled,
+        rules: {
+            required: required && errorMessages?.required
+        }
     })
-
-    return <FormControl variant="standard" style={{ width: '100%' }}>
+    console.log(controller.fieldState.error)
+    return <FormControl variant="standard" fullWidth>
         <InputLabel htmlFor={ID} shrink>{label}</InputLabel>
         <Input
             id={ID}

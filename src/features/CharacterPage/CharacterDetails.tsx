@@ -52,7 +52,7 @@ const CharacterDetails = (character: Partial<Character>) => {
                     Estado: {character.status}
                 </Typography>
                 <Typography variant="body1" color="textSecondary">
-                    Expecies: {character.species}
+                    Expecie: {character.species}
                 </Typography>
                 {character.type && <Typography variant="body1" color="textSecondary">
                     Tipo: {character.type}
