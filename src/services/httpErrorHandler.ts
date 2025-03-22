@@ -14,7 +14,7 @@ const httpErrorHandler = (error: unknown) => {
             }
         }
     }
-    throw new Internal(error, 'Internal error!!')
+    throw new Internal(error, 'Internal error!! httpErrorHandler')
 }
 
 export { httpErrorHandler }

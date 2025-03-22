@@ -13,6 +13,7 @@ interface FieldValues {
     species: string
     status: Status
     type: string
+    locationName: string
 }
 
 
@@ -24,7 +25,8 @@ const CharacterForm = (character: Partial<Character>) => {
             name: character.name || '',
             species: character.species || '',
             status: character.status || 'unknown',
-            type: character.type || ''
+            type: character.type || '',
+            locationName: character.location?.name || ''
         }
     })
     const uptadeCharacter = useUptadeCharacter(character.id)
@@ -35,7 +37,8 @@ const CharacterForm = (character: Partial<Character>) => {
                 name: fieldValues.name,
                 species: fieldValues.species,
                 status: fieldValues.status,
-                type: fieldValues.type
+                type: fieldValues.type,
+                locationName: fieldValues.locationName || 'unknown'
             })
             navigate(`/${character.id}`)
         } catch (error) {
@@ -75,6 +78,12 @@ const CharacterForm = (character: Partial<Character>) => {
                     errorMessages={{
                         required: 'Campo requerido'
                     }}
+                />
+                <TextInput
+                    control={form.control}
+                    label="Última ubicación (Opcional):"
+                    name="locationName"
+                    required
                 />
                 <Select
                     control={form.control}

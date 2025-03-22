@@ -1,15 +1,29 @@
 import { useMutation } from '@tanstack/react-query'
 import { Character } from '../interfaces/Character'
 import { Internal } from '../interfaces/Errors/Internal'
-import { uptadeCharacterLocally } from '../services/character'
+import { LocalCharacterRepository } from '../services/localCharacterServices'
 
 
-const useUptadeCharacter = (id?: string) => {
+interface Data {
+    name: Character['name'],
+    type: Character['type'],
+    species: Character['species'],
+    status: Character['status'],
+    locationName?: Character['location']['name']
+}
+
+const useUptadeCharacter = (id?: number) => {
 
     const { data, mutateAsync, status, error } = useMutation({
-        mutationFn: async (character: Pick<Character, "name" | "type" | "species" | "status">) => {
+        mutationFn: async (character: Data) => {
             if (!id) throw new Internal(undefined, 'ID is required to update a character')
-            return await uptadeCharacterLocally(id, character)
+            return await LocalCharacterRepository.updateCharacter(id, {
+                ...character,
+                location: character.locationName ? {
+                    name: character.locationName,
+                    url: ''
+                } : undefined
+            })
         },
     })
 

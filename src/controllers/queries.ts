@@ -45,8 +45,8 @@ const queries = {
             name
         }
     }),
-    getCharacter: (id?: string) => createKey({
-        feature: features.CHARACTERS,
+    getCharacter: (id?: number) => createKey({
+        feature: features.CHARACTER,
         state: {
             id
         }

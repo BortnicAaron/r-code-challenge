@@ -1,7 +1,13 @@
 export type Status = 'Alive' | 'Dead' | 'unknown'
 
+
+export interface Location {
+    name: string
+    url: string
+}
+
 export interface Character {
-    id: string,
+    id: number,
     name: string
     status: Status,
     species: string,
@@ -9,8 +15,6 @@ export interface Character {
     gender: string,
     image: string,
     episode: string[]
-    location: {
-        name: string
-        url: string
-    }
+    location: Location
+    deletedAt?: string
 }

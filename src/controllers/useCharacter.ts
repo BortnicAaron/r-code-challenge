@@ -1,8 +1,8 @@
 import { skipToken, useQuery } from '@tanstack/react-query'
-import { AxiosResponse } from 'axios'
 import { Character } from '../interfaces/Character'
 import { NotFound } from '../interfaces/Errors/NotFound'
-import { createCharacterLocally, getCharacter, getCharacterLocally } from '../services/character'
+import { CharacterServices } from '../services/characterServices'
+import { LocalCharacterRepository } from '../services/localCharacterServices'
 import { queries } from './queries'
 
 interface IConfig {
@@ -28,7 +28,7 @@ const configDefault: IConfig = {
 }
 
 
-const useCharacter = (id: string | undefined, configInput?: IConfig) => {
+const useCharacter = (id: number | undefined, configInput?: IConfig) => {
     const config = {
         ...configDefault,
         ...configInput
@@ -37,12 +37,12 @@ const useCharacter = (id: string | undefined, configInput?: IConfig) => {
     const { data, isFetching, status, error, isRefetching } = useQuery({
         queryKey: queries.getCharacter(id),
         queryFn: id ? async () => {
-            let characterLocally: AxiosResponse<Character, any>
+            let characterLocally: Character
             try {
-                characterLocally = (await getCharacterLocally(id))
+                characterLocally = (await LocalCharacterRepository.getCharacter(id))
             } catch (error) {
-                const character = await getCharacter(id)
-                characterLocally = (await createCharacterLocally(character.data))
+                const character = await CharacterServices.getCharacter(id)
+                characterLocally = (await LocalCharacterRepository.createCharacter(character))
             }
 
 
@@ -56,7 +56,7 @@ const useCharacter = (id: string | undefined, configInput?: IConfig) => {
         isFetching,
         isRefetching,
         status,
-        isNotFound: error instanceof NotFound
+        isNotFound: error instanceof NotFound,
     }
 }
 export { useCharacter }
