@@ -1,5 +1,6 @@
 import CloseIcon from '@mui/icons-material/Close'
 import SearchIcon from '@mui/icons-material/Search'
+import { Box } from '@mui/material'
 import FormHelperText from '@mui/material/FormHelperText'
 import IconButton from "@mui/material/IconButton"
 import InputBase from "@mui/material/InputBase"
@@ -32,7 +33,7 @@ function SearchInput<N extends Path<T>, T extends FieldValues>({
         disabled,
     })
 
-    return <div style={{ display: 'flex', flexDirection: 'column', width: '300px' }}>
+    return <Box display={'flex'} flexDirection={'column'} mx={'4rem'}>
         <Paper
             component="div"
             sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: '100%' }}
@@ -68,7 +69,7 @@ function SearchInput<N extends Path<T>, T extends FieldValues>({
             </IconButton>
         </Paper>
         {controller.fieldState.error && <FormHelperText error > {controller.fieldState.error.message}</FormHelperText>}
-    </div>
+    </Box>
 }
 
 

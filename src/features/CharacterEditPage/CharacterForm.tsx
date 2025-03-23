@@ -1,7 +1,7 @@
 import { ArrowBack, Save } from "@mui/icons-material"
 import { Box, Button, Card, CardContent, Typography } from "@mui/material"
 import { useForm } from "react-hook-form"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { Autocomplete, Option } from "../../components/Autocomplete"
 import { Select } from "../../components/Select"
 import { TextInput } from "../../components/TextInput"
@@ -56,7 +56,7 @@ const CharacterForm = (character: Partial<Character>) => {
                 locationUrl: String(fieldValues.location.id),
                 image: fieldValues.image
             })
-            navigate(`/${character.id}`)
+            navigate(`/${character.id}`, { replace: true })
         } catch (error) {
 
         }
@@ -139,8 +139,7 @@ const CharacterForm = (character: Partial<Character>) => {
                 />
                 <Box display="flex" width={'100%'} flexDirection="row" justifyContent={'space-between'}>
                     <Button
-                        component={Link}
-                        to={`/${character.id}`}
+                        onClick={() => navigate(`/${character.id}`, { replace: true })}
                         startIcon={<ArrowBack />}
                         variant="outlined"
                         loading={form.formState.isSubmitting}

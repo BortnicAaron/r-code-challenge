@@ -3,7 +3,7 @@ import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
 import { Box, Button, Card, CardContent, Typography } from "@mui/material"
 import { useMemo } from "react"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useDeleteCharacter } from '../../controllers/useDeleteCharacter'
 import { Character } from "../../interfaces/Character"
 
@@ -38,13 +38,17 @@ const CharacterDetails = (character: Partial<Character>) => {
 
 
     const isDeleted = Boolean(character.deletedAt)
+    const navigate = useNavigate()
+
+    const goBack = () => {
+        navigate('/')
+    }
 
     return <Card sx={{ maxWidth: '20rem' }} >
         <CardContent>
             <Box display="flex" flexDirection="column" alignItems="center" gap='1rem'>
                 <Button
-                    component={Link}
-                    to={'/'}
+                    onClick={goBack}
                     startIcon={<ArrowBack />}
                     variant="outlined"
                     style={{ display: 'flex', }}

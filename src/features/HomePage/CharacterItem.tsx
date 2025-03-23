@@ -10,7 +10,7 @@ import { Link } from "react-router-dom"
 import styles from './CharacterItem.module.css'
 
 const CharacterItem = (character: ICharacter) => {
-
+    const isDeleted = Boolean(character.deletedAt)
     return (
         <Card
             component={Link}
@@ -22,8 +22,24 @@ const CharacterItem = (character: ICharacter) => {
                     image={character.image}
                     height={300}
                     alt="character"
+                    style={isDeleted ? {
+                        filter: 'grayscale(100%)',
+                    } : undefined}
                 />
                 <CardContent style={{ height: 'max-content' }}>
+                    {isDeleted && <Typography
+                        style={{
+                            position: 'absolute',
+                            top: '150px',
+                            left: '50%',
+                            transform: 'translate(-50%, -50%)',
+                        }}
+                        variant="h4"
+                        component="div"
+                        gutterBottom
+                        color='error'
+
+                    >ELIMINADO</Typography>}
                     <Typography gutterBottom variant="h5" component="div">
                         {character.name}
                     </Typography>

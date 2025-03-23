@@ -57,8 +57,8 @@ function HomePage() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem', paddingTop: '3rem', paddingBottom: '3rem', textAlign: 'center' }}>
-      <Typography component={'h1'} variant='h1' >
-        Rick and Morty
+      <Typography component={'h1'} variant='h1' mx={{ fontSize: '4rem' }}>
+        Rick y Morty
       </Typography>
       <form onSubmit={handleSubmit(onSubmit)} style={{ display: 'flex', justifyContent: 'center' }}>
         <SearchInput
