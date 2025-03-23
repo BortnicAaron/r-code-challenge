@@ -22,6 +22,7 @@ function Select<N extends Path<T>, T extends FieldValues>({
     items
 }: ISelect<N, T>) {
     const LABEL_ID = useId()
+    const ID = useId()
     const controller = useController<T>({
         name,
         control,
@@ -41,7 +42,7 @@ function Select<N extends Path<T>, T extends FieldValues>({
             }}
             onBlur={controller.field.onBlur}
             inputRef={controller.field.ref}
-            id="selasdasdasdect"
+            id={ID}
             labelId={LABEL_ID}
         >
             {items.map(({ value, text }) => <MenuItem key={value} value={value}>{text}</MenuItem>)}

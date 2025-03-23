@@ -3,17 +3,34 @@ import FormHelperText from '@mui/material/FormHelperText'
 import { useId } from 'react'
 import { Control, FieldValues, Path, useController } from 'react-hook-form'
 
+const validateUrl: (urlString: string) => boolean = (urlString: string) => {
+    try {
+        const url = new URL(urlString)
+        return !(url.protocol !== 'http:' && url.protocol !== 'https:')
+    } catch (_) {
+        return false
+    }
+}
 interface ITextInput<N extends string, T extends FieldValues> {
     name: N
     label: string
     control: Control<T>
     required?: boolean
+    validUrl?: boolean
     errorMessages?: {
         required?: string
+        validUrl?: string
     }
     disabled?: boolean
     placeholder?: string
     ariaDescribedby?: string
+}
+
+
+
+const ERROR_MESSAGES_DEFAULT = {
+    required: 'Campo requerido',
+    validUrl: 'URL no válida'
 }
 
 
@@ -25,18 +42,28 @@ function TextInput<N extends Path<T>, T extends FieldValues>({
     placeholder = '',
     ariaDescribedby,
     required,
-    errorMessages
+    validUrl,
+    errorMessages,
 }: ITextInput<N, T>) {
     const ID = useId()
+
+    const errorMessagesR = {
+        ...ERROR_MESSAGES_DEFAULT,
+        ...errorMessages
+    }
+
     const controller = useController<T>({
         name,
         control,
         disabled,
         rules: {
-            required: required && errorMessages?.required
-        }
+            required: required && errorMessagesR?.required,
+            validate: (v) => {
+                if (validUrl && !validateUrl(v)) return errorMessagesR.validUrl
+                return true
+            },
+        },
     })
-    console.log(controller.fieldState.error)
     return <FormControl variant="standard" fullWidth>
         <InputLabel htmlFor={ID} shrink>{label}</InputLabel>
         <Input

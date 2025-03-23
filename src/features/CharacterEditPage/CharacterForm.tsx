@@ -2,18 +2,23 @@ import { ArrowBack, Save } from "@mui/icons-material"
 import { Box, Button, Card, CardContent, Typography } from "@mui/material"
 import { useForm } from "react-hook-form"
 import { Link, useNavigate } from "react-router-dom"
+import { Autocomplete, Option } from "../../components/Autocomplete"
 import { Select } from "../../components/Select"
 import { TextInput } from "../../components/TextInput"
 import { useUptadeCharacter } from "../../controllers/useUptadeCharacter"
 import { Character, Status } from "../../interfaces/Character"
+import { LOCATIONS } from "./Locations"
 
+
+const locationOptions: Option[] = LOCATIONS.map(({ url, name }) => ({ id: url, label: name }))
 
 interface FieldValues {
+    image: string
     name: string
     species: string
     status: Status
     type: string
-    locationName: string
+    location: Option
 }
 
 
@@ -23,11 +28,18 @@ const CharacterForm = (character: Partial<Character>) => {
 
     const form = useForm<FieldValues>({
         values: {
+            image: character.image || '',
             name: character.name || '',
             species: character.species || '',
             status: character.status || 'unknown',
             type: character.type || '',
-            locationName: character.location?.name || ''
+            location: character.location ? {
+                id: character.location?.url,
+                label: character.location?.name
+            } : {
+                id: '',
+                label: ''
+            }
         },
         disabled: isFormDisabled
     })
@@ -40,7 +52,9 @@ const CharacterForm = (character: Partial<Character>) => {
                 species: fieldValues.species,
                 status: fieldValues.status,
                 type: fieldValues.type,
-                locationName: fieldValues.locationName || 'unknown'
+                locationName: fieldValues.location.label,
+                locationUrl: String(fieldValues.location.id),
+                image: fieldValues.image
             })
             navigate(`/${character.id}`)
         } catch (error) {
@@ -72,6 +86,27 @@ const CharacterForm = (character: Partial<Character>) => {
                 />
                 <TextInput
                     control={form.control}
+                    label="Imagen:"
+                    name="image"
+                    required
+                    validUrl
+                    errorMessages={{
+                        required: 'Campo requerido',
+                        validUrl: 'URL no válida'
+                    }}
+                />
+                <Autocomplete
+                    control={form.control}
+                    label="Última ubicación:"
+                    name="location"
+                    options={locationOptions}
+                    required
+                    errorMessages={{
+                        required: 'Campo requerido'
+                    }}
+                />
+                <TextInput
+                    control={form.control}
                     label="Tipo(Opcional):"
                     name="type"
                     errorMessages={{
@@ -86,12 +121,6 @@ const CharacterForm = (character: Partial<Character>) => {
                     errorMessages={{
                         required: 'Campo requerido'
                     }}
-                />
-                <TextInput
-                    control={form.control}
-                    label="Última ubicación (Opcional):"
-                    name="locationName"
-                    required
                 />
                 <Select
                     control={form.control}

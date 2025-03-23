@@ -1,3 +1,4 @@
+import { ArrowBack } from '@mui/icons-material'
 import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
 import { Box, Button, Card, CardContent, Typography } from "@mui/material"
@@ -41,6 +42,13 @@ const CharacterDetails = (character: Partial<Character>) => {
     return <Card sx={{ maxWidth: '20rem' }} >
         <CardContent>
             <Box display="flex" flexDirection="column" alignItems="center" gap='1rem'>
+                <Button
+                    component={Link}
+                    to={'/'}
+                    startIcon={<ArrowBack />}
+                    variant="outlined"
+                    style={{ display: 'flex', }}
+                >Volver</Button>
                 <img src={character.image} alt={character.name} style={{ width: '100%', borderRadius: '50%' }} />
                 <div style={{ display: 'flex', gap: '3rem' }}>
                     <Button

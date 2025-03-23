@@ -8,6 +8,7 @@ export interface UpdateCharacterLocally {
     species: Character['species']
     status: Character['status']
     location?: Character['location']
+    image?: Character['image']
 }
 
 
@@ -92,7 +93,8 @@ export const LocalCharacterRepository = {
                 type: character.type,
                 species: character.species,
                 status: character.status,
-                location: character.location
+                location: character.location,
+                image: character.image
             })
             return buildCharacter(data)
         } catch (error) {

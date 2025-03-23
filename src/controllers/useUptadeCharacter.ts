@@ -9,7 +9,9 @@ interface Data {
     type: Character['type'],
     species: Character['species'],
     status: Character['status'],
-    locationName?: Character['location']['name']
+    locationName: Character['location']['name']
+    locationUrl: Character['location']['url']
+    image: Character['image']
 }
 
 const useUptadeCharacter = (id?: number) => {
@@ -21,7 +23,7 @@ const useUptadeCharacter = (id?: number) => {
                 ...character,
                 location: character.locationName ? {
                     name: character.locationName,
-                    url: ''
+                    url: character.locationUrl
                 } : undefined
             })
         },
