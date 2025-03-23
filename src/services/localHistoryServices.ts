@@ -1,66 +1,41 @@
 import { localApi } from '../config/api'
-import { Character, Location, Status } from '../interfaces/Character'
+import { Character } from '../interfaces/Character'
+import { History } from '../interfaces/History'
 import { httpErrorHandler } from './httpErrorHandler'
 
-export interface UpdateCharacterLocally {
-    name: Character['name']
-    type: Character['type']
-    species: Character['species']
-    status: Character['status']
-    location?: Character['location']
+interface HistoryMsg {
+    id: number,
+    characterId: number,
+    createdAt: string
+    type: 'UPDATE'
+    previousData: Partial<Character>,
+    currentData: Partial<Character>
 }
 
 
-interface CharacterLocationLocally {
-    name: string
-    url: string
-}
-
-interface CharacterLocally {
-    id: string
-    name: string
-    status: string
-    species: string
-    type: string
-    gender: string
-    origin: CharacterLocationLocally
-    location: CharacterLocationLocally
-    image: string
-    episode: string[]
-    url: string
-    created: string
-    deletedAt?: string
-}
-
-
-const buildLocation = (characterLocationLocally: CharacterLocationLocally): Location => {
+const buildHistory = (historyMsg: HistoryMsg): History => {
     return {
-        name: characterLocationLocally.name,
-        url: characterLocationLocally.url
+        characterId: historyMsg.characterId,
+        id: historyMsg.id,
+        createdAt: historyMsg.createdAt,
+        type: historyMsg.type,
+        currentData: historyMsg.currentData,
+        previousData: historyMsg.previousData
     }
 }
 
-const buildCharacter = (characterLocally: CharacterLocally): Character => {
-    return {
-        id: Number(characterLocally.id),
-        episode: characterLocally.episode,
-        gender: characterLocally.gender,
-        image: characterLocally.image,
-        location: buildLocation(characterLocally.location),
-        name: characterLocally.name,
-        species: characterLocally.species,
-        status: characterLocally.status as Status,
-        type: characterLocally.type,
-        deletedAt: characterLocally.deletedAt
-    }
-}
-
-export const LocalCharacterRepository = {
-    getHistory: async (): Promise<Character[]> => {
+export const LocalHistoryServices = {
+    createHistory: async (history: Omit<History, 'id' | 'createdAt'>): Promise<History> => {
         try {
-            const { data } = await localApi.get<CharacterLocally[]>('/character').catch(httpErrorHandler)
+            const { data } = await localApi.post<HistoryMsg>('/history', {
+                characterId: history.characterId,
+                createdAt: new Date().toISOString(),
+                type: history.type,
+                previousData: history.previousData,
+                currentData: history.currentData
+            }).catch(httpErrorHandler)
 
-            return data.map(buildCharacter)
+            return buildHistory(data)
 
         } catch (error) {
             throw httpErrorHandler(error)

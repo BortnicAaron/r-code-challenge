@@ -43,7 +43,7 @@ const CharacterForm = (character: Partial<Character>) => {
         },
         disabled: isFormDisabled
     })
-    const uptadeCharacter = useUptadeCharacter(character.id)
+    const uptadeCharacter = useUptadeCharacter(character)
 
     const onChange = async (fieldValues: FieldValues) => {
         try {

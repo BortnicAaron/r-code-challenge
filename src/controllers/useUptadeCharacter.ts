@@ -14,18 +14,20 @@ interface Data {
     image: Character['image']
 }
 
-const useUptadeCharacter = (id?: number) => {
+const useUptadeCharacter = (character?: Partial<Character>) => {
 
     const { data, mutateAsync, status, error } = useMutation({
-        mutationFn: async (character: Data) => {
-            if (!id) throw new Internal(undefined, 'ID is required to update a character')
-            return await LocalCharacterRepository.updateCharacter(id, {
-                ...character,
-                location: character.locationName ? {
-                    name: character.locationName,
-                    url: character.locationUrl
-                } : undefined
-            })
+        mutationFn: async (data: Data) => {
+            if (!character?.id) throw new Internal(undefined, 'ID is required to update a character')
+            const r: Partial<Character> = {}
+            if (character.name !== data.name) r.name = data.name
+            if (character.type !== data.type) r.type = data.type
+            if (character.species !== data.species) r.species = data.species
+            if (character.status !== data.status) r.status = data.status
+            if (character.image !== data.image) r.image = data.image
+            if (character.location?.name !== data.locationName || character.location?.url !== data.locationUrl) r.location = { name: data.locationName, url: data.locationUrl }
+
+            return await LocalCharacterRepository.updateCharacter(character.id, r)
         },
     })
 

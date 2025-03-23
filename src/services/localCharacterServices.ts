@@ -1,14 +1,18 @@
 import { localApi } from '../config/api'
 import { Character, Location, Status } from '../interfaces/Character'
 import { httpErrorHandler } from './httpErrorHandler'
+import { LocalHistoryServices } from './localHistoryServices'
 
 export interface UpdateCharacterLocally {
-    name: Character['name']
-    type: Character['type']
-    species: Character['species']
-    status: Character['status']
-    location?: Character['location']
-    image?: Character['image']
+    name?: string
+    type?: string
+    species?: string
+    status?: Status
+    location?: {
+        name: string
+        url: string
+    }
+    image?: string
 }
 
 
@@ -87,6 +91,15 @@ export const LocalCharacterRepository = {
     },
 
     updateCharacter: async (id: number, character: UpdateCharacterLocally): Promise<Character> => {
+        let currentCharacter: Character | undefined
+        let prevCharacter: Character | undefined
+
+        try {
+            prevCharacter = await LocalCharacterRepository.getCharacter(id)
+        } catch (error) {
+            throw httpErrorHandler(error)
+        }
+
         try {
             const { data } = await localApi.patch<CharacterLocally>(`/character/${id}`, {
                 name: character.name,
@@ -96,10 +109,40 @@ export const LocalCharacterRepository = {
                 location: character.location,
                 image: character.image
             })
-            return buildCharacter(data)
+
+            currentCharacter = buildCharacter(data)
         } catch (error) {
             throw httpErrorHandler(error)
         }
+
+
+        try {
+
+            LocalHistoryServices.createHistory({
+                characterId: id,
+                type: 'UPDATE',
+                currentData: {
+                    name: character.name,
+                    type: character.type,
+                    species: character.species,
+                    status: character.status,
+                    location: character.location || undefined,
+                    image: character.image
+                },
+                previousData: {
+                    name: prevCharacter.name,
+                    type: prevCharacter.type,
+                    species: prevCharacter.species,
+                    status: prevCharacter.status,
+                    location: prevCharacter.location,
+                    image: prevCharacter.image
+                }
+            })
+        } catch (error) {
+
+        }
+
+        return (currentCharacter)
 
     },
 
