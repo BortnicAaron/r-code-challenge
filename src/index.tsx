@@ -1,4 +1,5 @@
 import { ThemeProvider } from '@emotion/react'
+import CssBaseline from '@mui/material/CssBaseline'
 import { createTheme } from '@mui/material/styles'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
@@ -8,6 +9,7 @@ import { RouterProvider } from 'react-router-dom'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 import { queryClient, router } from './routes'
+
 
 const darkTheme = createTheme({
   palette: {
@@ -25,6 +27,7 @@ root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={darkTheme}>
+        <CssBaseline />
         <RouterProvider router={router} />
       </ThemeProvider>
       <ReactQueryDevtools initialIsOpen={true} />

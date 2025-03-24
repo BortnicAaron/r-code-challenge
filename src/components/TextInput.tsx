@@ -11,16 +11,20 @@ const validateUrl: (urlString: string) => boolean = (urlString: string) => {
         return false
     }
 }
+
+interface IErrorMessages {
+    required?: string
+    validUrl?: string
+    maxLength?: string
+}
 interface ITextInput<N extends string, T extends FieldValues> {
     name: N
     label: string
     control: Control<T>
     required?: boolean
     validUrl?: boolean
-    errorMessages?: {
-        required?: string
-        validUrl?: string
-    }
+    maxLength?: number
+    errorMessages?: IErrorMessages
     disabled?: boolean
     placeholder?: string
     ariaDescribedby?: string
@@ -30,7 +34,8 @@ interface ITextInput<N extends string, T extends FieldValues> {
 
 const ERROR_MESSAGES_DEFAULT = {
     required: 'Campo requerido',
-    validUrl: 'URL no válida'
+    validUrl: 'URL no válida',
+    maxLength: 'Por favor, ingresa un texto más corto.'
 }
 
 
@@ -44,6 +49,7 @@ function TextInput<N extends Path<T>, T extends FieldValues>({
     required,
     validUrl,
     errorMessages,
+    maxLength
 }: ITextInput<N, T>) {
     const ID = useId()
 
@@ -58,6 +64,10 @@ function TextInput<N extends Path<T>, T extends FieldValues>({
         disabled,
         rules: {
             required: required && errorMessagesR?.required,
+            maxLength: maxLength && {
+                value: maxLength,
+                message: errorMessagesR.maxLength
+            },
             validate: (v) => {
                 if (validUrl && !validateUrl(v)) return errorMessagesR.validUrl
                 return true

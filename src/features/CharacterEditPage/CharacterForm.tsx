@@ -65,11 +65,10 @@ const CharacterForm = (character: Partial<Character>) => {
 
 
 
-    return <Card sx={{ maxWidth: '20rem', width: '100%' }} >
+    return <Card sx={{ maxWidth: '22.5rem', width: '100%' }} >
         <CardContent >
-            <Box onSubmit={form.handleSubmit(onChange)} component={'form'} display="flex" flexDirection="column" alignItems="start" gap='1rem'>
-
-                <Typography variant="h5" component={'h1'} color={isFormDisabled ? 'textDisabled' : 'primary'}>
+            <Box onSubmit={form.handleSubmit(onChange)} component={'form'} sx={{ display: "flex", flexDirection: "column", alignItems: "start", gap: '1rem' }} >
+                <Typography variant="h5" component={'h1'} color={isFormDisabled ? 'textDisabled' : 'textPrimary'}>
                     Editar personaje
                 </Typography>
                 {Boolean(character.deletedAt) && <Typography variant="subtitle1" component="div" gutterBottom color='error'>
@@ -80,8 +79,10 @@ const CharacterForm = (character: Partial<Character>) => {
                     label="Nombre:"
                     name="name"
                     required
+                    maxLength={43}
                     errorMessages={{
-                        required: 'Campo requerido'
+                        required: 'Campo requerido.',
+                        maxLength: `Máximo ${43} caracteres permitidos.`
                     }}
                 />
                 <TextInput
@@ -91,8 +92,8 @@ const CharacterForm = (character: Partial<Character>) => {
                     required
                     validUrl
                     errorMessages={{
-                        required: 'Campo requerido',
-                        validUrl: 'URL no válida'
+                        required: 'Campo requerido.',
+                        validUrl: 'URL no válida.'
                     }}
                 />
                 <Autocomplete
@@ -102,15 +103,17 @@ const CharacterForm = (character: Partial<Character>) => {
                     options={locationOptions}
                     required
                     errorMessages={{
-                        required: 'Campo requerido'
+                        required: 'Campo requerido.'
                     }}
                 />
                 <TextInput
                     control={form.control}
                     label="Tipo(Opcional):"
                     name="type"
+                    maxLength={43}
                     errorMessages={{
-                        required: 'Campo requerido'
+                        required: 'Campo requerido.',
+                        maxLength: `Máximo ${43} caracteres permitidos.`
                     }}
                 />
                 <TextInput
@@ -118,8 +121,10 @@ const CharacterForm = (character: Partial<Character>) => {
                     label="Especie:"
                     name="species"
                     required
+                    maxLength={43}
                     errorMessages={{
-                        required: 'Campo requerido'
+                        required: 'Campo requerido.',
+                        maxLength: `Máximo ${43} caracteres permitidos.`
                     }}
                 />
                 <Select

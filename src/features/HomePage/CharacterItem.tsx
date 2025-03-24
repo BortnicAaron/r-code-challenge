@@ -7,26 +7,36 @@ import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
 import { useRef } from "react"
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 const CharacterItem = (character: ICharacter) => {
     const isDeleted = Boolean(character.deletedAt)
     const imgRef = useRef<HTMLImageElement>(null)
-
+    const navigate = useNavigate()
 
     return (
         <Card
-            component={Link}
-            to={`/${character.id}`}
             sx={{
                 display: 'flex',
                 flexDirection: 'column',
                 position: 'relative',
                 margin: 'auto',
-                height: '100%'
+                height: '100%',
+                textDecoration: "none"
             }}
         >
-            <CardActionArea>
+            <CardActionArea
+                onClick={() => {
+                    navigate(`/${character.id}`)
+                }}
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                    justifyContent: 'flex-start',
+                    height: '100%'
+                }}
+            >
                 <CardMedia
                     component="img"
                     loading="lazy"
@@ -34,7 +44,7 @@ const CharacterItem = (character: ICharacter) => {
                     ref={imgRef}
                     height={300}
                     width={300}
-                    sx={{ height: { sm: '435px' } }}
+                    sx={{ height: { sm: '435px', md: '300px' } }}
                     alt={character.name}
                     style={isDeleted ? {
                         filter: 'grayscale(100%)',
@@ -57,7 +67,7 @@ const CharacterItem = (character: ICharacter) => {
                     <Typography gutterBottom variant="h5" component="div">
                         {character.name}
                     </Typography>
-                    {character.species && <Typography gutterBottom variant="h6" component="div">
+                    {character.species && <Typography gutterBottom variant="h6" component="div" color="textSecondary">
                         {character.species}
                     </Typography>}
                 </CardContent>

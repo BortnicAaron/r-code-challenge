@@ -643,6 +643,247 @@
       "currentData": {
         "name": "Agenc"
       }
+    },
+    {
+      "id": "87f2",
+      "characterId": 10,
+      "createdAt": "2025-03-24T17:48:17.313Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Alan Rails",
+        "type": "Superhuman (Ghost trains summoner)",
+        "species": "Human",
+        "status": "Dead",
+        "location": {
+          "name": "Worldender's lair",
+          "url": "https://rickandmortyapi.com/api/location/4"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/10.jpeg"
+      },
+      "currentData": {
+        "name": "Alan"
+      }
+    },
+    {
+      "id": "e6e4",
+      "characterId": 10,
+      "createdAt": "2025-03-24T17:48:25.240Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Alan",
+        "type": "Superhuman (Ghost trains summoner)",
+        "species": "Human",
+        "status": "Dead",
+        "location": {
+          "name": "Worldender's lair",
+          "url": "https://rickandmortyapi.com/api/location/4"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/10.jpeg"
+      },
+      "currentData": {
+        "status": "Alive"
+      }
+    },
+    {
+      "id": "e400",
+      "characterId": 10,
+      "createdAt": "2025-03-24T17:50:45.917Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Alan",
+        "type": "Superhuman (Ghost trains summoner)",
+        "species": "Human",
+        "status": "Alive",
+        "location": {
+          "name": "Worldender's lair",
+          "url": "https://rickandmortyapi.com/api/location/4"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/10.jpeg"
+      },
+      "currentData": {
+        "location": {
+          "name": "Post-Apocalyptic Earth",
+          "url": "https://rickandmortyapi.com/api/location/8"
+        }
+      }
+    },
+    {
+      "id": "64b6",
+      "characterId": 10,
+      "createdAt": "2025-03-24T17:50:53.410Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Alan",
+        "type": "Superhuman (Ghost trains summoner)",
+        "species": "Human",
+        "status": "Alive",
+        "location": {
+          "name": "Post-Apocalyptic Earth",
+          "url": "https://rickandmortyapi.com/api/location/8"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/10.jpeg"
+      },
+      "currentData": {
+        "location": {
+          "name": "Earth (C-500A)",
+          "url": "https://rickandmortyapi.com/api/location/23"
+        }
+      }
+    },
+    {
+      "id": "9527",
+      "characterId": 10,
+      "createdAt": "2025-03-24T17:52:31.850Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Alan",
+        "type": "Superhuman (Ghost trains summoner)",
+        "species": "Human",
+        "status": "Alive",
+        "location": {
+          "name": "Earth (C-500A)",
+          "url": "https://rickandmortyapi.com/api/location/23"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/10.jpeg"
+      },
+      "currentData": {
+        "name": "Alan asdas ",
+        "type": "Superhuman ",
+        "species": "Human Perro",
+        "status": "Dead",
+        "location": {
+          "name": "Earth (5-126)",
+          "url": "https://rickandmortyapi.com/api/location/17"
+        }
+      }
+    },
+    {
+      "id": "770c",
+      "characterId": 54,
+      "createdAt": "2025-03-24T17:55:04.102Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Bobby Moynihan",
+        "type": "",
+        "species": "Human",
+        "status": "Alive",
+        "location": {
+          "name": "Interdimensional Cable",
+          "url": "https://rickandmortyapi.com/api/location/6"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/54.jpeg"
+      },
+      "currentData": {
+        "name": "Bobby MoynihanASDASDASDASDASDASDASDASDASDSDAD"
+      }
+    },
+    {
+      "id": "7a04",
+      "characterId": 54,
+      "createdAt": "2025-03-24T17:58:33.867Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Bobby MoynihanASDASDASDASDASDASDASDASDASDSDAD",
+        "type": "",
+        "species": "Human",
+        "status": "Alive",
+        "location": {
+          "name": "Interdimensional Cable",
+          "url": "https://rickandmortyapi.com/api/location/6"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/54.jpeg"
+      },
+      "currentData": {
+        "name": "Bobby MoynihanASDASDASDASASDASDASDDSASADASDASDASDASDASDSDAD"
+      }
+    },
+    {
+      "id": "eb7e",
+      "characterId": 54,
+      "createdAt": "2025-03-24T17:58:37.030Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Bobby MoynihanASDASDASDASASDASDASDDSASADASDASDASDASDASDSDAD",
+        "type": "",
+        "species": "Human",
+        "status": "Alive",
+        "location": {
+          "name": "Interdimensional Cable",
+          "url": "https://rickandmortyapi.com/api/location/6"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/54.jpeg"
+      },
+      "currentData": {
+        "name": "Bobby MoynihanASDASDAasdasdasdSDASASDASDASDDSASADASDASDASDASDASDSDAD"
+      }
+    },
+    {
+      "id": "69be",
+      "characterId": 54,
+      "createdAt": "2025-03-24T18:06:27.787Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Bobby MoynihanASDASDAasdasdasdSDASASDASDASDDSASADASDASDASDASDASDSDAD",
+        "type": "",
+        "species": "Human",
+        "status": "Alive",
+        "location": {
+          "name": "Interdimensional Cable",
+          "url": "https://rickandmortyapi.com/api/location/6"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/54.jpeg"
+      },
+      "currentData": {
+        "name": "asdasd"
+      }
+    },
+    {
+      "id": "f0b2",
+      "characterId": 15,
+      "createdAt": "2025-03-24T18:11:49.257Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Alien Rick",
+        "type": "",
+        "species": "Alien",
+        "status": "unknown",
+        "location": {
+          "name": "Citadel of Ricks",
+          "url": "https://rickandmortyapi.com/api/location/3"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/15.jpeg"
+      },
+      "currentData": {
+        "name": "Alien Rickasdsadasdasd sdasdasdas da as"
+      }
+    },
+    {
+      "id": "8c8d",
+      "characterId": 9,
+      "createdAt": "2025-03-24T18:19:35.961Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Agenc",
+        "type": "",
+        "species": "Human",
+        "status": "Dead",
+        "location": {
+          "name": "Earth (Replacement Dimension)",
+          "url": "https://rickandmortyapi.com/api/location/20"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/9.jpeg"
+      },
+      "currentData": {
+        "name": "Agenc asdaasd",
+        "type": "Superhuman ",
+        "species": "perro",
+        "status": "Alive",
+        "location": {
+          "name": "Rick's Memories",
+          "url": "https://rickandmortyapi.com/api/location/126"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+      }
     }
   ],
   "character": [
@@ -1108,13 +1349,14 @@
       "gender": "Male",
       "image": "https://rickandmortyapi.com/api/character/avatar/10.jpeg",
       "location": {
-        "name": "Worldender's lair",
-        "url": "https://rickandmortyapi.com/api/location/4"
+        "name": "Earth (5-126)",
+        "url": "https://rickandmortyapi.com/api/location/17"
       },
-      "name": "Alan Rails",
-      "species": "Human",
+      "name": "Alan asdas ",
+      "species": "Human Perro",
       "status": "Dead",
-      "type": "Superhuman (Ghost trains summoner)"
+      "type": "Superhuman ",
+      "deletedAt": "2025-03-24T18:18:19.300Z"
     },
     {
       "id": "6",
@@ -1130,7 +1372,8 @@
       "name": "Abadango Cluster Princess",
       "species": "Alien",
       "status": "Alive",
-      "type": ""
+      "type": "",
+      "deletedAt": "2025-03-24T17:53:08.392Z"
     },
     {
       "id": "97",
@@ -1221,15 +1464,15 @@
         "https://rickandmortyapi.com/api/episode/24"
       ],
       "gender": "Male",
-      "image": "https://rickandmortyapi.com/api/character/avatar/9.jpeg",
+      "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg",
       "location": {
-        "name": "Earth (Replacement Dimension)",
-        "url": "https://rickandmortyapi.com/api/location/20"
+        "name": "Rick's Memories",
+        "url": "https://rickandmortyapi.com/api/location/126"
       },
-      "name": "Agenc",
-      "species": "Human",
-      "status": "Dead",
-      "type": ""
+      "name": "Agenc asdaasd",
+      "species": "perro",
+      "status": "Alive",
+      "type": "Superhuman "
     },
     {
       "id": "642",
@@ -1298,7 +1541,7 @@
       "type": ""
     },
     {
-      "id": 42,
+      "id": "42",
       "episode": [
         "https://rickandmortyapi.com/api/episode/22"
       ],
@@ -1312,6 +1555,140 @@
       "species": "Human",
       "status": "unknown",
       "type": "Human with giant head"
+    },
+    {
+      "id": "45",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/3"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/45.jpeg",
+      "location": {
+        "name": "Earth (C-137)",
+        "url": "https://rickandmortyapi.com/api/location/1"
+      },
+      "name": "Bill",
+      "species": "Human",
+      "status": "Alive",
+      "type": ""
+    },
+    {
+      "id": "51",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/19"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/51.jpeg",
+      "location": {
+        "name": "Interdimensional Cable",
+        "url": "https://rickandmortyapi.com/api/location/6"
+      },
+      "name": "Blue Diplomat",
+      "species": "Alien",
+      "status": "Alive",
+      "type": ""
+    },
+    {
+      "id": "17",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/3"
+      ],
+      "gender": "Female",
+      "image": "https://rickandmortyapi.com/api/character/avatar/17.jpeg",
+      "location": {
+        "name": "Anatomy Park",
+        "url": "https://rickandmortyapi.com/api/location/5"
+      },
+      "name": "Annie",
+      "species": "Human",
+      "status": "Alive",
+      "type": ""
+    },
+    {
+      "id": "54",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/8"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/54.jpeg",
+      "location": {
+        "name": "Interdimensional Cable",
+        "url": "https://rickandmortyapi.com/api/location/6"
+      },
+      "name": "asdasd",
+      "species": "Human",
+      "status": "Alive",
+      "type": ""
+    },
+    {
+      "id": "47",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/11",
+        "https://rickandmortyapi.com/api/episode/16",
+        "https://rickandmortyapi.com/api/episode/21",
+        "https://rickandmortyapi.com/api/episode/22",
+        "https://rickandmortyapi.com/api/episode/26",
+        "https://rickandmortyapi.com/api/episode/49",
+        "https://rickandmortyapi.com/api/episode/51"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/47.jpeg",
+      "location": {
+        "name": "Planet Squanch",
+        "url": "https://rickandmortyapi.com/api/location/35"
+      },
+      "name": "Birdperson",
+      "species": "Alien",
+      "status": "Alive",
+      "type": "Bird-Person"
+    },
+    {
+      "id": "63",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/2"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/63.jpeg",
+      "location": {
+        "name": "Mr. Goldenfold's dream",
+        "url": "https://rickandmortyapi.com/api/location/18"
+      },
+      "name": "Centaur",
+      "species": "Mythological Creature",
+      "status": "Alive",
+      "type": "Centaur"
+    },
+    {
+      "id": "15",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/10"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/15.jpeg",
+      "location": {
+        "name": "Citadel of Ricks",
+        "url": "https://rickandmortyapi.com/api/location/3"
+      },
+      "name": "Alien Rickasdsadasdasd sdasdasdas da as",
+      "species": "Alien",
+      "status": "unknown",
+      "type": ""
+    },
+    {
+      "id": "824",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/51"
+      ],
+      "gender": "Female",
+      "image": "https://rickandmortyapi.com/api/character/avatar/824.jpeg",
+      "location": {
+        "name": "Earth (Unknown dimension)",
+        "url": "https://rickandmortyapi.com/api/location/30"
+      },
+      "name": "Young Beth",
+      "species": "Human",
+      "status": "unknown",
+      "type": ""
     }
   ]
 }

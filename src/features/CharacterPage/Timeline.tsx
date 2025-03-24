@@ -4,7 +4,6 @@ import TimelineConnector from '@mui/lab/TimelineConnector'
 import TimelineContent from '@mui/lab/TimelineContent'
 import TimelineDot from '@mui/lab/TimelineDot'
 import TimelineItem, { timelineItemClasses } from '@mui/lab/TimelineItem'
-
 import TimelineSeparator from '@mui/lab/TimelineSeparator'
 import { Box, Button, Typography } from '@mui/material'
 
@@ -42,6 +41,10 @@ const Timeline = ({ characterId }: ITimeLine) => {
             flex: 0,
             padding: 0,
           },
+          my: 0,
+          py: 0,
+          pl: 0,
+          ml: 0
         }}
       >
 
@@ -86,6 +89,7 @@ const Timeline = ({ characterId }: ITimeLine) => {
                   label='Especie'
                 />
               </Box>
+              Accordion
             </TimelineContent>
           </TimelineItem>)
         }

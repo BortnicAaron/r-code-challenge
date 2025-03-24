@@ -5,7 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
+  background-color: #83cd83;
+  @media (prefers-color-scheme: dark) {
+    background-color: black !important;
+  }
 }
 
 code {
