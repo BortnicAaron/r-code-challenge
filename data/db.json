@@ -1,72 +1,109 @@
 {
   "history": [
     {
-      "id": "2605",
-      "characterId": 71,
-      "createdAt": "2025-03-23T16:16:38.370Z",
+      "id": "892b",
+      "characterId": 1,
+      "createdAt": 1742766275640,
       "type": "UPDATE",
       "previousData": {
-        "name": "Conroy",
+        "name": "Rick Sanchez",
         "type": "",
-        "species": "Robot",
-        "status": "Dead",
+        "species": "Human",
+        "status": "Alive",
         "location": {
-          "name": "Earth (C-137)",
-          "url": "https://rickandmortyapi.com/api/location/1"
+          "name": "Citadel of Ricks",
+          "url": "https://rickandmortyapi.com/api/location/3"
         },
-        "image": "https://rickandmortyapi.com/api/character/avatar/71.jpeg"
+        "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
       },
       "currentData": {
-        "name": "Conroy oBrian"
+        "name": "Rick Sanchez 1"
       }
     },
     {
-      "id": "88ad",
-      "characterId": 71,
-      "createdAt": "2025-03-23T16:19:17.939Z",
+      "id": "c8bd",
+      "characterId": 1,
+      "createdAt": 1742766278590,
       "type": "UPDATE",
       "previousData": {
-        "name": "Conroy oBrian",
+        "name": "Rick Sanchez 1",
         "type": "",
-        "species": "Robot",
-        "status": "Dead",
+        "species": "Human",
+        "status": "Alive",
         "location": {
-          "name": "Earth (C-137)",
-          "url": "https://rickandmortyapi.com/api/location/1"
+          "name": "Citadel of Ricks",
+          "url": "https://rickandmortyapi.com/api/location/3"
         },
-        "image": "https://rickandmortyapi.com/api/character/avatar/71.jpeg"
+        "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
       },
       "currentData": {
-        "location": {
-          "name": "Abadango",
-          "url": "https://rickandmortyapi.com/api/location/2"
-        }
+        "name": "Rick Sanchez 2"
       }
     },
     {
-      "id": "bdda",
-      "characterId": 71,
-      "createdAt": "2025-03-23T16:34:55.341Z",
+      "id": "1a86",
+      "characterId": 1,
+      "createdAt": 1742766281579,
       "type": "UPDATE",
       "previousData": {
-        "name": "Conroy oBrian",
+        "name": "Rick Sanchez 2",
         "type": "",
-        "species": "Robot",
-        "status": "Dead",
+        "species": "Human",
+        "status": "Alive",
         "location": {
-          "name": "Abadango",
-          "url": "https://rickandmortyapi.com/api/location/2"
+          "name": "Citadel of Ricks",
+          "url": "https://rickandmortyapi.com/api/location/3"
         },
-        "image": "https://rickandmortyapi.com/api/character/avatar/71.jpeg"
+        "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
       },
       "currentData": {
-        "name": "Conroy"
+        "name": "Rick Sanchez 3"
       }
     },
     {
-      "id": "e3c6",
+      "id": "5f04",
+      "characterId": 1,
+      "createdAt": 1742766285342,
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Rick Sanchez 3",
+        "type": "",
+        "species": "Human",
+        "status": "Alive",
+        "location": {
+          "name": "Citadel of Ricks",
+          "url": "https://rickandmortyapi.com/api/location/3"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+      },
+      "currentData": {
+        "name": "Rick Sanchez 4"
+      }
+    },
+    {
+      "id": "33d1",
+      "characterId": 5,
+      "createdAt": 1742766292525,
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Jerry Smith",
+        "type": "",
+        "species": "Human",
+        "status": "Alive",
+        "location": {
+          "name": "Earth (Replacement Dimension)",
+          "url": "https://rickandmortyapi.com/api/location/20"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/5.jpeg"
+      },
+      "currentData": {
+        "name": "Jerry Smith 1"
+      }
+    },
+    {
+      "id": "cb01",
       "characterId": 2,
-      "createdAt": "2025-03-23T16:35:25.973Z",
+      "createdAt": 1742766300297,
       "type": "UPDATE",
       "previousData": {
         "name": "Morty Smith",
@@ -80,32 +117,319 @@
         "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
       },
       "currentData": {
-        "name": "Morty"
+        "name": "Morty Smith 1"
+      }
+    },
+    {
+      "id": "bab2",
+      "characterId": 3,
+      "createdAt": 1742766306384,
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Summer Smith",
+        "type": "",
+        "species": "Human",
+        "status": "Alive",
+        "location": {
+          "name": "Earth (Replacement Dimension)",
+          "url": "https://rickandmortyapi.com/api/location/20"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg"
+      },
+      "currentData": {
+        "name": "Summer Smith 1"
+      }
+    },
+    {
+      "id": "a9e2",
+      "characterId": 2,
+      "createdAt": 1742766311189,
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Morty Smith 1",
+        "type": "",
+        "species": "Human",
+        "status": "Alive",
+        "location": {
+          "name": "Citadel of Ricks",
+          "url": "https://rickandmortyapi.com/api/location/3"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+      },
+      "currentData": {
+        "name": "Morty Smith 2"
+      }
+    },
+    {
+      "id": "1c67",
+      "characterId": 1,
+      "createdAt": "2025-03-24T01:06:46.857Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Rick Sanchez 4",
+        "type": "",
+        "species": "Human",
+        "status": "Alive",
+        "location": {
+          "name": "Citadel of Ricks",
+          "url": "https://rickandmortyapi.com/api/location/3"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+      },
+      "currentData": {
+        "status": "Dead"
+      }
+    },
+    {
+      "id": "4b8e",
+      "characterId": 1,
+      "createdAt": "2025-03-24T01:06:53.987Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Rick Sanchez 4",
+        "type": "",
+        "species": "Human",
+        "status": "Dead",
+        "location": {
+          "name": "Citadel of Ricks",
+          "url": "https://rickandmortyapi.com/api/location/3"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+      },
+      "currentData": {
+        "species": "Cucaracha"
+      }
+    },
+    {
+      "id": "df56",
+      "characterId": 1,
+      "createdAt": "2025-03-24T01:07:03.509Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Rick Sanchez 4",
+        "type": "",
+        "species": "Cucaracha",
+        "status": "Dead",
+        "location": {
+          "name": "Citadel of Ricks",
+          "url": "https://rickandmortyapi.com/api/location/3"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+      },
+      "currentData": {
+        "type": "asdasd",
+        "species": "sas",
+        "status": "unknown",
+        "location": {
+          "name": "Venzenulon 7",
+          "url": "https://rickandmortyapi.com/api/location/10"
+        }
+      }
+    },
+    {
+      "id": "0e4a",
+      "characterId": 1,
+      "createdAt": "2025-03-24T01:39:49.319Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Rick Sanchez 4",
+        "type": "asdasd",
+        "species": "sas",
+        "status": "unknown",
+        "location": {
+          "name": "Venzenulon 7",
+          "url": "https://rickandmortyapi.com/api/location/10"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+      },
+      "currentData": {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVkF2GWEs_foJwNww-bZiRHskYwyNFHGb9Q&s"
+      }
+    },
+    {
+      "id": "b113",
+      "characterId": 1,
+      "createdAt": "2025-03-24T01:40:52.196Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Rick Sanchez 4",
+        "type": "asdasd",
+        "species": "sas",
+        "status": "unknown",
+        "location": {
+          "name": "Venzenulon 7",
+          "url": "https://rickandmortyapi.com/api/location/10"
+        },
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVkF2GWEs_foJwNww-bZiRHskYwyNFHGb9Q&s"
+      },
+      "currentData": {
+        "location": {
+          "name": "Worldender's lair",
+          "url": "https://rickandmortyapi.com/api/location/4"
+        }
+      }
+    },
+    {
+      "id": "0290",
+      "characterId": 1,
+      "createdAt": "2025-03-24T01:51:30.068Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Rick Sanchez 4",
+        "type": "asdasd",
+        "species": "sas",
+        "status": "unknown",
+        "location": {
+          "name": "Worldender's lair",
+          "url": "https://rickandmortyapi.com/api/location/4"
+        },
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVkF2GWEs_foJwNww-bZiRHskYwyNFHGb9Q&s"
+      },
+      "currentData": {
+        "type": "asdssss"
+      }
+    },
+    {
+      "id": "6c4b",
+      "characterId": 1,
+      "createdAt": "2025-03-24T01:51:47.803Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Rick Sanchez 4",
+        "type": "asdssss",
+        "species": "sas",
+        "status": "unknown",
+        "location": {
+          "name": "Worldender's lair",
+          "url": "https://rickandmortyapi.com/api/location/4"
+        },
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVkF2GWEs_foJwNww-bZiRHskYwyNFHGb9Q&s"
+      },
+      "currentData": {
+        "name": "Rick Sanchez 9"
       }
     }
   ],
   "character": [
     {
-      "id": "71",
-      "name": "Conroy",
-      "status": "Dead",
-      "species": "Robot",
-      "type": "",
-      "gender": "unknown",
-      "origin": {
+      "id": "1",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/1",
+        "https://rickandmortyapi.com/api/episode/2",
+        "https://rickandmortyapi.com/api/episode/3",
+        "https://rickandmortyapi.com/api/episode/4",
+        "https://rickandmortyapi.com/api/episode/5",
+        "https://rickandmortyapi.com/api/episode/6",
+        "https://rickandmortyapi.com/api/episode/7",
+        "https://rickandmortyapi.com/api/episode/8",
+        "https://rickandmortyapi.com/api/episode/9",
+        "https://rickandmortyapi.com/api/episode/10",
+        "https://rickandmortyapi.com/api/episode/11",
+        "https://rickandmortyapi.com/api/episode/12",
+        "https://rickandmortyapi.com/api/episode/13",
+        "https://rickandmortyapi.com/api/episode/14",
+        "https://rickandmortyapi.com/api/episode/15",
+        "https://rickandmortyapi.com/api/episode/16",
+        "https://rickandmortyapi.com/api/episode/17",
+        "https://rickandmortyapi.com/api/episode/18",
+        "https://rickandmortyapi.com/api/episode/19",
+        "https://rickandmortyapi.com/api/episode/20",
+        "https://rickandmortyapi.com/api/episode/21",
+        "https://rickandmortyapi.com/api/episode/22",
+        "https://rickandmortyapi.com/api/episode/23",
+        "https://rickandmortyapi.com/api/episode/24",
+        "https://rickandmortyapi.com/api/episode/25",
+        "https://rickandmortyapi.com/api/episode/26",
+        "https://rickandmortyapi.com/api/episode/27",
+        "https://rickandmortyapi.com/api/episode/28",
+        "https://rickandmortyapi.com/api/episode/29",
+        "https://rickandmortyapi.com/api/episode/30",
+        "https://rickandmortyapi.com/api/episode/31",
+        "https://rickandmortyapi.com/api/episode/32",
+        "https://rickandmortyapi.com/api/episode/33",
+        "https://rickandmortyapi.com/api/episode/34",
+        "https://rickandmortyapi.com/api/episode/35",
+        "https://rickandmortyapi.com/api/episode/36",
+        "https://rickandmortyapi.com/api/episode/37",
+        "https://rickandmortyapi.com/api/episode/38",
+        "https://rickandmortyapi.com/api/episode/39",
+        "https://rickandmortyapi.com/api/episode/40",
+        "https://rickandmortyapi.com/api/episode/41",
+        "https://rickandmortyapi.com/api/episode/42",
+        "https://rickandmortyapi.com/api/episode/43",
+        "https://rickandmortyapi.com/api/episode/44",
+        "https://rickandmortyapi.com/api/episode/45",
+        "https://rickandmortyapi.com/api/episode/46",
+        "https://rickandmortyapi.com/api/episode/47",
+        "https://rickandmortyapi.com/api/episode/48",
+        "https://rickandmortyapi.com/api/episode/49",
+        "https://rickandmortyapi.com/api/episode/50",
+        "https://rickandmortyapi.com/api/episode/51"
+      ],
+      "gender": "Male",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVkF2GWEs_foJwNww-bZiRHskYwyNFHGb9Q&s",
+      "location": {
+        "name": "Worldender's lair",
+        "url": "https://rickandmortyapi.com/api/location/4"
+      },
+      "name": "Rick Sanchez 9",
+      "species": "sas",
+      "status": "unknown",
+      "type": "asdssss"
+    },
+    {
+      "id": "5",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/6",
+        "https://rickandmortyapi.com/api/episode/7",
+        "https://rickandmortyapi.com/api/episode/8",
+        "https://rickandmortyapi.com/api/episode/9",
+        "https://rickandmortyapi.com/api/episode/10",
+        "https://rickandmortyapi.com/api/episode/11",
+        "https://rickandmortyapi.com/api/episode/12",
+        "https://rickandmortyapi.com/api/episode/13",
+        "https://rickandmortyapi.com/api/episode/14",
+        "https://rickandmortyapi.com/api/episode/15",
+        "https://rickandmortyapi.com/api/episode/16",
+        "https://rickandmortyapi.com/api/episode/18",
+        "https://rickandmortyapi.com/api/episode/19",
+        "https://rickandmortyapi.com/api/episode/20",
+        "https://rickandmortyapi.com/api/episode/21",
+        "https://rickandmortyapi.com/api/episode/22",
+        "https://rickandmortyapi.com/api/episode/23",
+        "https://rickandmortyapi.com/api/episode/26",
+        "https://rickandmortyapi.com/api/episode/29",
+        "https://rickandmortyapi.com/api/episode/30",
+        "https://rickandmortyapi.com/api/episode/31",
+        "https://rickandmortyapi.com/api/episode/32",
+        "https://rickandmortyapi.com/api/episode/33",
+        "https://rickandmortyapi.com/api/episode/35",
+        "https://rickandmortyapi.com/api/episode/36",
+        "https://rickandmortyapi.com/api/episode/38",
+        "https://rickandmortyapi.com/api/episode/39",
+        "https://rickandmortyapi.com/api/episode/40",
+        "https://rickandmortyapi.com/api/episode/41",
+        "https://rickandmortyapi.com/api/episode/42",
+        "https://rickandmortyapi.com/api/episode/43",
+        "https://rickandmortyapi.com/api/episode/44",
+        "https://rickandmortyapi.com/api/episode/45",
+        "https://rickandmortyapi.com/api/episode/46",
+        "https://rickandmortyapi.com/api/episode/47",
+        "https://rickandmortyapi.com/api/episode/48",
+        "https://rickandmortyapi.com/api/episode/49",
+        "https://rickandmortyapi.com/api/episode/50",
+        "https://rickandmortyapi.com/api/episode/51"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/5.jpeg",
+      "location": {
         "name": "Earth (Replacement Dimension)",
         "url": "https://rickandmortyapi.com/api/location/20"
       },
-      "location": {
-        "name": "Abadango",
-        "url": "https://rickandmortyapi.com/api/location/2"
-      },
-      "image": "https://rickandmortyapi.com/api/character/avatar/71.jpeg",
-      "episode": [
-        "https://rickandmortyapi.com/api/episode/22"
-      ],
-      "url": "https://rickandmortyapi.com/api/character/71",
-      "created": "2017-11-30T11:35:50.183Z"
+      "name": "Jerry Smith 1",
+      "species": "Human",
+      "status": "Alive",
+      "type": ""
     },
     {
       "id": "2",
@@ -168,11 +492,100 @@
         "name": "Citadel of Ricks",
         "url": "https://rickandmortyapi.com/api/location/3"
       },
-      "name": "Morty",
+      "name": "Morty Smith 2",
       "species": "Human",
       "status": "Alive",
-      "type": "",
-      "deletedAt": "2025-03-23T16:35:27.292Z"
+      "type": ""
+    },
+    {
+      "id": "3",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/6",
+        "https://rickandmortyapi.com/api/episode/7",
+        "https://rickandmortyapi.com/api/episode/8",
+        "https://rickandmortyapi.com/api/episode/9",
+        "https://rickandmortyapi.com/api/episode/10",
+        "https://rickandmortyapi.com/api/episode/11",
+        "https://rickandmortyapi.com/api/episode/12",
+        "https://rickandmortyapi.com/api/episode/14",
+        "https://rickandmortyapi.com/api/episode/15",
+        "https://rickandmortyapi.com/api/episode/16",
+        "https://rickandmortyapi.com/api/episode/17",
+        "https://rickandmortyapi.com/api/episode/18",
+        "https://rickandmortyapi.com/api/episode/19",
+        "https://rickandmortyapi.com/api/episode/20",
+        "https://rickandmortyapi.com/api/episode/21",
+        "https://rickandmortyapi.com/api/episode/22",
+        "https://rickandmortyapi.com/api/episode/23",
+        "https://rickandmortyapi.com/api/episode/24",
+        "https://rickandmortyapi.com/api/episode/25",
+        "https://rickandmortyapi.com/api/episode/26",
+        "https://rickandmortyapi.com/api/episode/27",
+        "https://rickandmortyapi.com/api/episode/29",
+        "https://rickandmortyapi.com/api/episode/30",
+        "https://rickandmortyapi.com/api/episode/31",
+        "https://rickandmortyapi.com/api/episode/32",
+        "https://rickandmortyapi.com/api/episode/33",
+        "https://rickandmortyapi.com/api/episode/34",
+        "https://rickandmortyapi.com/api/episode/35",
+        "https://rickandmortyapi.com/api/episode/36",
+        "https://rickandmortyapi.com/api/episode/38",
+        "https://rickandmortyapi.com/api/episode/39",
+        "https://rickandmortyapi.com/api/episode/40",
+        "https://rickandmortyapi.com/api/episode/41",
+        "https://rickandmortyapi.com/api/episode/42",
+        "https://rickandmortyapi.com/api/episode/43",
+        "https://rickandmortyapi.com/api/episode/44",
+        "https://rickandmortyapi.com/api/episode/45",
+        "https://rickandmortyapi.com/api/episode/46",
+        "https://rickandmortyapi.com/api/episode/47",
+        "https://rickandmortyapi.com/api/episode/48",
+        "https://rickandmortyapi.com/api/episode/49",
+        "https://rickandmortyapi.com/api/episode/51"
+      ],
+      "gender": "Female",
+      "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
+      "location": {
+        "name": "Earth (Replacement Dimension)",
+        "url": "https://rickandmortyapi.com/api/location/20"
+      },
+      "name": "Summer Smith 1",
+      "species": "Human",
+      "status": "Alive",
+      "type": ""
+    },
+    {
+      "id": "20",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/8"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/20.jpeg",
+      "location": {
+        "name": "Interdimensional Cable",
+        "url": "https://rickandmortyapi.com/api/location/6"
+      },
+      "name": "Ants in my Eyes Johnson",
+      "species": "Human",
+      "status": "unknown",
+      "type": "Human with ants in his eyes"
+    },
+    {
+      "id": 85,
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/10",
+        "https://rickandmortyapi.com/api/episode/28"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/85.jpeg",
+      "location": {
+        "name": "Citadel of Ricks",
+        "url": "https://rickandmortyapi.com/api/location/3"
+      },
+      "name": "Cyclops Morty",
+      "species": "Humanoid",
+      "status": "Alive",
+      "type": ""
     }
   ]
 }

@@ -6,6 +6,7 @@ import { useMemo } from "react"
 import { Link, useNavigate } from 'react-router-dom'
 import { useDeleteCharacter } from '../../controllers/useDeleteCharacter'
 import { Character } from "../../interfaces/Character"
+import { HistoryModal } from './HistoryModal'
 
 function getEpisodeNumberFromUrl(url: string) {
     const episodeNumber = url.split('/').pop() // Extrae el número del episodio de la URL
@@ -54,25 +55,30 @@ const CharacterDetails = (character: Partial<Character>) => {
                     style={{ display: 'flex', }}
                 >Volver</Button>
                 <img src={character.image} alt={character.name} style={{ width: '100%', borderRadius: '50%' }} />
-                <div style={{ display: 'flex', gap: '3rem' }}>
-                    <Button
-                        component={Link}
-                        to={`edit`}
-                        variant="outlined"
-                        endIcon={<EditIcon />}
-                        disabled={isDeleted}
-                    >
-                        Editar
-                    </Button>
-                    <Button
-                        onClick={() => handleDelete()}
-                        variant="outlined"
-                        endIcon={<DeleteIcon />}
-                        disabled={isDeleted}
-                    >
-                        Eliminar
-                    </Button>
-                </div>
+                <Box display={'flex'} flexDirection='column' gap={'1rem'} width={'100%'}>
+                    <Box display={'flex'} justifyContent='space-between'>
+                        <Button
+                            component={Link}
+                            to={`edit`}
+                            variant="outlined"
+                            endIcon={<EditIcon />}
+                            disabled={isDeleted}
+                        >
+                            Editar
+                        </Button>
+                        <Button
+                            onClick={() => handleDelete()}
+                            variant="outlined"
+                            endIcon={<DeleteIcon />}
+                            disabled={isDeleted}
+                        >
+                            Eliminar
+                        </Button>
+                    </Box>
+                    <Box display={'flex'} justifyContent='space-between'>
+                        <HistoryModal />
+                    </Box>
+                </Box>
                 <Typography variant="h5" component="div" gutterBottom>
                     {character.name}
                 </Typography>
