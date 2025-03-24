@@ -28,6 +28,7 @@ const configDefault: IConfig = {
 
 
 const usePaginatedCharacters = (page: number | undefined, nameCharacter: string | undefined, configInput?: IConfig) => {
+
     const config = {
         ...configDefault,
         ...configInput
@@ -37,6 +38,7 @@ const usePaginatedCharacters = (page: number | undefined, nameCharacter: string 
         queryKey: queries.getPaginatedCharacters(page, nameCharacter),
         queryFn: async () => {
             const paginatedCharacters = await CharacterServices.getPaginatedCharacters({ page, name: nameCharacter })
+
 
             const characters = paginatedCharacters.results
             const charactersLocally = await LocalCharacterRepository.getCharacters()

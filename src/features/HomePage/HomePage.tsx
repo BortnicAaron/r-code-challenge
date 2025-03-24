@@ -1,5 +1,6 @@
-import { Typography } from '@mui/material'
+import { Box, CircularProgress, Typography } from '@mui/material'
 import Grid2 from '@mui/material/Grid2'
+
 import { useCallback, useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useLocation, useNavigate } from 'react-router-dom'
@@ -32,9 +33,9 @@ function HomePage() {
   }
 
   const changeNameCharacter = useCallback((value: string) => {
-    navigate(`?page=${page}`)
+    navigate(`/`)
     setNameCharacter(value)
-  }, [navigate, page])
+  }, [navigate])
 
 
   const onSubmit = async (fieldValues: { search: string }) => {
@@ -56,8 +57,8 @@ function HomePage() {
   }, [paginatedCharactersQuery.data?.info.pages])
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem', paddingTop: '3rem', paddingBottom: '3rem', textAlign: 'center' }}>
-      <Typography component={'h1'} variant='h1' mx={{ fontSize: '4rem' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', gap: '3rem', paddingTop: '3rem', paddingBottom: '3rem', textAlign: 'center' }}>
+      <Typography component={'h1'} variant='h1' mx={{ fontSize: '4rem' }} color='textPrimary'>
         Rick y Morty
       </Typography>
       <form onSubmit={handleSubmit(onSubmit)} style={{ display: 'flex', justifyContent: 'center' }}>
@@ -70,19 +71,21 @@ function HomePage() {
         />
       </form>
       {/*<Pagination page={page} setPage={setPage} />*/}
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
         <Pagination count={paginationCount} page={Number(page)} disabled={paginatedCharactersQuery.isNotFound} onPageChange={handlePageChange} />
-      </div>
-      {paginatedCharactersQuery.isNotFound && <h1>No se encontro ningun personaje</h1>}
-      {paginatedCharactersQuery.isFetching && !paginatedCharactersQuery.isRefetching && <h1>Cargando</h1>}
+      </Box>
+      {paginatedCharactersQuery.isNotFound && <Typography sx={{ marginTop: '4rem' }} variant='h5' component={'h2'}>No se encontro ningun personaje</Typography>}
+      {paginatedCharactersQuery.isFetching && !paginatedCharactersQuery.isRefetching && <CircularProgress sx={{ position: 'relative', inset: 'auto', margin: 'auto', marginTop: '4rem' }} size={120} />}
       {paginatedCharactersQuery.data?.results && paginatedCharactersQuery.data?.results?.length > 0 && <Grid2 container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-        {paginatedCharactersQuery.data?.results.map((character, index) => (
-          <Grid2 container key={character.id} size={{ xs: 2, sm: 4, md: 4 }} >
-            <CharacterItem {...character}>{index + 1}</CharacterItem>
-          </Grid2>
-        ))}
+        {paginatedCharactersQuery.data?.results.length > 0 && <Grid2 container spacing={{ xs: '1rem', sm: '3rem', md: '4rem' }} paddingLeft={'1.5rem'} paddingRight={'1.5rem'}>
+          {paginatedCharactersQuery.data?.results.map((character, index) => (
+            <Grid2 key={character.id} size={{ xs: 12, sm: 4, md: 4 }} >
+              <CharacterItem {...character}>{index + 1}</CharacterItem>
+            </Grid2>
+          ))}
+        </Grid2>}
       </Grid2>}
-    </div>
+    </Box>
   )
 }
 

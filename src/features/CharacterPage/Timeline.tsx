@@ -8,7 +8,6 @@ import TimelineItem, { timelineItemClasses } from '@mui/lab/TimelineItem'
 import TimelineSeparator from '@mui/lab/TimelineSeparator'
 import { Box, Button, Typography } from '@mui/material'
 
-import { useState } from 'react'
 import { usePaginatedHistory } from '../../controllers/usePaginatedHistory'
 
 const formattedDate = (timestamp: string) => new Date(timestamp).toLocaleDateString('es-ES', {
@@ -20,15 +19,23 @@ const formattedDate = (timestamp: string) => new Date(timestamp).toLocaleDateStr
   second: '2-digit'
 })
 
-const Timeline = () => {
-  const [page, setPage] = useState(1)
+interface ITimeLine {
+  characterId?: number
+}
 
-  const paginatedHistory = usePaginatedHistory('1', page)
+const Timeline = ({ characterId }: ITimeLine) => {
+
+  const paginatedHistory = usePaginatedHistory(characterId)
+
+
+  if (paginatedHistory.status === 'success' && paginatedHistory.r?.length === 0) {
+    return <Typography variant="h6" component="div" sx={{ textAlign: 'center' }} marginBottom={'5rem'} marginTop={'5rem'} color=''>
+      No hay registro de cambios
+    </Typography>
+  }
 
   return (
     <Box display='block' sx={{ 'overflowY': 'scroll' }} height={'20rem'}>
-
-
       <TimelineMUI
         sx={{
           [`& .${timelineItemClasses.root}:before`]: {
@@ -39,12 +46,12 @@ const Timeline = () => {
       >
 
         {
-          paginatedHistory.r?.map((history) => <TimelineItem key={history.id}>
+          paginatedHistory.r?.map((history, index) => <TimelineItem key={history.id}>
             <TimelineSeparator>
               <TimelineDot >
                 <EditIcon />
               </TimelineDot>
-              <TimelineConnector />
+              {index !== paginatedHistory.r?.length! - 1 && <TimelineConnector />}
             </TimelineSeparator>
             <TimelineContent >
               <Typography variant="body1" component="div">
@@ -53,35 +60,57 @@ const Timeline = () => {
               <Typography variant="body2" component="div">
                 {formattedDate(history.createdAt)}
               </Typography>
-
-              {history.currentData.name && <Typography variant="body2" component="div">
-                - {history.currentData.name && 'Nombre'}
-              </Typography>}
-              {history.currentData.status && <Typography variant="body2" component="div">
-                - {history.currentData.status && 'Estado'}
-              </Typography>}
-              {history.currentData.type && <Typography variant="body2" component="div">
-                - {history.currentData.type && 'Tipo'}
-              </Typography>}
-              {history.currentData.location && <Typography variant="body2" component="div">
-                - {history.currentData.location && 'Locacion'}
-              </Typography>}
-              {history.currentData.image && <Typography variant="body2" component="div">
-                - {history.currentData.image && 'Imagen'}
-              </Typography>}
-              {history.currentData.species && <Typography variant="body2" component="div">
-                - {history.currentData.species && 'Especie'}
-              </Typography>}
+              <Box display={'flex'} flexDirection='column' gap={'0.5rem'} marginTop={'0.5rem'} marginBottom={'0.5rem'}>
+                <HistoryItem
+                  value={history.currentData.name}
+                  label='Nombre'
+                />
+                <HistoryItem
+                  value={history.currentData.status}
+                  label='Estado'
+                />
+                <HistoryItem
+                  value={history.currentData.type}
+                  label='Tipo'
+                />
+                <HistoryItem
+                  value={history.currentData.location}
+                  label='Locacion'
+                />
+                <HistoryItem
+                  value={history.currentData.image}
+                  label='Imagen'
+                />
+                <HistoryItem
+                  value={history.currentData.species}
+                  label='Especie'
+                />
+              </Box>
             </TimelineContent>
           </TimelineItem>)
         }
         <Button
           onClick={() => paginatedHistory.fetchNextPage()}
           disabled={!paginatedHistory.hasNextPage}
-        >Next</Button>
+        >Ver más</Button>
       </TimelineMUI>
     </Box>
   )
+}
+
+interface IHistoryItem {
+  value?: unknown
+  label: string
+}
+
+const HistoryItem = ({
+  value,
+  label
+}: IHistoryItem) => {
+  return <>{Boolean(value) && <Typography variant="body2" component="div">
+    - {label}
+  </Typography>}
+  </>
 }
 
 export { Timeline }

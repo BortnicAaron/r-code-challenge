@@ -308,6 +308,341 @@
       "currentData": {
         "name": "Rick Sanchez 9"
       }
+    },
+    {
+      "id": "4151",
+      "characterId": 5,
+      "createdAt": "2025-03-24T02:27:19.092Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Jerry Smith 1",
+        "type": "",
+        "species": "Human",
+        "status": "Alive",
+        "location": {
+          "name": "Earth (Replacement Dimension)",
+          "url": "https://rickandmortyapi.com/api/location/20"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/5.jpeg"
+      },
+      "currentData": {
+        "name": "Martina"
+      }
+    },
+    {
+      "id": "7cae",
+      "characterId": 5,
+      "createdAt": "2025-03-24T02:28:01.488Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Martina",
+        "type": "",
+        "species": "Human",
+        "status": "Alive",
+        "location": {
+          "name": "Earth (Replacement Dimension)",
+          "url": "https://rickandmortyapi.com/api/location/20"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/5.jpeg"
+      },
+      "currentData": {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVkF2GWEs_foJwNww-bZiRHskYwyNFHGb9Q&s"
+      }
+    },
+    {
+      "id": "8895",
+      "characterId": 5,
+      "createdAt": "2025-03-24T02:28:30.422Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Martina",
+        "type": "",
+        "species": "Human",
+        "status": "Alive",
+        "location": {
+          "name": "Earth (Replacement Dimension)",
+          "url": "https://rickandmortyapi.com/api/location/20"
+        },
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVkF2GWEs_foJwNww-bZiRHskYwyNFHGb9Q&s"
+      },
+      "currentData": {
+        "image": "https://ric"
+      }
+    },
+    {
+      "id": "b75e",
+      "characterId": 1,
+      "createdAt": "2025-03-24T02:30:18.940Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Rick Sanchez 9",
+        "type": "asdssss",
+        "species": "sas",
+        "status": "unknown",
+        "location": {
+          "name": "Worldender's lair",
+          "url": "https://rickandmortyapi.com/api/location/4"
+        },
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVkF2GWEs_foJwNww-bZiRHskYwyNFHGb9Q&s"
+      },
+      "currentData": {
+        "name": "Aaron"
+      }
+    },
+    {
+      "id": "9665",
+      "characterId": 7,
+      "createdAt": "2025-03-24T03:16:33.729Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Abradolf Lincler",
+        "type": "Genetic experiment",
+        "species": "Human",
+        "status": "unknown",
+        "location": {
+          "name": "Testicle Monster Dimension",
+          "url": "https://rickandmortyapi.com/api/location/21"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+      },
+      "currentData": {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVkF2GWEs_foJwNww-bZiRHskYwyNFHGb9Q&s"
+      }
+    },
+    {
+      "id": "2a0e",
+      "characterId": 1,
+      "createdAt": "2025-03-24T13:52:25.512Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Aaron",
+        "type": "asdssss",
+        "species": "sas",
+        "status": "unknown",
+        "location": {
+          "name": "Worldender's lair",
+          "url": "https://rickandmortyapi.com/api/location/4"
+        },
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVkF2GWEs_foJwNww-bZiRHskYwyNFHGb9Q&s"
+      },
+      "currentData": {
+        "image": "https://encrypted-"
+      }
+    },
+    {
+      "id": "f3c7",
+      "characterId": 11,
+      "createdAt": "2025-03-24T14:09:19.923Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Albert Einstein",
+        "type": "",
+        "species": "Human",
+        "status": "Dead",
+        "location": {
+          "name": "Earth (Replacement Dimension)",
+          "url": "https://rickandmortyapi.com/api/location/20"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/11.jpeg"
+      },
+      "currentData": {
+        "location": {
+          "name": "Bird World",
+          "url": "https://rickandmortyapi.com/api/location/15"
+        }
+      }
+    },
+    {
+      "id": "ca02",
+      "characterId": 14,
+      "createdAt": "2025-03-24T14:19:28.779Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Alien Morty",
+        "type": "",
+        "species": "Alien",
+        "status": "unknown",
+        "location": {
+          "name": "Citadel of Ricks",
+          "url": "https://rickandmortyapi.com/api/location/3"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/14.jpeg"
+      },
+      "currentData": {
+        "type": "asdasd"
+      }
+    },
+    {
+      "id": "1197",
+      "characterId": 3,
+      "createdAt": "2025-03-24T14:49:13.946Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Summer Smith 1",
+        "type": "",
+        "species": "Human",
+        "status": "Alive",
+        "location": {
+          "name": "Earth (Replacement Dimension)",
+          "url": "https://rickandmortyapi.com/api/location/20"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg"
+      },
+      "currentData": {
+        "name": "Summer Smith 3",
+        "type": "Coca",
+        "species": "asdasd",
+        "status": "unknown",
+        "location": {
+          "name": "Forbodulon Prime",
+          "url": "https://rickandmortyapi.com/api/location/79"
+        },
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVkF2GWEs_foJwNww-bZiRHskYwyNFHGb9Q&s"
+      }
+    },
+    {
+      "id": "8688",
+      "characterId": 20,
+      "createdAt": "2025-03-24T15:01:46.863Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Ants in my Eyes Johnson",
+        "type": "Human with ants in his eyes",
+        "species": "Human",
+        "status": "unknown",
+        "location": {
+          "name": "Interdimensional Cable",
+          "url": "https://rickandmortyapi.com/api/location/6"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/20.jpeg"
+      },
+      "currentData": {
+        "name": "Ants in my Eyes JohnsonvAnts in my Eyes JohnsonAnts in my Eyes JohnsonAnts in my Eyes JohnsonAnts in my Eyes Johnson"
+      }
+    },
+    {
+      "id": "df98",
+      "characterId": 13,
+      "createdAt": "2025-03-24T15:07:05.599Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Alien Googah",
+        "type": "",
+        "species": "Alien",
+        "status": "unknown",
+        "location": {
+          "name": "Earth (Replacement Dimension)",
+          "url": "https://rickandmortyapi.com/api/location/20"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/13.jpeg"
+      },
+      "currentData": {
+        "status": "Dead"
+      }
+    },
+    {
+      "id": "d6c3",
+      "characterId": 7,
+      "createdAt": "2025-03-24T15:12:21.692Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Abradolf Lincler",
+        "type": "Genetic experiment",
+        "species": "Human",
+        "status": "unknown",
+        "location": {
+          "name": "Testicle Monster Dimension",
+          "url": "https://rickandmortyapi.com/api/location/21"
+        },
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVkF2GWEs_foJwNww-bZiRHskYwyNFHGb9Q&s"
+      },
+      "currentData": {}
+    },
+    {
+      "id": "c614",
+      "characterId": 7,
+      "createdAt": "2025-03-24T15:50:41.565Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Abradolf Lincler",
+        "type": "Genetic experiment",
+        "species": "Human",
+        "status": "unknown",
+        "location": {
+          "name": "Testicle Monster Dimension",
+          "url": "https://rickandmortyapi.com/api/location/21"
+        },
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVkF2GWEs_foJwNww-bZiRHskYwyNFHGb9Q&s"
+      },
+      "currentData": {
+        "location": {
+          "name": "Rick and Two Crows Planet",
+          "url": "https://rickandmortyapi.com/api/location/125"
+        }
+      }
+    },
+    {
+      "id": "9d4f",
+      "characterId": 83,
+      "createdAt": "2025-03-24T16:00:59.957Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Cronenberg Morty",
+        "type": "",
+        "species": "Cronenberg",
+        "status": "unknown",
+        "location": {
+          "name": "Earth (C-137)",
+          "url": "https://rickandmortyapi.com/api/location/1"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/83.jpeg"
+      },
+      "currentData": {
+        "species": "asdasdsad"
+      }
+    },
+    {
+      "id": "901a",
+      "characterId": 11,
+      "createdAt": "2025-03-24T16:40:58.663Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Albert Einstein",
+        "type": "",
+        "species": "Human",
+        "status": "Dead",
+        "location": {
+          "name": "Bird World",
+          "url": "https://rickandmortyapi.com/api/location/15"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/11.jpeg"
+      },
+      "currentData": {
+        "location": {
+          "name": "Plopstar",
+          "url": "https://rickandmortyapi.com/api/location/66"
+        }
+      }
+    },
+    {
+      "id": "998f",
+      "characterId": 9,
+      "createdAt": "2025-03-24T16:52:59.135Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Agency Director",
+        "type": "",
+        "species": "Human",
+        "status": "Dead",
+        "location": {
+          "name": "Earth (Replacement Dimension)",
+          "url": "https://rickandmortyapi.com/api/location/20"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/9.jpeg"
+      },
+      "currentData": {
+        "name": "Agenc"
+      }
     }
   ],
   "character": [
@@ -367,15 +702,16 @@
         "https://rickandmortyapi.com/api/episode/51"
       ],
       "gender": "Male",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVkF2GWEs_foJwNww-bZiRHskYwyNFHGb9Q&s",
+      "image": "https://encrypted-",
       "location": {
         "name": "Worldender's lair",
         "url": "https://rickandmortyapi.com/api/location/4"
       },
-      "name": "Rick Sanchez 9",
+      "name": "Aaron",
       "species": "sas",
       "status": "unknown",
-      "type": "asdssss"
+      "type": "asdssss",
+      "deletedAt": "2025-03-24T14:07:10.114Z"
     },
     {
       "id": "5",
@@ -421,12 +757,12 @@
         "https://rickandmortyapi.com/api/episode/51"
       ],
       "gender": "Male",
-      "image": "https://rickandmortyapi.com/api/character/avatar/5.jpeg",
+      "image": "https://ric",
       "location": {
         "name": "Earth (Replacement Dimension)",
         "url": "https://rickandmortyapi.com/api/location/20"
       },
-      "name": "Jerry Smith 1",
+      "name": "Martina",
       "species": "Human",
       "status": "Alive",
       "type": ""
@@ -495,7 +831,8 @@
       "name": "Morty Smith 2",
       "species": "Human",
       "status": "Alive",
-      "type": ""
+      "type": "",
+      "deletedAt": "2025-03-24T02:29:55.159Z"
     },
     {
       "id": "3",
@@ -544,15 +881,16 @@
         "https://rickandmortyapi.com/api/episode/51"
       ],
       "gender": "Female",
-      "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVkF2GWEs_foJwNww-bZiRHskYwyNFHGb9Q&s",
       "location": {
-        "name": "Earth (Replacement Dimension)",
-        "url": "https://rickandmortyapi.com/api/location/20"
+        "name": "Forbodulon Prime",
+        "url": "https://rickandmortyapi.com/api/location/79"
       },
-      "name": "Summer Smith 1",
-      "species": "Human",
-      "status": "Alive",
-      "type": ""
+      "name": "Summer Smith 3",
+      "species": "asdasd",
+      "status": "unknown",
+      "type": "Coca",
+      "deletedAt": "2025-03-24T15:06:55.981Z"
     },
     {
       "id": "20",
@@ -565,13 +903,14 @@
         "name": "Interdimensional Cable",
         "url": "https://rickandmortyapi.com/api/location/6"
       },
-      "name": "Ants in my Eyes Johnson",
+      "name": "Ants in my Eyes JohnsonvAnts in my Eyes JohnsonAnts in my Eyes JohnsonAnts in my Eyes JohnsonAnts in my Eyes Johnson",
       "species": "Human",
       "status": "unknown",
-      "type": "Human with ants in his eyes"
+      "type": "Human with ants in his eyes",
+      "deletedAt": "2025-03-24T15:06:31.769Z"
     },
     {
-      "id": 85,
+      "id": "85",
       "episode": [
         "https://rickandmortyapi.com/api/episode/10",
         "https://rickandmortyapi.com/api/episode/28"
@@ -586,6 +925,393 @@
       "species": "Humanoid",
       "status": "Alive",
       "type": ""
+    },
+    {
+      "id": "761",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/47"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/761.jpeg",
+      "location": {
+        "name": "Earth (Replacement Dimension)",
+        "url": "https://rickandmortyapi.com/api/location/20"
+      },
+      "name": "Turkey President Curtis",
+      "species": "Animal",
+      "status": "Alive",
+      "type": "Turkey"
+    },
+    {
+      "id": "14",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/10"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/14.jpeg",
+      "location": {
+        "name": "Citadel of Ricks",
+        "url": "https://rickandmortyapi.com/api/location/3"
+      },
+      "name": "Alien Morty",
+      "species": "Alien",
+      "status": "unknown",
+      "type": "asdasd",
+      "deletedAt": "2025-03-24T15:12:44.681Z"
+    },
+    {
+      "id": "4",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/6",
+        "https://rickandmortyapi.com/api/episode/7",
+        "https://rickandmortyapi.com/api/episode/8",
+        "https://rickandmortyapi.com/api/episode/9",
+        "https://rickandmortyapi.com/api/episode/10",
+        "https://rickandmortyapi.com/api/episode/11",
+        "https://rickandmortyapi.com/api/episode/12",
+        "https://rickandmortyapi.com/api/episode/14",
+        "https://rickandmortyapi.com/api/episode/15",
+        "https://rickandmortyapi.com/api/episode/16",
+        "https://rickandmortyapi.com/api/episode/18",
+        "https://rickandmortyapi.com/api/episode/19",
+        "https://rickandmortyapi.com/api/episode/20",
+        "https://rickandmortyapi.com/api/episode/21",
+        "https://rickandmortyapi.com/api/episode/22",
+        "https://rickandmortyapi.com/api/episode/23",
+        "https://rickandmortyapi.com/api/episode/24",
+        "https://rickandmortyapi.com/api/episode/25",
+        "https://rickandmortyapi.com/api/episode/26",
+        "https://rickandmortyapi.com/api/episode/27",
+        "https://rickandmortyapi.com/api/episode/28",
+        "https://rickandmortyapi.com/api/episode/29",
+        "https://rickandmortyapi.com/api/episode/30",
+        "https://rickandmortyapi.com/api/episode/31",
+        "https://rickandmortyapi.com/api/episode/32",
+        "https://rickandmortyapi.com/api/episode/33",
+        "https://rickandmortyapi.com/api/episode/34",
+        "https://rickandmortyapi.com/api/episode/35",
+        "https://rickandmortyapi.com/api/episode/36",
+        "https://rickandmortyapi.com/api/episode/38",
+        "https://rickandmortyapi.com/api/episode/39",
+        "https://rickandmortyapi.com/api/episode/40",
+        "https://rickandmortyapi.com/api/episode/41",
+        "https://rickandmortyapi.com/api/episode/42",
+        "https://rickandmortyapi.com/api/episode/43",
+        "https://rickandmortyapi.com/api/episode/44",
+        "https://rickandmortyapi.com/api/episode/45",
+        "https://rickandmortyapi.com/api/episode/46",
+        "https://rickandmortyapi.com/api/episode/47",
+        "https://rickandmortyapi.com/api/episode/48",
+        "https://rickandmortyapi.com/api/episode/49",
+        "https://rickandmortyapi.com/api/episode/51"
+      ],
+      "gender": "Female",
+      "image": "https://rickandmortyapi.com/api/character/avatar/4.jpeg",
+      "location": {
+        "name": "Earth (Replacement Dimension)",
+        "url": "https://rickandmortyapi.com/api/location/20"
+      },
+      "name": "Beth Smith",
+      "species": "Human",
+      "status": "Alive",
+      "type": "",
+      "deletedAt": "2025-03-24T14:07:22.022Z"
+    },
+    {
+      "id": "7",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/10",
+        "https://rickandmortyapi.com/api/episode/11"
+      ],
+      "gender": "Male",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVkF2GWEs_foJwNww-bZiRHskYwyNFHGb9Q&s",
+      "location": {
+        "name": "Rick and Two Crows Planet",
+        "url": "https://rickandmortyapi.com/api/location/125"
+      },
+      "name": "Abradolf Lincler",
+      "species": "Human",
+      "status": "unknown",
+      "type": "Genetic experiment",
+      "deletedAt": "2025-03-24T15:50:43.969Z"
+    },
+    {
+      "id": "13",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/31"
+      ],
+      "gender": "unknown",
+      "image": "https://rickandmortyapi.com/api/character/avatar/13.jpeg",
+      "location": {
+        "name": "Earth (Replacement Dimension)",
+        "url": "https://rickandmortyapi.com/api/location/20"
+      },
+      "name": "Alien Googah",
+      "species": "Alien",
+      "status": "Dead",
+      "type": ""
+    },
+    {
+      "id": "11",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/12"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/11.jpeg",
+      "location": {
+        "name": "Plopstar",
+        "url": "https://rickandmortyapi.com/api/location/66"
+      },
+      "name": "Albert Einstein",
+      "species": "Human",
+      "status": "Dead",
+      "type": ""
+    },
+    {
+      "id": "8",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/28"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/8.jpeg",
+      "location": {
+        "name": "Citadel of Ricks",
+        "url": "https://rickandmortyapi.com/api/location/3"
+      },
+      "name": "Adjudicator Rick",
+      "species": "Human",
+      "status": "Dead",
+      "type": "",
+      "deletedAt": "2025-03-24T15:01:34.213Z"
+    },
+    {
+      "id": "19",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/10"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/19.jpeg",
+      "location": {
+        "name": "unknown",
+        "url": ""
+      },
+      "name": "Antenna Rick",
+      "species": "Human",
+      "status": "unknown",
+      "type": "Human with antennae"
+    },
+    {
+      "id": "10",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/25"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/10.jpeg",
+      "location": {
+        "name": "Worldender's lair",
+        "url": "https://rickandmortyapi.com/api/location/4"
+      },
+      "name": "Alan Rails",
+      "species": "Human",
+      "status": "Dead",
+      "type": "Superhuman (Ghost trains summoner)"
+    },
+    {
+      "id": "6",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/27"
+      ],
+      "gender": "Female",
+      "image": "https://rickandmortyapi.com/api/character/avatar/6.jpeg",
+      "location": {
+        "name": "Abadango",
+        "url": "https://rickandmortyapi.com/api/location/2"
+      },
+      "name": "Abadango Cluster Princess",
+      "species": "Alien",
+      "status": "Alive",
+      "type": ""
+    },
+    {
+      "id": "97",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/3"
+      ],
+      "gender": "unknown",
+      "image": "https://rickandmortyapi.com/api/character/avatar/97.jpeg",
+      "location": {
+        "name": "Anatomy Park",
+        "url": "https://rickandmortyapi.com/api/location/5"
+      },
+      "name": "Gonorrhea",
+      "species": "Disease",
+      "status": "Dead",
+      "type": ""
+    },
+    {
+      "id": "100",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/3"
+      ],
+      "gender": "unknown",
+      "image": "https://rickandmortyapi.com/api/character/avatar/100.jpeg",
+      "location": {
+        "name": "Anatomy Park",
+        "url": "https://rickandmortyapi.com/api/location/5"
+      },
+      "name": "Bubonic Plague",
+      "species": "Disease",
+      "status": "Dead",
+      "type": ""
+    },
+    {
+      "id": "18",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/10",
+        "https://rickandmortyapi.com/api/episode/28"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/18.jpeg",
+      "location": {
+        "name": "Citadel of Ricks",
+        "url": "https://rickandmortyapi.com/api/location/3"
+      },
+      "name": "Antenna Morty",
+      "species": "Human",
+      "status": "Alive",
+      "type": "Human with antennae"
+    },
+    {
+      "id": "82",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/6",
+        "https://rickandmortyapi.com/api/episode/10"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/82.jpeg",
+      "location": {
+        "name": "Earth (C-137)",
+        "url": "https://rickandmortyapi.com/api/location/1"
+      },
+      "name": "Cronenberg Rick",
+      "species": "Cronenberg",
+      "status": "unknown",
+      "type": ""
+    },
+    {
+      "id": "83",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/6",
+        "https://rickandmortyapi.com/api/episode/10"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/83.jpeg",
+      "location": {
+        "name": "Earth (C-137)",
+        "url": "https://rickandmortyapi.com/api/location/1"
+      },
+      "name": "Cronenberg Morty",
+      "species": "asdasdsad",
+      "status": "unknown",
+      "type": ""
+    },
+    {
+      "id": "9",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/24"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/9.jpeg",
+      "location": {
+        "name": "Earth (Replacement Dimension)",
+        "url": "https://rickandmortyapi.com/api/location/20"
+      },
+      "name": "Agenc",
+      "species": "Human",
+      "status": "Dead",
+      "type": ""
+    },
+    {
+      "id": "642",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/38"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/642.jpeg",
+      "location": {
+        "name": "Glorzo Asteroid",
+        "url": "https://rickandmortyapi.com/api/location/101"
+      },
+      "name": "Council of Glorzos Member",
+      "species": "Alien",
+      "status": "Dead",
+      "type": "Glorzo"
+    },
+    {
+      "id": "62",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/1"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/62.jpeg",
+      "location": {
+        "name": "unknown",
+        "url": ""
+      },
+      "name": "Canklanker Thom",
+      "species": "Alien",
+      "status": "Dead",
+      "type": "Gromflomite"
+    },
+    {
+      "id": "22",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/10",
+        "https://rickandmortyapi.com/api/episode/22",
+        "https://rickandmortyapi.com/api/episode/28"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/22.jpeg",
+      "location": {
+        "name": "Citadel of Ricks",
+        "url": "https://rickandmortyapi.com/api/location/3"
+      },
+      "name": "Aqua Rick",
+      "species": "Humanoid",
+      "status": "unknown",
+      "type": "Fish-Person"
+    },
+    {
+      "id": "43",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/28"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/43.jpeg",
+      "location": {
+        "name": "Citadel of Ricks",
+        "url": "https://rickandmortyapi.com/api/location/3"
+      },
+      "name": "Big Morty",
+      "species": "Human",
+      "status": "Dead",
+      "type": ""
+    },
+    {
+      "id": 42,
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/22"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/42.jpeg",
+      "location": {
+        "name": "Citadel of Ricks",
+        "url": "https://rickandmortyapi.com/api/location/3"
+      },
+      "name": "Big Head Morty",
+      "species": "Human",
+      "status": "unknown",
+      "type": "Human with giant head"
     }
   ]
 }

@@ -65,7 +65,7 @@ export const LocalHistoryServices = {
             throw httpErrorHandler(error)
         }
     },
-    getPaginatedHistory: async ({ characterId, page = 1 }: { characterId: string, page?: number }) => {
+    getPaginatedHistory: async ({ characterId, page = 1 }: { characterId: number, page?: number }) => {
         try {
             const { data } = await localApi.get<PaginatedResponseMsg<HistoryMsg[]>>('/history', {
                 params: {

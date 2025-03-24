@@ -78,7 +78,15 @@ export const CharacterServices = {
             throw httpErrorHandler(error)
         }
     },
-
+    getCharacters: async (): Promise<Character[]> => {
+        try {
+            const { data } = await api.get<CharacterMsg[]>(`/character`)
+            console.log(data)
+            return data.map(buildCharacter)
+        } catch (error) {
+            throw httpErrorHandler(error)
+        }
+    },
     getCharacter: async (id: number): Promise<Character> => {
         try {
             const { data } = await api.get<CharacterMsg>(`/character/${id}`)

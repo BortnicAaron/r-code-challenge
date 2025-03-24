@@ -33,7 +33,7 @@ function SearchInput<N extends Path<T>, T extends FieldValues>({
         disabled,
     })
 
-    return <Box display={'flex'} flexDirection={'column'} mx={'4rem'}>
+    return <Box display={'flex'} flexDirection={'column'} mx={'1.5rem'} width={'100%'} maxWidth={'20rem'}>
         <Paper
             component="div"
             sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: '100%' }}

@@ -1,7 +1,8 @@
 import { ArrowBack } from '@mui/icons-material'
 import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
-import { Box, Button, Card, CardContent, Typography } from "@mui/material"
+import HideImageIcon from '@mui/icons-material/HideImageOutlined'
+import { Avatar, Box, Button, Card, CardContent, Typography } from "@mui/material"
 import { useMemo } from "react"
 import { Link, useNavigate } from 'react-router-dom'
 import { useDeleteCharacter } from '../../controllers/useDeleteCharacter'
@@ -45,39 +46,54 @@ const CharacterDetails = (character: Partial<Character>) => {
         navigate('/')
     }
 
-    return <Card sx={{ maxWidth: '20rem' }} >
+    return <Card sx={{ width: { xs: "100%", sm: '22.5rem' } }}  >
         <CardContent>
-            <Box display="flex" flexDirection="column" alignItems="center" gap='1rem'>
+            <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: '1rem' }}>
                 <Button
                     onClick={goBack}
                     startIcon={<ArrowBack />}
                     variant="outlined"
                     style={{ display: 'flex', }}
                 >Volver</Button>
-                <img src={character.image} alt={character.name} style={{ width: '100%', borderRadius: '50%' }} />
-                <Box display={'flex'} flexDirection='column' gap={'1rem'} width={'100%'}>
-                    <Box display={'flex'} justifyContent='space-between'>
-                        <Button
-                            component={Link}
-                            to={`edit`}
-                            variant="outlined"
-                            endIcon={<EditIcon />}
-                            disabled={isDeleted}
-                        >
-                            Editar
-                        </Button>
-                        <Button
-                            onClick={() => handleDelete()}
-                            variant="outlined"
-                            endIcon={<DeleteIcon />}
-                            disabled={isDeleted}
-                        >
-                            Eliminar
-                        </Button>
-                    </Box>
-                    <Box display={'flex'} justifyContent='space-between'>
-                        <HistoryModal />
-                    </Box>
+                <Box sx={{ width: "100%", position: "relative" }}>
+                    {/* Contenedor para mantener el aspect ratio 1:1 */}
+                    <Box sx={{ width: "100%", paddingTop: "100%" }} />
+
+                    <Avatar
+                        src={character.image}
+                        variant="circular"
+                        alt={character.name}
+                        sx={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                        }}
+                    >
+                        <HideImageIcon sx={{ width: '40%', height: '40%', margin: '5000rem' }} />
+                    </Avatar>
+                </Box>
+                <Box display={'flex'} flexDirection={'column'} justifyContent='space-between' gap={'1rem'} width={'100%'}>
+                    <Button
+                        component={Link}
+                        to={`edit`}
+                        variant="outlined"
+                        startIcon={<EditIcon />}
+                        disabled={isDeleted}
+                    >
+                        Editar
+                    </Button>
+                    <Button
+                        onClick={() => handleDelete()}
+                        variant="outlined"
+                        startIcon={<DeleteIcon />}
+                        disabled={isDeleted}
+                    >
+                        Eliminar
+                    </Button>
+                    <HistoryModal disabled={isDeleted} characterId={character?.id} />
                 </Box>
                 <Typography variant="h5" component="div" gutterBottom>
                     {character.name}
@@ -89,7 +105,7 @@ const CharacterDetails = (character: Partial<Character>) => {
                     Estado: {character.status}
                 </Typography>
                 <Typography variant="body1" color="textSecondary">
-                    Expecie: {character.species}
+                    Especie: {character.species}
                 </Typography>
                 {character.type && <Typography variant="body1" color="textSecondary">
                     Tipo: {character.type}

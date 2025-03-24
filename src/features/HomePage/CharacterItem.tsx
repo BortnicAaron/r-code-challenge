@@ -6,29 +6,43 @@ import CardActionArea from '@mui/material/CardActionArea'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
+import { useRef } from "react"
 import { Link } from "react-router-dom"
-import styles from './CharacterItem.module.css'
 
 const CharacterItem = (character: ICharacter) => {
     const isDeleted = Boolean(character.deletedAt)
+    const imgRef = useRef<HTMLImageElement>(null)
+
+
     return (
         <Card
             component={Link}
             to={`/${character.id}`}
-            sx={{ maxWidth: 345 }} className={styles.characterItem}>
+            sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                position: 'relative',
+                margin: 'auto',
+                height: '100%'
+            }}
+        >
             <CardActionArea>
                 <CardMedia
                     component="img"
+                    loading="lazy"
                     image={character.image}
+                    ref={imgRef}
                     height={300}
-                    alt="character"
+                    width={300}
+                    sx={{ height: { sm: '435px' } }}
+                    alt={character.name}
                     style={isDeleted ? {
                         filter: 'grayscale(100%)',
                     } : undefined}
                 />
-                <CardContent style={{ height: 'max-content' }}>
+                <CardContent sx={{ height: 'max-content' }}>
                     {isDeleted && <Typography
-                        style={{
+                        sx={{
                             position: 'absolute',
                             top: '150px',
                             left: '50%',

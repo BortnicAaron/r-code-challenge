@@ -115,7 +115,7 @@ const CharacterForm = (character: Partial<Character>) => {
                 />
                 <TextInput
                     control={form.control}
-                    label="Expecie:"
+                    label="Especie:"
                     name="species"
                     required
                     errorMessages={{
@@ -146,7 +146,7 @@ const CharacterForm = (character: Partial<Character>) => {
                     >Volver</Button>
                     <Button
                         type='submit'
-                        endIcon={<Save />}
+                        startIcon={<Save />}
                         variant="outlined"
                         loading={form.formState.isSubmitting}
                         disabled={isFormDisabled}

@@ -6,13 +6,12 @@ import { LocalHistoryServices } from '../services/localHistoryServices'
 import { queries } from './queries'
 
 
-const usePaginatedHistory = (characterId: string, page: number | undefined) => {
+const usePaginatedHistory = (characterId?: number) => {
 
     const { data, isFetching, status, error, isRefetching, fetchNextPage, hasNextPage } = useInfiniteQuery({
         queryKey: queries.getPaginatedHistory(characterId),
         queryFn: async ({ pageParam }) => {
-            console.log(pageParam)
-            const paginatedHistory = await LocalHistoryServices.getPaginatedHistory({ characterId, page: Number(pageParam) })
+            const paginatedHistory = await LocalHistoryServices.getPaginatedHistory({ characterId: characterId!, page: Number(pageParam) })
 
             return paginatedHistory
         },
@@ -25,6 +24,7 @@ const usePaginatedHistory = (characterId: string, page: number | undefined) => {
         refetchInterval: false,
         retryOnMount: false,
         retry: false,
+        enabled: Boolean(characterId)
     })
 
     const r = useMemo(() => {

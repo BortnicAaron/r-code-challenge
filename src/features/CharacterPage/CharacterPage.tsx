@@ -8,7 +8,7 @@ function CharacterPage() {
   const character = useCharacter(id ? Number(id) : undefined)
 
   return (
-    <Container maxWidth="lg" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: '3rem', padding: '3rem' }}>
+    <Container maxWidth="lg" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', padding: '3rem 1rem' }}>
       {character.status === 'pending' && <CircularProgress />}
       {character.data && <CharacterDetails {...character.data} />}
     </Container>

@@ -7,8 +7,11 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    maxWidth: '400px',
+    width: '100%',
+    boxSizing: 'border-box',
     bgcolor: 'background.paper',
+    color: 'text.primary',
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
@@ -17,28 +20,33 @@ const style = {
     gap: '1rem'
 }
 
-const HistoryModal = () => {
+
+interface IHistoryModal {
+    disabled?: boolean
+    characterId?: number
+}
+
+const HistoryModal = ({ disabled, characterId }: IHistoryModal) => {
     const [open, setOpen] = useState(false)
     const handleOpen = () => setOpen(true)
     const handleClose = () => setOpen(false)
     return <>
         <Button
             onClick={handleOpen}
-            endIcon={<HistoryIcon />}
+            startIcon={<HistoryIcon />}
             variant="outlined"
             style={{ display: 'flex' }}
+            disabled={disabled}
         >Historial</Button>
         <Modal
             open={open}
             onClose={handleClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
         >
             <Box sx={style}>
-                <Typography id="modal-modal-title" variant="h6" component="h2">
-                    Historial del personaje
+                <Typography variant="h6" component="h2">
+                    Historial del personaje:
                 </Typography>
-                <Timeline />
+                <Timeline characterId={characterId} />
             </Box>
         </Modal>
     </>

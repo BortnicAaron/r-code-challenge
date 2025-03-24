@@ -1,8 +1,9 @@
 // features - scopes
 
 const features = {
-    PAGINATED_CHARACTERS: 'PAGINATED_CHARACTERS',
+    PAGINATED_CHARACTER: 'PAGINATED_CHARACTER',
     CHARACTER: 'CHARACTER',
+    CHARACTERS: 'CHARACTERS',
     PAGINATED_HISTORY: 'PAGINATED_HISTORY',
 } as const
 
@@ -40,11 +41,14 @@ function getKeyState<Feature extends TFeature, State extends TState>(k: TKey<Fea
 // queries
 const queries = {
     getPaginatedCharacters: (page?: number, name?: string) => createKey({
-        feature: features.PAGINATED_CHARACTERS,
+        feature: features.PAGINATED_CHARACTER,
         state: {
             page: String(page),
             name
         }
+    }),
+    getCharacters: () => createKey({
+        feature: features.CHARACTERS,
     }),
     getCharacter: (id?: number) => createKey({
         feature: features.CHARACTER,
@@ -52,7 +56,7 @@ const queries = {
             id
         }
     }),
-    getPaginatedHistory: (characterId?: string) => createKey({
+    getPaginatedHistory: (characterId?: number) => createKey({
         feature: features.PAGINATED_HISTORY,
         state: {
             characterId
