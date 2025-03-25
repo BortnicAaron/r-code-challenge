@@ -1,5 +1,23 @@
 {
   "comment": [],
   "history": [],
-  "character": []
+  "character": [
+    {
+      "id": 83,
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/6",
+        "https://rickandmortyapi.com/api/episode/10"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/83.jpeg",
+      "location": {
+        "name": "Earth (C-137)",
+        "url": "https://rickandmortyapi.com/api/location/1"
+      },
+      "name": "Cronenberg Morty",
+      "species": "Cronenberg",
+      "status": "unknown",
+      "type": ""
+    }
+  ]
 }

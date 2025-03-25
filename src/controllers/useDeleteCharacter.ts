@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { Internal } from '../interfaces/Errors/Internal'
 import { NotFound } from '../interfaces/Errors/NotFound'
-import { LocalCharacterRepository } from '../services/localCharacterServices'
+import { LocalCharacterServices } from '../services/localCharacterServices'
 import { features, queries } from './queries'
 
 const useDeleteCharacter = (id?: number) => {
@@ -11,7 +11,7 @@ const useDeleteCharacter = (id?: number) => {
     const { mutateAsync, data, status, error } = useMutation({
         mutationFn: async () => {
             if (!id) throw new Internal(undefined, 'ID is required to update a character')
-            return await LocalCharacterRepository.deleteCharacter(id)
+            return await LocalCharacterServices.deleteCharacter(id)
         },
         onSuccess: (character) => {
             queryClient.setQueryData(queries.getCharacter(id), character)

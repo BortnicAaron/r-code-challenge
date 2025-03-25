@@ -2,7 +2,7 @@ import { skipToken, useQuery } from '@tanstack/react-query'
 import { Character } from '../interfaces/Character'
 import { NotFound } from '../interfaces/Errors/NotFound'
 import { CharacterServices } from '../services/characterServices'
-import { LocalCharacterRepository } from '../services/localCharacterServices'
+import { LocalCharacterServices } from '../services/localCharacterServices'
 import { queries } from './queries'
 
 interface IConfig {
@@ -39,10 +39,10 @@ const useCharacter = (id: number | undefined, configInput?: IConfig) => {
         queryFn: id ? async () => {
             let characterLocally: Character
             try {
-                characterLocally = (await LocalCharacterRepository.getCharacter(id))
+                characterLocally = (await LocalCharacterServices.getCharacter(id))
             } catch (error) {
                 const character = await CharacterServices.getCharacter(id)
-                characterLocally = (await LocalCharacterRepository.createCharacter(character))
+                characterLocally = (await LocalCharacterServices.createCharacter(character))
             }
 
 

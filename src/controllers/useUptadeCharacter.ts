@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { Character } from '../interfaces/Character'
 import { Internal } from '../interfaces/Errors/Internal'
-import { LocalCharacterRepository } from '../services/localCharacterServices'
+import { LocalCharacterServices } from '../services/localCharacterServices'
 import { features, queries } from './queries'
 
 
@@ -29,7 +29,7 @@ const useUptadeCharacter = (character?: Partial<Character>) => {
             if (character.image !== data.image) r.image = data.image
             if (character.location?.name !== data.locationName || character.location?.url !== data.locationUrl) r.location = { name: data.locationName, url: data.locationUrl }
 
-            return await LocalCharacterRepository.updateCharacter(character.id, r)
+            return await LocalCharacterServices.updateCharacter(character.id, r)
         },
         onSuccess: (character) => {
             queryClient.setQueryData(queries.getCharacter(character?.id), character)

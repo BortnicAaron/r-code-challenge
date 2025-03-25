@@ -1,7 +1,7 @@
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { NotFound } from '../interfaces/Errors/NotFound'
 import { CharacterServices } from '../services/characterServices'
-import { LocalCharacterRepository } from '../services/localCharacterServices'
+import { LocalCharacterServices } from '../services/localCharacterServices'
 import { queries } from './queries'
 
 interface IConfig {
@@ -45,7 +45,7 @@ const usePaginatedCharacters = (page: number | undefined, nameCharacter: string 
 
             const charactersLocally = await queryClient.fetchQuery({
                 queryKey: queries.getCharacters(),
-                queryFn: LocalCharacterRepository.getCharacters,
+                queryFn: LocalCharacterServices.getCharacters,
                 staleTime: Infinity
 
             })

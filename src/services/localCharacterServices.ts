@@ -60,7 +60,7 @@ const buildCharacter = (characterLocally: CharacterLocally): Character => {
     }
 }
 
-export const LocalCharacterRepository = {
+export const LocalCharacterServices = {
     getCharacters: async (): Promise<Character[]> => {
         try {
             const { data } = await localApi.get<CharacterLocally[]>('/character').catch(httpErrorHandler)
@@ -95,7 +95,7 @@ export const LocalCharacterRepository = {
         let prevCharacter: Character | undefined
 
         try {
-            prevCharacter = await LocalCharacterRepository.getCharacter(id)
+            prevCharacter = await LocalCharacterServices.getCharacter(id)
         } catch (error) {
             throw httpErrorHandler(error)
         }
