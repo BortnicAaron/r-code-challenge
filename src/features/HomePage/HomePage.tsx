@@ -1,7 +1,7 @@
 import { Box, CircularProgress, Typography } from '@mui/material'
 import Grid2 from '@mui/material/Grid2'
 
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { Pagination } from '../../components/Pagination'
@@ -16,6 +16,7 @@ function HomePage() {
   const page = parseInt(queryParams.get('page')!) || 1
   const nameCharacter = (queryParams.get('name')!) || ''
   const navigate = useNavigate()
+  const isFirstRender = useRef(true)
   const paginatedCharactersQuery = usePaginatedCharacters(Number(page), nameCharacter, { retry: false, refetchOnMount: true, keepPreviousData: true })
 
   const {
@@ -54,8 +55,13 @@ function HomePage() {
     changeNameCharacter(fieldValues.search)
   }
 
+
   useEffect(() => {
-    if (formState.submitCount > 0 && search === '') navigate('')
+    if (isFirstRender.current) {
+      isFirstRender.current = false
+      return
+    }
+    if (search === '') navigate('')
   }, [navigate, search, formState.submitCount])
 
 

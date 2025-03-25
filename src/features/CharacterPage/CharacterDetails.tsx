@@ -9,7 +9,7 @@ import { Character } from "../../interfaces/Character"
 import { HistoryModal } from './HistoryModal'
 
 function getEpisodeNumberFromUrl(url: string) {
-    const episodeNumber = url.split('/').pop() // Extrae el número del episodio de la URL
+    const episodeNumber = url.split('/').pop()
     return episodeNumber
 }
 
