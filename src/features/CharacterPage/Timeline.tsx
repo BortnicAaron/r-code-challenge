@@ -6,8 +6,8 @@ import TimelineDot from '@mui/lab/TimelineDot'
 import TimelineItem, { timelineItemClasses } from '@mui/lab/TimelineItem'
 import TimelineSeparator from '@mui/lab/TimelineSeparator'
 import { Box, Button, Typography } from '@mui/material'
-
 import { usePaginatedHistory } from '../../controllers/usePaginatedHistory'
+
 
 const formattedDate = (timestamp: string) => new Date(timestamp).toLocaleDateString('es-ES', {
   year: '2-digit',
@@ -89,7 +89,7 @@ const Timeline = ({ characterId }: ITimeLine) => {
                   label='Especie'
                 />
               </Box>
-              Accordion
+
             </TimelineContent>
           </TimelineItem>)
         }

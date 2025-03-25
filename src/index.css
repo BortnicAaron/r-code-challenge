@@ -9,6 +9,8 @@ body {
   @media (prefers-color-scheme: dark) {
     background-color: black !important;
   }
+  padding-top: 6rem;
+  padding-bottom: 4rem;
 }
 
 code {

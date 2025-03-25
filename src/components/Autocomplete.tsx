@@ -46,7 +46,7 @@ function Autocomplete<O extends Option, N extends Path<T>, T extends FieldValues
         }
     })
 
-    return <FormControl variant="standard" fullWidth>
+    return <FormControl variant="standard" fullWidth error={Boolean(controller.fieldState.error)}>
         <InputLabel htmlFor={ID} shrink style={{ position: 'relative' }}>{label}</InputLabel>
         <AutocompleteMUI
             {...controller.field}

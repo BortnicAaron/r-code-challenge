@@ -22,7 +22,8 @@ const CharacterItem = (character: ICharacter) => {
                 position: 'relative',
                 margin: 'auto',
                 height: '100%',
-                textDecoration: "none"
+                textDecoration: "none",
+                width: { xs: '300px', md: '300px' },
             }}
         >
             <CardActionArea

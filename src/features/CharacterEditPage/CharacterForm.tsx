@@ -1,5 +1,5 @@
 import { ArrowBack, Save } from "@mui/icons-material"
-import { Box, Button, Card, CardContent, Typography } from "@mui/material"
+import { Box, Button, Card, CardContent, Divider, Typography } from "@mui/material"
 import { useForm } from "react-hook-form"
 import { useNavigate } from "react-router-dom"
 import { Autocomplete, Option } from "../../components/Autocomplete"
@@ -65,12 +65,13 @@ const CharacterForm = (character: Partial<Character>) => {
 
 
 
-    return <Card sx={{ maxWidth: '22.5rem', width: '100%' }} >
+    return <Card sx={{ maxWidth: '24rem', width: '100%' }} >
         <CardContent >
-            <Box onSubmit={form.handleSubmit(onChange)} component={'form'} sx={{ display: "flex", flexDirection: "column", alignItems: "start", gap: '1rem' }} >
+            <Box onSubmit={form.handleSubmit(onChange)} component={'form'} sx={{ display: "flex", flexDirection: "column", gap: '1.5rem', alignItems: 'stretch' }} >
                 <Typography variant="h5" component={'h1'} color={isFormDisabled ? 'textDisabled' : 'textPrimary'}>
                     Editar personaje
                 </Typography>
+                <Divider variant="fullWidth" component="div" />
                 {Boolean(character.deletedAt) && <Typography variant="subtitle1" component="div" gutterBottom color='error'>
                     El personaje no se puede editar porque esta eliminado.
                 </Typography>}
@@ -142,7 +143,7 @@ const CharacterForm = (character: Partial<Character>) => {
                         value: 'unknown'
                     }]}
                 />
-                <Box display="flex" width={'100%'} flexDirection="row" justifyContent={'space-between'}>
+                <Box display="flex" width={'100%'} flexDirection="row" justifyContent={'space-between'} marginTop={'1rem'}>
                     <Button
                         onClick={() => navigate(`/${character.id}`, { replace: true })}
                         startIcon={<ArrowBack />}

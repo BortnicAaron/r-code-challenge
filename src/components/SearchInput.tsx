@@ -23,7 +23,7 @@ function SearchInput<N extends Path<T>, T extends FieldValues>({
     name,
     control,
     disabled = false,
-    placeholder = 'Search',
+    placeholder = 'Buscar',
     inputAriaLabel,
     buttonAriaLabel
 }: ISearchInput<N, T>) {

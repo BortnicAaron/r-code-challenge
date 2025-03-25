@@ -1,10 +1,9 @@
-import { ArrowBack } from '@mui/icons-material'
 import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
 import HideImageIcon from '@mui/icons-material/HideImageOutlined'
 import { Avatar, Box, Button, Card, CardContent, Typography } from "@mui/material"
 import { useMemo } from "react"
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useDeleteCharacter } from '../../controllers/useDeleteCharacter'
 import { Character } from "../../interfaces/Character"
 import { HistoryModal } from './HistoryModal'
@@ -40,24 +39,13 @@ const CharacterDetails = (character: Partial<Character>) => {
 
 
     const isDeleted = Boolean(character.deletedAt)
-    const navigate = useNavigate()
 
-    const goBack = () => {
-        navigate('/')
-    }
-
-    return <Card sx={{ width: { xs: "100%", sm: '22.5rem' } }}  >
+    return <Card sx={{ width: { xs: "100%", sm: '24rem' } }}  >
         <CardContent>
-            <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: '1rem' }}>
-                <Button
-                    onClick={goBack}
-                    startIcon={<ArrowBack />}
-                    variant="outlined"
-                    style={{ display: 'flex', }}
-                >Volver</Button>
+            <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: '1rem', m: '1rem' }}>
                 <Box sx={{ width: "100%", position: "relative" }}>
                     {/* Contenedor para mantener el aspect ratio 1:1 */}
-                    <Box sx={{ width: "100%", paddingTop: "100%" }} />
+                    <Box sx={{ width: "100%", paddingTop: "100%", }} />
 
                     <Avatar
                         src={character.image}
@@ -70,6 +58,7 @@ const CharacterDetails = (character: Partial<Character>) => {
                             width: "100%",
                             height: "100%",
                             objectFit: "cover",
+
                         }}
                     >
                         <HideImageIcon sx={{ width: '40%', height: '40%', margin: '5000rem' }} />

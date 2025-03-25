@@ -14,10 +14,8 @@ function HomePage() {
   const location = useLocation()
   const queryParams = new URLSearchParams(location.search)
   const page = parseInt(queryParams.get('page')!) || 1
-
-  const [nameCharacter, setNameCharacter] = useState('')
+  const nameCharacter = (queryParams.get('name')!) || ''
   const navigate = useNavigate()
-
   const paginatedCharactersQuery = usePaginatedCharacters(Number(page), nameCharacter, { retry: false, refetchOnMount: true, keepPreviousData: true })
 
   const {
@@ -33,8 +31,11 @@ function HomePage() {
   }
 
   const changeNameCharacter = useCallback((value: string) => {
-    navigate(`/`)
-    setNameCharacter(value)
+    if (!value) {
+      navigate('')
+    } else {
+      navigate(`?name=${value}`)
+    }
   }, [navigate])
 
 
@@ -43,8 +44,8 @@ function HomePage() {
   }
 
   useEffect(() => {
-    if (search === '') changeNameCharacter(search)
-  }, [search, changeNameCharacter])
+    if (search === '') navigate('')
+  }, [navigate, search])
 
 
 
@@ -57,7 +58,7 @@ function HomePage() {
   }, [paginatedCharactersQuery.data?.info.pages])
 
   return (
-    <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', gap: '3rem', paddingTop: '3rem', paddingBottom: '3rem', textAlign: 'center' }}>
+    <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column', gap: '3rem', paddingBottom: '3rem', textAlign: 'center' }}>
       <form onSubmit={handleSubmit(onSubmit)} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
         <Box
           component={'img'}
@@ -81,9 +82,18 @@ function HomePage() {
       {paginatedCharactersQuery.isNotFound && <Typography sx={{ marginTop: '4rem' }} variant='h5' component={'h2'} color='textPrimary'>No se encontro ningun personaje</Typography>}
       {paginatedCharactersQuery.isFetching && !paginatedCharactersQuery.isRefetching && <CircularProgress sx={{ position: 'relative', inset: 'auto', margin: 'auto', marginTop: '4rem' }} size={120} />}
       {paginatedCharactersQuery.data?.results && paginatedCharactersQuery.data?.results?.length > 0 && <Grid2 container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-        {paginatedCharactersQuery.data?.results.length > 0 && <Grid2 container spacing={{ xs: '1rem', sm: '3rem', md: '4rem' }} paddingLeft={'1.5rem'} paddingRight={'1.5rem'}>
+        {paginatedCharactersQuery.data?.results.length > 0 && <Grid2
+          container
+          spacing={{ xs: '1rem', sm: '3rem', md: '4rem' }}
+          paddingLeft={'1.5rem'}
+          paddingRight={'1.5rem'}
+          sx={{
+            justifyContent: "center",
+            alignItems: "stretch",
+          }}
+        >
           {paginatedCharactersQuery.data?.results.map((character, index) => (
-            <Grid2 key={character.id} size={{ xs: 12, sm: 4, md: 3 }} >
+            <Grid2 key={character.id} >
               <CharacterItem {...character}>{index + 1}</CharacterItem>
             </Grid2>
           ))}

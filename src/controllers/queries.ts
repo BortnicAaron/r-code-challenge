@@ -5,6 +5,7 @@ const features = {
     CHARACTER: 'CHARACTER',
     CHARACTERS: 'CHARACTERS',
     PAGINATED_HISTORY: 'PAGINATED_HISTORY',
+    PAGINATED_COMMENT: 'PAGINATED_COMMENT',
 } as const
 
 // types
@@ -58,6 +59,12 @@ const queries = {
     }),
     getPaginatedHistory: (characterId?: number) => createKey({
         feature: features.PAGINATED_HISTORY,
+        state: {
+            characterId
+        }
+    }),
+    getPaginatedComment: (characterId?: number) => createKey({
+        feature: features.PAGINATED_COMMENT,
         state: {
             characterId
         }

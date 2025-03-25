@@ -29,7 +29,7 @@ function Select<N extends Path<T>, T extends FieldValues>({
         disabled,
     })
 
-    return <FormControl variant="standard" fullWidth>
+    return <FormControl variant="standard" fullWidth error={Boolean(controller.fieldState.error)}>
         <InputLabel variant="standard" id={LABEL_ID} shrink>
             {label}
         </InputLabel>

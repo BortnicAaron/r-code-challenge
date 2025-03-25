@@ -1,4 +1,138 @@
 {
+  "comment": [
+    {
+      "id": "6ce9",
+      "characterId": 12,
+      "message": "asdasdsad",
+      "createdAt": "2025-03-25T04:41:23.485Z"
+    },
+    {
+      "id": "5e8d",
+      "characterId": 12,
+      "message": "asdasdsad\n\n\n\nasd",
+      "createdAt": "2025-03-25T04:42:35.528Z"
+    },
+    {
+      "id": "1499",
+      "characterId": 12,
+      "message": "askljdalksd\nasd\nas\nda\nsd\nas\nd",
+      "createdAt": "2025-03-25T04:48:24.191Z"
+    },
+    {
+      "id": "a16e",
+      "characterId": 12,
+      "message": "Hola\n\nComo\n\nestas?",
+      "createdAt": "2025-03-25T04:49:53.611Z"
+    },
+    {
+      "id": "9c7f",
+      "characterId": 15,
+      "message": "Holaaa\n\n\nComo estas??\n",
+      "createdAt": "2025-03-25T04:57:32.207Z"
+    },
+    {
+      "id": "6e8c",
+      "characterId": 15,
+      "message": "asdasdasd",
+      "createdAt": "2025-03-25T05:00:21.121Z"
+    },
+    {
+      "id": "ff5e",
+      "characterId": 15,
+      "message": "asdasdasd\n\n\nasd",
+      "createdAt": "2025-03-25T05:00:25.645Z"
+    },
+    {
+      "id": "3937",
+      "characterId": 15,
+      "message": "asdasdasd\n\n\nasd",
+      "createdAt": "2025-03-25T05:00:43.606Z"
+    },
+    {
+      "id": "9897",
+      "characterId": 15,
+      "message": "Esto es un comentario\n",
+      "createdAt": "2025-03-25T05:00:57.734Z"
+    },
+    {
+      "id": "8180",
+      "characterId": 15,
+      "message": "Hola\n",
+      "createdAt": "2025-03-25T05:01:35.734Z"
+    },
+    {
+      "id": "1859",
+      "characterId": 16,
+      "message": "asdasd\n\n\nasd",
+      "createdAt": "2025-03-25T05:05:34.834Z"
+    },
+    {
+      "id": "0927",
+      "characterId": 9,
+      "message": "asdasd\n\n\nasd",
+      "createdAt": "2025-03-25T05:07:11.590Z"
+    },
+    {
+      "id": "5cae",
+      "characterId": 98,
+      "message": "asdasdasdasd\na\nsd\nas\nd\nasd\na\nsd\nasd\n\nasd\n\nads",
+      "createdAt": "2025-03-25T05:08:12.414Z"
+    },
+    {
+      "id": "6162",
+      "characterId": 98,
+      "message": "asd\nasd\nasd\nasdssdas\nasdasdasd\nasdasdasdasd",
+      "createdAt": "2025-03-25T05:20:02.827Z"
+    },
+    {
+      "id": "9da8",
+      "characterId": 98,
+      "message": "asdd\na",
+      "createdAt": "2025-03-25T05:20:09.207Z"
+    },
+    {
+      "id": "db50",
+      "characterId": 98,
+      "message": "Hola soy hernat \ny me gustarida decir \n\nasdasdasdadas\ndas\nd\nasd\na\nsd\nd",
+      "createdAt": "2025-03-25T05:22:03.619Z"
+    },
+    {
+      "id": "f274",
+      "characterId": 98,
+      "message": "asdasdasda ksja dlkajsdlakjsdlkasjdlakjsdlakjs",
+      "createdAt": "2025-03-25T05:22:30.541Z"
+    },
+    {
+      "id": "28ef",
+      "characterId": 98,
+      "message": "Hola soy hernat\ny me gustarida decir\n\nasdasdasdadas\ndas\nd\nasd\na\nsd\nFinal",
+      "createdAt": "2025-03-25T05:25:17.865Z"
+    },
+    {
+      "id": "09be",
+      "characterId": 98,
+      "message": "asdasdasda ksja dlkajsdlakjsdlkasjdlakjsdlakjs lkjalkdjsalkdjalskjd lkjaslkdjasdlkjasldkjasldkjas lkjasdkjasldkj",
+      "createdAt": "2025-03-25T05:25:31.454Z"
+    },
+    {
+      "id": "6d3c",
+      "characterId": 15,
+      "message": "hola",
+      "createdAt": "2025-03-25T05:33:52.292Z"
+    },
+    {
+      "id": "055e",
+      "characterId": 15,
+      "message": "Hola\n",
+      "createdAt": "2025-03-25T05:33:58.610Z"
+    },
+    {
+      "id": "98e4",
+      "characterId": 15,
+      "message": "Hola\n\n\n\nasd",
+      "createdAt": "2025-03-25T05:38:19.391Z"
+    }
+  ],
   "history": [
     {
       "id": "892b",
@@ -884,6 +1018,202 @@
         },
         "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg"
       }
+    },
+    {
+      "id": "dbee",
+      "characterId": 11,
+      "createdAt": "2025-03-24T19:21:38.489Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Albert Einstein",
+        "type": "",
+        "species": "Human",
+        "status": "Dead",
+        "location": {
+          "name": "Plopstar",
+          "url": "https://rickandmortyapi.com/api/location/66"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/11.jpeg"
+      },
+      "currentData": {
+        "type": "aSASDASD",
+        "location": {
+          "name": "Earth (D716-C)",
+          "url": "https://rickandmortyapi.com/api/location/61"
+        }
+      }
+    },
+    {
+      "id": "a509",
+      "characterId": 18,
+      "createdAt": "2025-03-24T19:56:05.135Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Antenna Morty",
+        "type": "Human with antennae",
+        "species": "Human",
+        "status": "Alive",
+        "location": {
+          "name": "Citadel of Ricks",
+          "url": "https://rickandmortyapi.com/api/location/3"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/18.jpeg"
+      },
+      "currentData": {
+        "name": "Antenna"
+      }
+    },
+    {
+      "id": "88c1",
+      "characterId": 200,
+      "createdAt": "2025-03-24T20:01:57.617Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Lawyer Morty",
+        "type": "",
+        "species": "Human",
+        "status": "unknown",
+        "location": {
+          "name": "Citadel of Ricks",
+          "url": "https://rickandmortyapi.com/api/location/3"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/200.jpeg"
+      },
+      "currentData": {
+        "name": "Lawyer"
+      }
+    },
+    {
+      "id": "df0d",
+      "characterId": 200,
+      "createdAt": "2025-03-24T20:03:21.102Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Lawyer",
+        "type": "",
+        "species": "Human",
+        "status": "unknown",
+        "location": {
+          "name": "Citadel of Ricks",
+          "url": "https://rickandmortyapi.com/api/location/3"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/200.jpeg"
+      },
+      "currentData": {
+        "name": "Eugeeeee"
+      }
+    },
+    {
+      "id": "5a5b",
+      "characterId": 18,
+      "createdAt": "2025-03-24T20:43:22.459Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Antenna",
+        "type": "Human with antennae",
+        "species": "Human",
+        "status": "Alive",
+        "location": {
+          "name": "Citadel of Ricks",
+          "url": "https://rickandmortyapi.com/api/location/3"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/18.jpeg"
+      },
+      "currentData": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "b1cd",
+      "characterId": 18,
+      "createdAt": "2025-03-24T20:47:39.052Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Antenna",
+        "type": "Human with antennae",
+        "species": "Human",
+        "status": "unknown",
+        "location": {
+          "name": "Citadel of Ricks",
+          "url": "https://rickandmortyapi.com/api/location/3"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/18.jpeg"
+      },
+      "currentData": {
+        "name": "Antenna asdd",
+        "type": "Human with",
+        "species": "Dog",
+        "status": "Alive",
+        "location": {
+          "name": "Interdimensional Cable",
+          "url": "https://rickandmortyapi.com/api/location/6"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/40.jpeg"
+      }
+    },
+    {
+      "id": "89e2",
+      "characterId": 11,
+      "createdAt": "2025-03-24T20:59:10.693Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Albert Einstein",
+        "type": "aSASDASD",
+        "species": "Human",
+        "status": "Dead",
+        "location": {
+          "name": "Earth (D716-C)",
+          "url": "https://rickandmortyapi.com/api/location/61"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/11.jpeg"
+      },
+      "currentData": {
+        "type": "Hola",
+        "location": {
+          "name": "Post-Apocalyptic Earth",
+          "url": "https://rickandmortyapi.com/api/location/8"
+        }
+      }
+    },
+    {
+      "id": "52eb",
+      "characterId": 12,
+      "createdAt": "2025-03-25T04:37:09.215Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Alexander",
+        "type": "",
+        "species": "Human",
+        "status": "Dead",
+        "location": {
+          "name": "Anatomy Park",
+          "url": "https://rickandmortyapi.com/api/location/5"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/12.jpeg"
+      },
+      "currentData": {
+        "type": "asdsd"
+      }
+    },
+    {
+      "id": "805d",
+      "characterId": 15,
+      "createdAt": "2025-03-25T05:44:46.229Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Alien Rickasdsadasdasd sdasdasdas da as",
+        "type": "",
+        "species": "Alien",
+        "status": "unknown",
+        "location": {
+          "name": "Citadel of Ricks",
+          "url": "https://rickandmortyapi.com/api/location/3"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/15.jpeg"
+      },
+      "currentData": {
+        "type": "sadasdads"
+      }
     }
   ],
   "character": [
@@ -1300,13 +1630,14 @@
       "gender": "Male",
       "image": "https://rickandmortyapi.com/api/character/avatar/11.jpeg",
       "location": {
-        "name": "Plopstar",
-        "url": "https://rickandmortyapi.com/api/location/66"
+        "name": "Post-Apocalyptic Earth",
+        "url": "https://rickandmortyapi.com/api/location/8"
       },
       "name": "Albert Einstein",
       "species": "Human",
       "status": "Dead",
-      "type": ""
+      "type": "Hola",
+      "deletedAt": "2025-03-24T20:59:14.904Z"
     },
     {
       "id": "8",
@@ -1414,15 +1745,15 @@
         "https://rickandmortyapi.com/api/episode/28"
       ],
       "gender": "Male",
-      "image": "https://rickandmortyapi.com/api/character/avatar/18.jpeg",
+      "image": "https://rickandmortyapi.com/api/character/avatar/40.jpeg",
       "location": {
-        "name": "Citadel of Ricks",
-        "url": "https://rickandmortyapi.com/api/location/3"
+        "name": "Interdimensional Cable",
+        "url": "https://rickandmortyapi.com/api/location/6"
       },
-      "name": "Antenna Morty",
-      "species": "Human",
+      "name": "Antenna asdd",
+      "species": "Dog",
       "status": "Alive",
-      "type": "Human with antennae"
+      "type": "Human with"
     },
     {
       "id": "82",
@@ -1602,7 +1933,8 @@
       "name": "Annie",
       "species": "Human",
       "status": "Alive",
-      "type": ""
+      "type": "",
+      "deletedAt": "2025-03-24T19:10:56.101Z"
     },
     {
       "id": "54",
@@ -1672,7 +2004,7 @@
       "name": "Alien Rickasdsadasdasd sdasdasdas da as",
       "species": "Alien",
       "status": "unknown",
-      "type": ""
+      "type": "sadasdads"
     },
     {
       "id": "824",
@@ -1688,6 +2020,126 @@
       "name": "Young Beth",
       "species": "Human",
       "status": "unknown",
+      "type": ""
+    },
+    {
+      "id": "16",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/15"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/16.jpeg",
+      "location": {
+        "name": "Earth (Replacement Dimension)",
+        "url": "https://rickandmortyapi.com/api/location/20"
+      },
+      "name": "Amish Cyborg",
+      "species": "Alien",
+      "status": "Dead",
+      "type": "Parasite",
+      "deletedAt": "2025-03-25T05:05:37.756Z"
+    },
+    {
+      "id": "822",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/51"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/822.jpeg",
+      "location": {
+        "name": "Earth (Unknown dimension)",
+        "url": "https://rickandmortyapi.com/api/location/30"
+      },
+      "name": "Young Jerry",
+      "species": "Human",
+      "status": "unknown",
+      "type": ""
+    },
+    {
+      "id": "38",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/1",
+        "https://rickandmortyapi.com/api/episode/2",
+        "https://rickandmortyapi.com/api/episode/3",
+        "https://rickandmortyapi.com/api/episode/4",
+        "https://rickandmortyapi.com/api/episode/5",
+        "https://rickandmortyapi.com/api/episode/6",
+        "https://rickandmortyapi.com/api/episode/22",
+        "https://rickandmortyapi.com/api/episode/51"
+      ],
+      "gender": "Female",
+      "image": "https://rickandmortyapi.com/api/character/avatar/38.jpeg",
+      "location": {
+        "name": "Earth (C-137)",
+        "url": "https://rickandmortyapi.com/api/location/1"
+      },
+      "name": "Beth Smith",
+      "species": "Human",
+      "status": "Alive",
+      "type": ""
+    },
+    {
+      "id": "200",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/22"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/200.jpeg",
+      "location": {
+        "name": "Citadel of Ricks",
+        "url": "https://rickandmortyapi.com/api/location/3"
+      },
+      "name": "Eugeeeee",
+      "species": "Human",
+      "status": "unknown",
+      "type": ""
+    },
+    {
+      "id": "821",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/48"
+      ],
+      "gender": "Genderless",
+      "image": "https://rickandmortyapi.com/api/character/avatar/821.jpeg",
+      "location": {
+        "name": "Earth (Replacement Dimension)",
+        "url": "https://rickandmortyapi.com/api/location/20"
+      },
+      "name": "Gotron",
+      "species": "Robot",
+      "status": "unknown",
+      "type": "Ferret Robot"
+    },
+    {
+      "id": "12",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/3"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/12.jpeg",
+      "location": {
+        "name": "Anatomy Park",
+        "url": "https://rickandmortyapi.com/api/location/5"
+      },
+      "name": "Alexander",
+      "species": "Human",
+      "status": "Dead",
+      "type": "asdsd"
+    },
+    {
+      "id": "98",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/3"
+      ],
+      "gender": "unknown",
+      "image": "https://rickandmortyapi.com/api/character/avatar/98.jpeg",
+      "location": {
+        "name": "Anatomy Park",
+        "url": "https://rickandmortyapi.com/api/location/5"
+      },
+      "name": "Hepatitis A",
+      "species": "Disease",
+      "status": "Dead",
       "type": ""
     }
   ]

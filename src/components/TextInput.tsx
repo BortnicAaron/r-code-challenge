@@ -28,6 +28,9 @@ interface ITextInput<N extends string, T extends FieldValues> {
     disabled?: boolean
     placeholder?: string
     ariaDescribedby?: string
+    multiline?: boolean
+    minRows?: number
+    maxRows?: number
 }
 
 
@@ -49,7 +52,10 @@ function TextInput<N extends Path<T>, T extends FieldValues>({
     required,
     validUrl,
     errorMessages,
-    maxLength
+    maxLength,
+    multiline,
+    minRows,
+    maxRows
 }: ITextInput<N, T>) {
     const ID = useId()
 
@@ -74,7 +80,7 @@ function TextInput<N extends Path<T>, T extends FieldValues>({
             },
         },
     })
-    return <FormControl variant="standard" fullWidth>
+    return <FormControl variant="standard" fullWidth error={Boolean(controller.fieldState.error)}>
         <InputLabel htmlFor={ID} shrink>{label}</InputLabel>
         <Input
             id={ID}
@@ -86,6 +92,9 @@ function TextInput<N extends Path<T>, T extends FieldValues>({
             onBlur={controller.field.onBlur}
             inputRef={controller.field.ref}
             placeholder={placeholder}
+            multiline={multiline}
+            minRows={minRows}
+            maxRows={maxRows}
         />
         {controller.fieldState.error && <FormHelperText id={ID} error > {controller.fieldState.error.message}</FormHelperText>}
     </FormControl>
