@@ -124,8 +124,7 @@ const HistoryItem = ({
 }: IHistoryItem) => {
   const ID = useId()
   const [open, setOpen] = useState(false)
-
-  return <>{Boolean(newValue) && <>
+  return <>{typeof (newValue) === 'string' && <>
     <Box display={'flex'} alignContent='center' alignItems='center' sx={{ cursor: 'pointer' }}>
       <Typography variant="body2" component="label" htmlFor={ID} sx={{ cursor: 'inherit' }}>
         {label}
@@ -139,11 +138,11 @@ const HistoryItem = ({
       </IconButton>
     </Box>
     {open && <>
-      <Typography variant="caption" component="p" sx={{ bgcolor: red['700'], p: '0.25rem 0.5rem', overflowWrap: 'break-word', wordBreak: 'break-word' }}>
-        {oldValue}
+      <Typography variant="caption" component="p" sx={{ bgcolor: red['700'], p: '0.25rem 0.5rem', overflowWrap: 'break-word', wordBreak: 'break-word', }}>
+        "{oldValue}"
       </Typography>
       <Typography variant="caption" component="p" sx={{ bgcolor: green['700'], p: '0.25rem 0.5rem', overflowWrap: 'break-word', wordBreak: 'break-word' }}>
-        {newValue}
+        "{newValue}"
       </Typography>
     </>}
   </>}

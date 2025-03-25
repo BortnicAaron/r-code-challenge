@@ -1724,6 +1724,94 @@
         },
         "image": "https://rickandmortyapi.com/api/character/avatar/50.jpeg"
       }
+    },
+    {
+      "id": "660b",
+      "characterId": 12,
+      "createdAt": "2025-03-25T15:09:11.677Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Alexander",
+        "type": "asdsd",
+        "species": "Human",
+        "status": "Dead",
+        "location": {
+          "name": "Anatomy Park",
+          "url": "https://rickandmortyapi.com/api/location/5"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/12.jpeg"
+      },
+      "currentData": {
+        "type": ""
+      }
+    },
+    {
+      "id": "10d6",
+      "characterId": 12,
+      "createdAt": "2025-03-25T15:09:22.319Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Alexander",
+        "type": "",
+        "species": "Human",
+        "status": "Dead",
+        "location": {
+          "name": "Anatomy Park",
+          "url": "https://rickandmortyapi.com/api/location/5"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/12.jpeg"
+      },
+      "currentData": {
+        "type": "dasdasd"
+      }
+    },
+    {
+      "id": "fcb9",
+      "characterId": 15,
+      "createdAt": "2025-03-25T15:20:08.952Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Alien Rickasdsadasdasd sdasdasdas da as",
+        "type": "sadasdads",
+        "species": "Alien",
+        "status": "unknown",
+        "location": {
+          "name": "Citadel of Ricks",
+          "url": "https://rickandmortyapi.com/api/location/3"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/15.jpeg"
+      },
+      "currentData": {
+        "status": "Dead"
+      }
+    },
+    {
+      "id": "e148",
+      "characterId": 15,
+      "createdAt": "2025-03-25T15:20:47.459Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Alien Rickasdsadasdasd sdasdasdas da as",
+        "type": "sadasdads",
+        "species": "Alien",
+        "status": "Dead",
+        "location": {
+          "name": "Citadel of Ricks",
+          "url": "https://rickandmortyapi.com/api/location/3"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/15.jpeg"
+      },
+      "currentData": {
+        "name": "Alien rick",
+        "type": "",
+        "species": "oso",
+        "status": "Alive",
+        "location": {
+          "name": "Earth (Giant Telepathic Spiders Dimension)",
+          "url": "https://rickandmortyapi.com/api/location/42"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg"
+      }
     }
   ],
   "character": [
@@ -2508,15 +2596,16 @@
         "https://rickandmortyapi.com/api/episode/10"
       ],
       "gender": "Male",
-      "image": "https://rickandmortyapi.com/api/character/avatar/15.jpeg",
+      "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
       "location": {
-        "name": "Citadel of Ricks",
-        "url": "https://rickandmortyapi.com/api/location/3"
+        "name": "Earth (Giant Telepathic Spiders Dimension)",
+        "url": "https://rickandmortyapi.com/api/location/42"
       },
-      "name": "Alien Rickasdsadasdasd sdasdasdas da as",
-      "species": "Alien",
-      "status": "unknown",
-      "type": "sadasdads"
+      "name": "Alien rick",
+      "species": "oso",
+      "status": "Alive",
+      "type": "",
+      "deletedAt": "2025-03-25T15:21:13.958Z"
     },
     {
       "id": "824",
@@ -2636,7 +2725,7 @@
       "name": "Alexander",
       "species": "Human",
       "status": "Dead",
-      "type": "asdsd"
+      "type": "dasdasd"
     },
     {
       "id": "98",
