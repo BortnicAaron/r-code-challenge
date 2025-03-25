@@ -30,7 +30,7 @@ root.render(
         <CssBaseline />
         <RouterProvider router={router} />
       </ThemeProvider>
-      <ReactQueryDevtools initialIsOpen={true} />
+      {false && <ReactQueryDevtools initialIsOpen={true} />}
     </QueryClientProvider>
   </React.StrictMode>
 )
