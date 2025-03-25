@@ -1,5 +1,6 @@
 import { ArrowBack, Save } from "@mui/icons-material"
 import { Box, Button, Card, CardContent, Divider, Typography } from "@mui/material"
+import { useCallback } from "react"
 import { useForm } from "react-hook-form"
 import { useNavigate } from "react-router-dom"
 import { Autocomplete, Option } from "../../components/Autocomplete"
@@ -21,6 +22,9 @@ interface FieldValues {
     location: Option
 }
 
+const sameValues = () => {
+
+}
 
 const CharacterForm = (character: Partial<Character>) => {
     const navigate = useNavigate()
@@ -45,25 +49,28 @@ const CharacterForm = (character: Partial<Character>) => {
     })
     const uptadeCharacter = useUptadeCharacter(character)
 
-    const onChange = async (fieldValues: FieldValues) => {
+
+    const onChange = useCallback(async (fieldValues: FieldValues) => {
         try {
-            await uptadeCharacter.mutateAsync({
-                name: fieldValues.name,
-                species: fieldValues.species,
-                status: fieldValues.status,
-                type: fieldValues.type,
-                locationName: fieldValues.location.label,
-                locationUrl: String(fieldValues.location.id),
-                image: fieldValues.image
-            })
+            if (form.formState.isDirty) {
+                await uptadeCharacter.mutateAsync({
+                    name: fieldValues.name,
+                    species: fieldValues.species,
+                    status: fieldValues.status,
+                    type: fieldValues.type,
+                    locationName: fieldValues.location.label,
+                    locationUrl: String(fieldValues.location.id),
+                    image: fieldValues.image
+                })
+            }
             navigate(`/${character.id}`, { replace: true })
         } catch (error) {
 
         }
 
-    }
+    }, [uptadeCharacter, character.id, navigate, form.formState.isDirty])
 
-
+    const [name, type, species] = form.watch(['name', 'type', 'species'])
 
     return <Card sx={{ maxWidth: '24rem', width: '100%' }} >
         <CardContent >
@@ -80,10 +87,10 @@ const CharacterForm = (character: Partial<Character>) => {
                     label="Nombre:"
                     name="name"
                     required
-                    maxLength={43}
+                    maxLength={41}
                     errorMessages={{
                         required: 'Campo requerido.',
-                        maxLength: `Máximo ${43} caracteres permitidos.`
+                        maxLength: `Has ingresado ${name.length} caracteres. El máximo permitido es ${40}.`
                     }}
                 />
                 <TextInput
@@ -111,10 +118,10 @@ const CharacterForm = (character: Partial<Character>) => {
                     control={form.control}
                     label="Tipo(Opcional):"
                     name="type"
-                    maxLength={43}
+                    maxLength={41}
                     errorMessages={{
                         required: 'Campo requerido.',
-                        maxLength: `Máximo ${43} caracteres permitidos.`
+                        maxLength: `Has ingresado ${type.length} caracteres. El máximo permitido es ${40}.`
                     }}
                 />
                 <TextInput
@@ -122,10 +129,10 @@ const CharacterForm = (character: Partial<Character>) => {
                     label="Especie:"
                     name="species"
                     required
-                    maxLength={43}
+                    maxLength={41}
                     errorMessages={{
                         required: 'Campo requerido.',
-                        maxLength: `Máximo ${43} caracteres permitidos.`
+                        maxLength: `Has ingresado ${species.length} caracteres. El máximo permitido es ${40}.`
                     }}
                 />
                 <Select
@@ -149,6 +156,7 @@ const CharacterForm = (character: Partial<Character>) => {
                         startIcon={<ArrowBack />}
                         variant="outlined"
                         loading={form.formState.isSubmitting}
+                        type='button'
                     >Volver</Button>
                     <Button
                         type='submit'

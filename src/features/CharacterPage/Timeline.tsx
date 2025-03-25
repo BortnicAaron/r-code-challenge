@@ -1,4 +1,5 @@
 import EditIcon from '@mui/icons-material/Edit'
+import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined'
 import TimelineMUI from '@mui/lab/Timeline'
 import TimelineConnector from '@mui/lab/TimelineConnector'
 import TimelineContent from '@mui/lab/TimelineContent'
@@ -6,8 +7,10 @@ import TimelineDot from '@mui/lab/TimelineDot'
 import TimelineItem, { timelineItemClasses } from '@mui/lab/TimelineItem'
 import TimelineSeparator from '@mui/lab/TimelineSeparator'
 import { Box, Button, Typography } from '@mui/material'
+import { green, red } from '@mui/material/colors'
+import IconButton from '@mui/material/IconButton'
+import { useId, useState } from 'react'
 import { usePaginatedHistory } from '../../controllers/usePaginatedHistory'
-
 
 const formattedDate = (timestamp: string) => new Date(timestamp).toLocaleDateString('es-ES', {
   year: '2-digit',
@@ -65,27 +68,33 @@ const Timeline = ({ characterId }: ITimeLine) => {
               </Typography>
               <Box display={'flex'} flexDirection='column' gap={'0.5rem'} marginTop={'0.5rem'} marginBottom={'0.5rem'}>
                 <HistoryItem
-                  value={history.currentData.name}
+                  newValue={history.currentData.name}
+                  oldValue={history.previousData.name}
                   label='Nombre'
                 />
                 <HistoryItem
-                  value={history.currentData.status}
+                  newValue={history.currentData.status}
+                  oldValue={history.previousData.status}
                   label='Estado'
                 />
                 <HistoryItem
-                  value={history.currentData.type}
+                  newValue={history.currentData.type}
+                  oldValue={history.previousData.type}
                   label='Tipo'
                 />
                 <HistoryItem
-                  value={history.currentData.location}
+                  newValue={history.currentData.location?.name}
+                  oldValue={history.previousData.location?.name}
                   label='Locacion'
                 />
                 <HistoryItem
-                  value={history.currentData.image}
+                  newValue={history.currentData.image}
+                  oldValue={history.previousData.image}
                   label='Imagen'
                 />
                 <HistoryItem
-                  value={history.currentData.species}
+                  newValue={history.currentData.species}
+                  oldValue={history.previousData.species}
                   label='Especie'
                 />
               </Box>
@@ -103,17 +112,42 @@ const Timeline = ({ characterId }: ITimeLine) => {
 }
 
 interface IHistoryItem {
-  value?: unknown
+  newValue?: string
+  oldValue?: string
   label: string
 }
 
 const HistoryItem = ({
-  value,
+  newValue,
+  oldValue,
   label
 }: IHistoryItem) => {
-  return <>{Boolean(value) && <Typography variant="body2" component="div">
-    - {label}
-  </Typography>}
+  const ID = useId()
+  const [open, setOpen] = useState(false)
+
+  return <>{Boolean(newValue) && <>
+    <Box display={'flex'} alignContent='center' alignItems='center' sx={{ cursor: 'pointer' }}>
+      <Typography variant="body2" component="label" htmlFor={ID} sx={{ cursor: 'inherit' }}>
+        {label}
+      </Typography>
+      <IconButton onClick={() => setOpen(!open)} size='small' sx={{ display: 'flex', alignItems: 'center' }} id={ID}>
+        <KeyboardArrowDownOutlinedIcon sx={{
+          fontSize: '1rem',
+          transform: open ? "rotate(-180deg)" : "rotate(0deg)",
+          transition: "transform 0.3s ease",
+        }} />
+      </IconButton>
+    </Box>
+    {open && <>
+      <Typography variant="caption" component="p" sx={{ bgcolor: red['700'], p: '0.25rem 0.5rem', overflowWrap: 'break-word', wordBreak: 'break-word' }}>
+        {oldValue}
+      </Typography>
+      <Typography variant="caption" component="p" sx={{ bgcolor: green['700'], p: '0.25rem 0.5rem', overflowWrap: 'break-word', wordBreak: 'break-word' }}>
+        {newValue}
+      </Typography>
+    </>}
+  </>}
+
   </>
 }
 

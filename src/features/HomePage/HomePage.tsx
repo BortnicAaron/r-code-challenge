@@ -23,7 +23,11 @@ function HomePage() {
     handleSubmit,
     formState,
     watch
-  } = useForm<{ search: string }>()
+  } = useForm<{ search: string }>({
+    values: {
+      search: nameCharacter
+    }
+  })
   const search = watch('search')
 
   const handlePageChange = (page: number) => {

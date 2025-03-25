@@ -2,7 +2,7 @@ import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { Character } from '../interfaces/Character'
 import { Internal } from '../interfaces/Errors/Internal'
 import { LocalCharacterRepository } from '../services/localCharacterServices'
-import { queries } from './queries'
+import { features, queries } from './queries'
 
 
 interface Data {
@@ -33,12 +33,9 @@ const useUptadeCharacter = (character?: Partial<Character>) => {
         },
         onSuccess: (character) => {
             queryClient.setQueryData(queries.getCharacter(character?.id), character)
-            queryClient.invalidateQueries({
-                queryKey: queries.getCharacter(character?.id)
-            })
-            queryClient.invalidateQueries({
-                queryKey: queries.getPaginatedComment(character?.id)
-            })
+            queryClient.invalidateQueries({ queryKey: [features.CHARACTERS] })
+            queryClient.invalidateQueries({ queryKey: [features.PAGINATED_CHARACTER] })
+            queryClient.invalidateQueries({ queryKey: [features.PAGINATED_HISTORY] })
         }
     })
 

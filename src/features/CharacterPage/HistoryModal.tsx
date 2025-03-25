@@ -1,25 +1,7 @@
 import HistoryIcon from '@mui/icons-material/History'
-import { Box, Button, Modal, Typography } from "@mui/material"
+import { Button, Card, CardContent, Divider, Modal, Typography } from "@mui/material"
 import { useState } from "react"
 import { Timeline } from './Timeline'
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    maxWidth: '400px',
-    width: '100%',
-    boxSizing: 'border-box',
-    bgcolor: 'background.paper',
-    color: 'text.primary',
-    border: '2px solid #000',
-    boxShadow: 24,
-    p: 4,
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '1rem'
-}
-
 
 interface IHistoryModal {
     disabled?: boolean
@@ -41,14 +23,23 @@ const HistoryModal = ({ disabled, characterId }: IHistoryModal) => {
         <Modal
             open={open}
             onClose={handleClose}
+            sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignContent: 'center',
+                flexWrap: 'wrap'
+            }}
         >
-            <Box sx={style}>
-                <Typography variant="h6" component="h2">
-                    Historial del personaje:
-                </Typography>
-                <Timeline characterId={characterId} />
-            </Box>
-        </Modal>
+            <Card sx={{ width: { xs: "100%", sm: '24rem' } }}  >
+                <CardContent sx={{ display: "flex", flexDirection: "column", gap: '1.5rem', alignItems: 'stretch', m: '1rem' }} >
+                    <Typography variant="h5" component={'h4'} color={false ? 'textDisabled' : 'textPrimary'}>
+                        Historial:
+                    </Typography>
+                    <Divider variant="fullWidth" component="div" />
+                    <Timeline characterId={characterId} />
+                </CardContent>
+            </Card>
+        </Modal >
     </>
 }
 

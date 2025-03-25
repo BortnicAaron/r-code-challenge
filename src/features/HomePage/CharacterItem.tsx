@@ -65,10 +65,10 @@ const CharacterItem = (character: ICharacter) => {
                         color='error'
 
                     >ELIMINADO</Typography>}
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography gutterBottom variant="h5" component="div" sx={{ overflowWrap: 'break-word', wordBreak: 'break-word' }}>
                         {character.name}
                     </Typography>
-                    {character.species && <Typography gutterBottom variant="h6" component="div" color="textSecondary">
+                    {character.species && <Typography gutterBottom variant="h6" component="div" color="textSecondary" sx={{ overflowWrap: 'break-word', wordBreak: 'break-word' }}>
                         {character.species}
                     </Typography>}
                 </CardContent>

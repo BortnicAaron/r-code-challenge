@@ -203,6 +203,18 @@
       "characterId": 18,
       "message": "asdasdasd\n\nasda\nsd\nda",
       "createdAt": "2025-03-25T12:28:22.149Z"
+    },
+    {
+      "id": "4df6",
+      "characterId": 9,
+      "message": "Hola \n\nComo estas",
+      "createdAt": "2025-03-25T12:57:04.684Z"
+    },
+    {
+      "id": "a79b",
+      "characterId": 18,
+      "message": "Este personaje me da miedo.\n\n\n\n\n\n\nyo soy genial!",
+      "createdAt": "2025-03-25T14:23:11.103Z"
     }
   ],
   "history": [
@@ -1306,6 +1318,412 @@
       "currentData": {
         "name": "Butter"
       }
+    },
+    {
+      "id": "1f2c",
+      "characterId": 18,
+      "createdAt": "2025-03-25T12:42:57.715Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Antenna asdd",
+        "type": "Human with",
+        "species": "Dog",
+        "status": "Alive",
+        "location": {
+          "name": "Interdimensional Cable",
+          "url": "https://rickandmortyapi.com/api/location/6"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/40.jpeg"
+      },
+      "currentData": {
+        "species": "Dog Gatp"
+      }
+    },
+    {
+      "id": "1d81",
+      "characterId": 9,
+      "createdAt": "2025-03-25T12:56:56.708Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Agenc asdaasd",
+        "type": "Superhuman ",
+        "species": "perro",
+        "status": "Alive",
+        "location": {
+          "name": "Rick's Memories",
+          "url": "https://rickandmortyapi.com/api/location/126"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+      },
+      "currentData": {
+        "name": "Agenc"
+      }
+    },
+    {
+      "id": "568d",
+      "characterId": 9,
+      "createdAt": "2025-03-25T13:46:35.565Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Agenc",
+        "type": "Superhuman ",
+        "species": "perro",
+        "status": "Alive",
+        "location": {
+          "name": "Rick's Memories",
+          "url": "https://rickandmortyapi.com/api/location/126"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+      },
+      "currentData": {
+        "name": "El grordo dan es un genio pero realm"
+      }
+    },
+    {
+      "id": "2305",
+      "characterId": 9,
+      "createdAt": "2025-03-25T13:50:56.746Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "El grordo dan es un genio pero realm",
+        "type": "Superhuman ",
+        "species": "perro",
+        "status": "Alive",
+        "location": {
+          "name": "Rick's Memories",
+          "url": "https://rickandmortyapi.com/api/location/126"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+      },
+      "currentData": {
+        "location": {
+          "name": "New Improved Galactic Federation Quarters",
+          "url": "https://rickandmortyapi.com/api/location/95"
+        }
+      }
+    },
+    {
+      "id": "bc46",
+      "characterId": 9,
+      "createdAt": "2025-03-25T13:51:05.747Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "El grordo dan es un genio pero realm",
+        "type": "Superhuman ",
+        "species": "perro",
+        "status": "Alive",
+        "location": {
+          "name": "New Improved Galactic Federation Quarters",
+          "url": "https://rickandmortyapi.com/api/location/95"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+      },
+      "currentData": {}
+    },
+    {
+      "id": "5366",
+      "characterId": 9,
+      "createdAt": "2025-03-25T13:54:25.303Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "El grordo dan es un genio pero realm",
+        "type": "Superhuman ",
+        "species": "perro",
+        "status": "Alive",
+        "location": {
+          "name": "New Improved Galactic Federation Quarters",
+          "url": "https://rickandmortyapi.com/api/location/95"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+      },
+      "currentData": {
+        "location": {
+          "name": "Plitzville Montana",
+          "url": "https://rickandmortyapi.com/api/location/91"
+        }
+      }
+    },
+    {
+      "id": "a142",
+      "characterId": 9,
+      "createdAt": "2025-03-25T13:54:35.305Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "El grordo dan es un genio pero realm",
+        "type": "Superhuman ",
+        "species": "perro",
+        "status": "Alive",
+        "location": {
+          "name": "Plitzville Montana",
+          "url": "https://rickandmortyapi.com/api/location/91"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+      },
+      "currentData": {}
+    },
+    {
+      "id": "3c1d",
+      "characterId": 9,
+      "createdAt": "2025-03-25T14:02:27.777Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "El grordo dan es un genio pero realm",
+        "type": "Superhuman ",
+        "species": "perro",
+        "status": "Alive",
+        "location": {
+          "name": "Plitzville Montana",
+          "url": "https://rickandmortyapi.com/api/location/91"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+      },
+      "currentData": {
+        "species": "perro asdasdasdsad"
+      }
+    },
+    {
+      "id": "85b8",
+      "characterId": 9,
+      "createdAt": "2025-03-25T14:02:47.335Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "El grordo dan es un genio pero realm",
+        "type": "Superhuman ",
+        "species": "perro asdasdasdsad",
+        "status": "Alive",
+        "location": {
+          "name": "Plitzville Montana",
+          "url": "https://rickandmortyapi.com/api/location/91"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+      },
+      "currentData": {
+        "status": "unknown"
+      }
+    },
+    {
+      "id": "9283",
+      "characterId": 9,
+      "createdAt": "2025-03-25T14:03:05.057Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "El grordo dan es un genio pero realm",
+        "type": "Superhuman ",
+        "species": "perro asdasdasdsad",
+        "status": "unknown",
+        "location": {
+          "name": "Plitzville Montana",
+          "url": "https://rickandmortyapi.com/api/location/91"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+      },
+      "currentData": {
+        "species": "perro"
+      }
+    },
+    {
+      "id": "a1f7",
+      "characterId": 9,
+      "createdAt": "2025-03-25T14:06:12.614Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "El grordo dan es un genio pero realm",
+        "type": "Superhuman ",
+        "species": "perro",
+        "status": "unknown",
+        "location": {
+          "name": "Plitzville Montana",
+          "url": "https://rickandmortyapi.com/api/location/91"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+      },
+      "currentData": {
+        "species": "perro hola"
+      }
+    },
+    {
+      "id": "909a",
+      "characterId": 9,
+      "createdAt": "2025-03-25T14:06:49.935Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "El grordo dan es un genio pero realm",
+        "type": "Superhuman ",
+        "species": "perro hola",
+        "status": "unknown",
+        "location": {
+          "name": "Plitzville Montana",
+          "url": "https://rickandmortyapi.com/api/location/91"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+      },
+      "currentData": {
+        "species": "perro"
+      }
+    },
+    {
+      "id": "08b5",
+      "characterId": 9,
+      "createdAt": "2025-03-25T14:07:16.148Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "El grordo dan es un genio pero realm",
+        "type": "Superhuman ",
+        "species": "perro",
+        "status": "unknown",
+        "location": {
+          "name": "Plitzville Montana",
+          "url": "https://rickandmortyapi.com/api/location/91"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+      },
+      "currentData": {
+        "location": {
+          "name": "New Improved Galactic Federation Quarters",
+          "url": "https://rickandmortyapi.com/api/location/95"
+        }
+      }
+    },
+    {
+      "id": "9150",
+      "characterId": 9,
+      "createdAt": "2025-03-25T14:08:52.134Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "El grordo dan es un genio pero realm",
+        "type": "Superhuman ",
+        "species": "perro",
+        "status": "unknown",
+        "location": {
+          "name": "New Improved Galactic Federation Quarters",
+          "url": "https://rickandmortyapi.com/api/location/95"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+      },
+      "currentData": {
+        "status": "Alive"
+      }
+    },
+    {
+      "id": "8754",
+      "characterId": 9,
+      "createdAt": "2025-03-25T14:09:44.509Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "El grordo dan es un genio pero realm",
+        "type": "Superhuman ",
+        "species": "perro",
+        "status": "Alive",
+        "location": {
+          "name": "New Improved Galactic Federation Quarters",
+          "url": "https://rickandmortyapi.com/api/location/95"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg"
+      },
+      "currentData": {
+        "name": "Genial",
+        "type": "Spiderman",
+        "species": "cat",
+        "status": "unknown",
+        "location": {
+          "name": "Earth (C-137)",
+          "url": "https://rickandmortyapi.com/api/location/1"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+      }
+    },
+    {
+      "id": "d2ea",
+      "characterId": 9,
+      "createdAt": "2025-03-25T14:13:04.308Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Genial",
+        "type": "Spiderman",
+        "species": "cat",
+        "status": "unknown",
+        "location": {
+          "name": "Earth (C-137)",
+          "url": "https://rickandmortyapi.com/api/location/1"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+      },
+      "currentData": {
+        "name": "Genial como estassadjasdñljasd todo bien?"
+      }
+    },
+    {
+      "id": "2e1e",
+      "characterId": 9,
+      "createdAt": "2025-03-25T14:13:27.523Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Genial como estassadjasdñljasd todo bien?",
+        "type": "Spiderman",
+        "species": "cat",
+        "status": "unknown",
+        "location": {
+          "name": "Earth (C-137)",
+          "url": "https://rickandmortyapi.com/api/location/1"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+      },
+      "currentData": {
+        "name": "Genial como estassadjasdñljasd todoaa bien?"
+      }
+    },
+    {
+      "id": "87bb",
+      "characterId": 9,
+      "createdAt": "2025-03-25T14:20:42.643Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Genial como estassadjasdñljasd todoaa bien?",
+        "type": "Spiderman",
+        "species": "cat",
+        "status": "unknown",
+        "location": {
+          "name": "Earth (C-137)",
+          "url": "https://rickandmortyapi.com/api/location/1"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+      },
+      "currentData": {
+        "name": " biesasskjfsldkjflskdjfdsdjflksdjldf",
+        "species": "asdasdsadsadkasdlkasdjañlskjdlaksjdlsajds",
+        "location": {
+          "name": "Abadango",
+          "url": "https://rickandmortyapi.com/api/location/2"
+        }
+      }
+    },
+    {
+      "id": "79a4",
+      "characterId": 18,
+      "createdAt": "2025-03-25T14:24:22.678Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Antenna asdd",
+        "type": "Human with",
+        "species": "Dog Gatp",
+        "status": "Alive",
+        "location": {
+          "name": "Interdimensional Cable",
+          "url": "https://rickandmortyapi.com/api/location/6"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/40.jpeg"
+      },
+      "currentData": {
+        "name": "Lula",
+        "type": "Perro",
+        "species": "Humana",
+        "status": "Dead",
+        "location": {
+          "name": "Earth (C-137)",
+          "url": "https://rickandmortyapi.com/api/location/1"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/50.jpeg"
+      }
     }
   ],
   "character": [
@@ -1838,15 +2256,16 @@
         "https://rickandmortyapi.com/api/episode/28"
       ],
       "gender": "Male",
-      "image": "https://rickandmortyapi.com/api/character/avatar/40.jpeg",
+      "image": "https://rickandmortyapi.com/api/character/avatar/50.jpeg",
       "location": {
-        "name": "Interdimensional Cable",
-        "url": "https://rickandmortyapi.com/api/location/6"
+        "name": "Earth (C-137)",
+        "url": "https://rickandmortyapi.com/api/location/1"
       },
-      "name": "Antenna asdd",
-      "species": "Dog",
-      "status": "Alive",
-      "type": "Human with"
+      "name": "Lula",
+      "species": "Humana",
+      "status": "Dead",
+      "type": "Perro",
+      "deletedAt": "2025-03-25T14:25:55.380Z"
     },
     {
       "id": "82",
@@ -1888,15 +2307,15 @@
         "https://rickandmortyapi.com/api/episode/24"
       ],
       "gender": "Male",
-      "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg",
+      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
       "location": {
-        "name": "Rick's Memories",
-        "url": "https://rickandmortyapi.com/api/location/126"
+        "name": "Abadango",
+        "url": "https://rickandmortyapi.com/api/location/2"
       },
-      "name": "Agenc asdaasd",
-      "species": "perro",
-      "status": "Alive",
-      "type": "Superhuman "
+      "name": " biesasskjfsldkjflskdjfdsdjflksdjldf",
+      "species": "asdasdsadsadkasdlkasdjañlskjdlaksjdlsajds",
+      "status": "unknown",
+      "type": "Spiderman"
     },
     {
       "id": "642",
@@ -2306,7 +2725,7 @@
       "deletedAt": "2025-03-25T12:26:16.443Z"
     },
     {
-      "id": 142,
+      "id": "142",
       "episode": [
         "https://rickandmortyapi.com/api/episode/26"
       ],
@@ -2320,6 +2739,41 @@
       "species": "Alien",
       "status": "Dead",
       "type": "Animal"
+    },
+    {
+      "id": "81",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/25"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/81.jpeg",
+      "location": {
+        "name": "Worldender's lair",
+        "url": "https://rickandmortyapi.com/api/location/4"
+      },
+      "name": "Crocubot",
+      "species": "Animal",
+      "status": "Dead",
+      "type": "Robot-Crocodile hybrid"
+    },
+    {
+      "id": "88",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/8",
+        "https://rickandmortyapi.com/api/episode/9",
+        "https://rickandmortyapi.com/api/episode/11",
+        "https://rickandmortyapi.com/api/episode/25"
+      ],
+      "gender": "Female",
+      "image": "https://rickandmortyapi.com/api/character/avatar/88.jpeg",
+      "location": {
+        "name": "Earth (Replacement Dimension)",
+        "url": "https://rickandmortyapi.com/api/location/20"
+      },
+      "name": "Cynthia",
+      "species": "Human",
+      "status": "Alive",
+      "type": ""
     }
   ]
 }

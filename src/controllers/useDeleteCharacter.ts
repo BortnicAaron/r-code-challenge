@@ -2,7 +2,7 @@ import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { Internal } from '../interfaces/Errors/Internal'
 import { NotFound } from '../interfaces/Errors/NotFound'
 import { LocalCharacterRepository } from '../services/localCharacterServices'
-import { queries } from './queries'
+import { features, queries } from './queries'
 
 const useDeleteCharacter = (id?: number) => {
     const queryClient = useQueryClient()
@@ -15,9 +15,9 @@ const useDeleteCharacter = (id?: number) => {
         },
         onSuccess: (character) => {
             queryClient.setQueryData(queries.getCharacter(id), character)
-            queryClient.invalidateQueries({
-                queryKey: queries.getPaginatedComment(id)
-            })
+            queryClient.invalidateQueries({ queryKey: [features.CHARACTERS] })
+            queryClient.invalidateQueries({ queryKey: [features.PAGINATED_CHARACTER] })
+            queryClient.invalidateQueries({ queryKey: queries.getPaginatedComment(id) })
         }
     })
 
