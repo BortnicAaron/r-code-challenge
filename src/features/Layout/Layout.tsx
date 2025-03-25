@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { HomeIcon } from './HomeIcon'
 
-function Layout({ children }: { children?: React.ReactNode }) {
+function Layout() {
     const navigate = useNavigate()
 
     return (

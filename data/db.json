@@ -1,267 +1,14 @@
 {
   "comment": [
     {
-      "id": "5ebd",
-      "characterId": 1,
-      "message": "Este es el mejor personaje porque bla \n\nblasalkdj laskjd lkasj dklsa jdkskskakskskskskkskskskskskskks\n\n\n\nojala",
-      "createdAt": "2025-03-25T15:43:00.352Z"
+      "id": "af87",
+      "characterId": 7,
+      "message": "as\nasd\n\nsad\nas\nd\nasd\nsda\nasd",
+      "createdAt": "2025-03-25T18:06:56.589Z"
     }
   ],
-  "history": [
-    {
-      "id": "ced1",
-      "characterId": 1,
-      "createdAt": "2025-03-25T15:42:26.421Z",
-      "type": "UPDATE",
-      "previousData": {
-        "name": "Rick Sanchez",
-        "type": "",
-        "species": "Human",
-        "status": "Alive",
-        "location": {
-          "name": "Citadel of Ricks",
-          "url": "https://rickandmortyapi.com/api/location/3"
-        },
-        "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
-      },
-      "currentData": {
-        "name": "Rick",
-        "type": "perro",
-        "species": "perro",
-        "status": "Dead",
-        "location": {
-          "name": "Earth (Giant Telepathic Spiders Dimension)",
-          "url": "https://rickandmortyapi.com/api/location/42"
-        },
-        "image": "https://rickandmortyapi.com/api/character/avatar/8.jpeg"
-      }
-    },
-    {
-      "id": "6de3",
-      "characterId": 62,
-      "createdAt": "2025-03-25T15:57:54.589Z",
-      "type": "UPDATE",
-      "previousData": {
-        "name": "Canklanker Thom",
-        "type": "Gromflomite",
-        "species": "Alien",
-        "status": "Dead",
-        "location": {
-          "name": "unknown",
-          "url": ""
-        },
-        "image": "https://rickandmortyapi.com/api/character/avatar/62.jpeg"
-      },
-      "currentData": {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVkF2GWEs_foJwNww-bZiRHskYwyNFHGb9Q&s"
-      }
-    },
-    {
-      "id": "c90a",
-      "characterId": 62,
-      "createdAt": "2025-03-25T16:01:56.580Z",
-      "type": "UPDATE",
-      "previousData": {
-        "name": "Canklanker Thom",
-        "type": "Gromflomite",
-        "species": "Alien",
-        "status": "Dead",
-        "location": {
-          "name": "unknown",
-          "url": ""
-        },
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVkF2GWEs_foJwNww-bZiRHskYwyNFHGb9Q&s"
-      },
-      "currentData": {
-        "status": "unknown"
-      }
-    },
-    {
-      "id": "7882",
-      "characterId": 62,
-      "createdAt": "2025-03-25T16:02:51.792Z",
-      "type": "UPDATE",
-      "previousData": {
-        "name": "Canklanker Thom",
-        "type": "Gromflomite",
-        "species": "Alien",
-        "status": "unknown",
-        "location": {
-          "name": "unknown",
-          "url": ""
-        },
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVkF2GWEs_foJwNww-bZiRHskYwyNFHGb9Q&s"
-      },
-      "currentData": {
-        "name": "Ernesto",
-        "type": "Gorrila",
-        "species": "Coco",
-        "status": "Alive",
-        "location": {
-          "name": "Earth (Giant Telepathic Spiders Dimension)",
-          "url": "https://rickandmortyapi.com/api/location/42"
-        },
-        "image": "https://rickandmortyapi.com/api/character/avatar/35.jpeg"
-      }
-    }
-  ],
+  "history": [],
   "character": [
-    {
-      "id": "3",
-      "episode": [
-        "https://rickandmortyapi.com/api/episode/6",
-        "https://rickandmortyapi.com/api/episode/7",
-        "https://rickandmortyapi.com/api/episode/8",
-        "https://rickandmortyapi.com/api/episode/9",
-        "https://rickandmortyapi.com/api/episode/10",
-        "https://rickandmortyapi.com/api/episode/11",
-        "https://rickandmortyapi.com/api/episode/12",
-        "https://rickandmortyapi.com/api/episode/14",
-        "https://rickandmortyapi.com/api/episode/15",
-        "https://rickandmortyapi.com/api/episode/16",
-        "https://rickandmortyapi.com/api/episode/17",
-        "https://rickandmortyapi.com/api/episode/18",
-        "https://rickandmortyapi.com/api/episode/19",
-        "https://rickandmortyapi.com/api/episode/20",
-        "https://rickandmortyapi.com/api/episode/21",
-        "https://rickandmortyapi.com/api/episode/22",
-        "https://rickandmortyapi.com/api/episode/23",
-        "https://rickandmortyapi.com/api/episode/24",
-        "https://rickandmortyapi.com/api/episode/25",
-        "https://rickandmortyapi.com/api/episode/26",
-        "https://rickandmortyapi.com/api/episode/27",
-        "https://rickandmortyapi.com/api/episode/29",
-        "https://rickandmortyapi.com/api/episode/30",
-        "https://rickandmortyapi.com/api/episode/31",
-        "https://rickandmortyapi.com/api/episode/32",
-        "https://rickandmortyapi.com/api/episode/33",
-        "https://rickandmortyapi.com/api/episode/34",
-        "https://rickandmortyapi.com/api/episode/35",
-        "https://rickandmortyapi.com/api/episode/36",
-        "https://rickandmortyapi.com/api/episode/38",
-        "https://rickandmortyapi.com/api/episode/39",
-        "https://rickandmortyapi.com/api/episode/40",
-        "https://rickandmortyapi.com/api/episode/41",
-        "https://rickandmortyapi.com/api/episode/42",
-        "https://rickandmortyapi.com/api/episode/43",
-        "https://rickandmortyapi.com/api/episode/44",
-        "https://rickandmortyapi.com/api/episode/45",
-        "https://rickandmortyapi.com/api/episode/46",
-        "https://rickandmortyapi.com/api/episode/47",
-        "https://rickandmortyapi.com/api/episode/48",
-        "https://rickandmortyapi.com/api/episode/49",
-        "https://rickandmortyapi.com/api/episode/51"
-      ],
-      "gender": "Female",
-      "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
-      "location": {
-        "name": "Earth (Replacement Dimension)",
-        "url": "https://rickandmortyapi.com/api/location/20"
-      },
-      "name": "Summer Smith",
-      "species": "Human",
-      "status": "Alive",
-      "type": ""
-    },
-    {
-      "id": "1",
-      "episode": [
-        "https://rickandmortyapi.com/api/episode/1",
-        "https://rickandmortyapi.com/api/episode/2",
-        "https://rickandmortyapi.com/api/episode/3",
-        "https://rickandmortyapi.com/api/episode/4",
-        "https://rickandmortyapi.com/api/episode/5",
-        "https://rickandmortyapi.com/api/episode/6",
-        "https://rickandmortyapi.com/api/episode/7",
-        "https://rickandmortyapi.com/api/episode/8",
-        "https://rickandmortyapi.com/api/episode/9",
-        "https://rickandmortyapi.com/api/episode/10",
-        "https://rickandmortyapi.com/api/episode/11",
-        "https://rickandmortyapi.com/api/episode/12",
-        "https://rickandmortyapi.com/api/episode/13",
-        "https://rickandmortyapi.com/api/episode/14",
-        "https://rickandmortyapi.com/api/episode/15",
-        "https://rickandmortyapi.com/api/episode/16",
-        "https://rickandmortyapi.com/api/episode/17",
-        "https://rickandmortyapi.com/api/episode/18",
-        "https://rickandmortyapi.com/api/episode/19",
-        "https://rickandmortyapi.com/api/episode/20",
-        "https://rickandmortyapi.com/api/episode/21",
-        "https://rickandmortyapi.com/api/episode/22",
-        "https://rickandmortyapi.com/api/episode/23",
-        "https://rickandmortyapi.com/api/episode/24",
-        "https://rickandmortyapi.com/api/episode/25",
-        "https://rickandmortyapi.com/api/episode/26",
-        "https://rickandmortyapi.com/api/episode/27",
-        "https://rickandmortyapi.com/api/episode/28",
-        "https://rickandmortyapi.com/api/episode/29",
-        "https://rickandmortyapi.com/api/episode/30",
-        "https://rickandmortyapi.com/api/episode/31",
-        "https://rickandmortyapi.com/api/episode/32",
-        "https://rickandmortyapi.com/api/episode/33",
-        "https://rickandmortyapi.com/api/episode/34",
-        "https://rickandmortyapi.com/api/episode/35",
-        "https://rickandmortyapi.com/api/episode/36",
-        "https://rickandmortyapi.com/api/episode/37",
-        "https://rickandmortyapi.com/api/episode/38",
-        "https://rickandmortyapi.com/api/episode/39",
-        "https://rickandmortyapi.com/api/episode/40",
-        "https://rickandmortyapi.com/api/episode/41",
-        "https://rickandmortyapi.com/api/episode/42",
-        "https://rickandmortyapi.com/api/episode/43",
-        "https://rickandmortyapi.com/api/episode/44",
-        "https://rickandmortyapi.com/api/episode/45",
-        "https://rickandmortyapi.com/api/episode/46",
-        "https://rickandmortyapi.com/api/episode/47",
-        "https://rickandmortyapi.com/api/episode/48",
-        "https://rickandmortyapi.com/api/episode/49",
-        "https://rickandmortyapi.com/api/episode/50",
-        "https://rickandmortyapi.com/api/episode/51"
-      ],
-      "gender": "Male",
-      "image": "https://rickandmortyapi.com/api/character/avatar/8.jpeg",
-      "location": {
-        "name": "Earth (Giant Telepathic Spiders Dimension)",
-        "url": "https://rickandmortyapi.com/api/location/42"
-      },
-      "name": "Rick",
-      "species": "perro",
-      "status": "Dead",
-      "type": "perro"
-    },
-    {
-      "id": "8",
-      "episode": [
-        "https://rickandmortyapi.com/api/episode/28"
-      ],
-      "gender": "Male",
-      "image": "https://rickandmortyapi.com/api/character/avatar/8.jpeg",
-      "location": {
-        "name": "Citadel of Ricks",
-        "url": "https://rickandmortyapi.com/api/location/3"
-      },
-      "name": "Adjudicator Rick",
-      "species": "Human",
-      "status": "Dead",
-      "type": ""
-    },
-    {
-      "id": "7",
-      "episode": [
-        "https://rickandmortyapi.com/api/episode/10",
-        "https://rickandmortyapi.com/api/episode/11"
-      ],
-      "gender": "Male",
-      "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg",
-      "location": {
-        "name": "Testicle Monster Dimension",
-        "url": "https://rickandmortyapi.com/api/location/21"
-      },
-      "name": "Abradolf Lincler",
-      "species": "Human",
-      "status": "unknown",
-      "type": "Genetic experiment"
-    },
     {
       "id": "2",
       "episode": [
@@ -329,68 +76,111 @@
       "type": ""
     },
     {
-      "id": "825",
+      "id": "7",
       "episode": [
-        "https://rickandmortyapi.com/api/episode/51"
+        "https://rickandmortyapi.com/api/episode/10",
+        "https://rickandmortyapi.com/api/episode/11"
       ],
       "gender": "Male",
-      "image": "https://rickandmortyapi.com/api/character/avatar/825.jpeg",
+      "image": "https://rickandmortyapi.com/api/character/avatar/7.jpeg",
       "location": {
-        "name": "Earth (Unknown dimension)",
-        "url": "https://rickandmortyapi.com/api/location/30"
+        "name": "Testicle Monster Dimension",
+        "url": "https://rickandmortyapi.com/api/location/21"
       },
-      "name": "Young Jerry",
+      "name": "Abradolf Lincler",
       "species": "Human",
       "status": "unknown",
-      "type": ""
+      "type": "Genetic experiment"
     },
     {
-      "id": "10",
+      "id": "42",
       "episode": [
-        "https://rickandmortyapi.com/api/episode/25"
+        "https://rickandmortyapi.com/api/episode/22"
       ],
       "gender": "Male",
-      "image": "https://rickandmortyapi.com/api/character/avatar/10.jpeg",
-      "location": {
-        "name": "Worldender's lair",
-        "url": "https://rickandmortyapi.com/api/location/4"
-      },
-      "name": "Alan Rails",
-      "species": "Human",
-      "status": "Dead",
-      "type": "Superhuman (Ghost trains summoner)"
-    },
-    {
-      "id": "43",
-      "episode": [
-        "https://rickandmortyapi.com/api/episode/28"
-      ],
-      "gender": "Male",
-      "image": "https://rickandmortyapi.com/api/character/avatar/43.jpeg",
+      "image": "https://rickandmortyapi.com/api/character/avatar/42.jpeg",
       "location": {
         "name": "Citadel of Ricks",
         "url": "https://rickandmortyapi.com/api/location/3"
       },
-      "name": "Big Morty",
+      "name": "Big Head Morty",
       "species": "Human",
-      "status": "Dead",
-      "type": ""
+      "status": "unknown",
+      "type": "Human with giant head"
     },
     {
-      "id": "62",
+      "id": "18",
       "episode": [
-        "https://rickandmortyapi.com/api/episode/1"
+        "https://rickandmortyapi.com/api/episode/10",
+        "https://rickandmortyapi.com/api/episode/28"
       ],
       "gender": "Male",
-      "image": "https://rickandmortyapi.com/api/character/avatar/35.jpeg",
+      "image": "https://rickandmortyapi.com/api/character/avatar/18.jpeg",
       "location": {
-        "name": "Earth (Giant Telepathic Spiders Dimension)",
-        "url": "https://rickandmortyapi.com/api/location/42"
+        "name": "Citadel of Ricks",
+        "url": "https://rickandmortyapi.com/api/location/3"
       },
-      "name": "Ernesto",
-      "species": "Coco",
+      "name": "Antenna Morty",
+      "species": "Human",
       "status": "Alive",
-      "type": "Gorrila"
+      "type": "Human with antennae"
+    },
+    {
+      "id": 3,
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/6",
+        "https://rickandmortyapi.com/api/episode/7",
+        "https://rickandmortyapi.com/api/episode/8",
+        "https://rickandmortyapi.com/api/episode/9",
+        "https://rickandmortyapi.com/api/episode/10",
+        "https://rickandmortyapi.com/api/episode/11",
+        "https://rickandmortyapi.com/api/episode/12",
+        "https://rickandmortyapi.com/api/episode/14",
+        "https://rickandmortyapi.com/api/episode/15",
+        "https://rickandmortyapi.com/api/episode/16",
+        "https://rickandmortyapi.com/api/episode/17",
+        "https://rickandmortyapi.com/api/episode/18",
+        "https://rickandmortyapi.com/api/episode/19",
+        "https://rickandmortyapi.com/api/episode/20",
+        "https://rickandmortyapi.com/api/episode/21",
+        "https://rickandmortyapi.com/api/episode/22",
+        "https://rickandmortyapi.com/api/episode/23",
+        "https://rickandmortyapi.com/api/episode/24",
+        "https://rickandmortyapi.com/api/episode/25",
+        "https://rickandmortyapi.com/api/episode/26",
+        "https://rickandmortyapi.com/api/episode/27",
+        "https://rickandmortyapi.com/api/episode/29",
+        "https://rickandmortyapi.com/api/episode/30",
+        "https://rickandmortyapi.com/api/episode/31",
+        "https://rickandmortyapi.com/api/episode/32",
+        "https://rickandmortyapi.com/api/episode/33",
+        "https://rickandmortyapi.com/api/episode/34",
+        "https://rickandmortyapi.com/api/episode/35",
+        "https://rickandmortyapi.com/api/episode/36",
+        "https://rickandmortyapi.com/api/episode/38",
+        "https://rickandmortyapi.com/api/episode/39",
+        "https://rickandmortyapi.com/api/episode/40",
+        "https://rickandmortyapi.com/api/episode/41",
+        "https://rickandmortyapi.com/api/episode/42",
+        "https://rickandmortyapi.com/api/episode/43",
+        "https://rickandmortyapi.com/api/episode/44",
+        "https://rickandmortyapi.com/api/episode/45",
+        "https://rickandmortyapi.com/api/episode/46",
+        "https://rickandmortyapi.com/api/episode/47",
+        "https://rickandmortyapi.com/api/episode/48",
+        "https://rickandmortyapi.com/api/episode/49",
+        "https://rickandmortyapi.com/api/episode/51"
+      ],
+      "gender": "Female",
+      "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
+      "location": {
+        "name": "Earth (Replacement Dimension)",
+        "url": "https://rickandmortyapi.com/api/location/20"
+      },
+      "name": "Summer Smith",
+      "species": "Human",
+      "status": "Alive",
+      "type": ""
     }
   ]
 }
