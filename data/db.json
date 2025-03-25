@@ -131,6 +131,78 @@
       "characterId": 15,
       "message": "Hola\n\n\n\nasd",
       "createdAt": "2025-03-25T05:38:19.391Z"
+    },
+    {
+      "id": "55fa",
+      "characterId": 18,
+      "message": "Hola\n\nasdasd\n\n\nasdsadd",
+      "createdAt": "2025-03-25T11:59:11.536Z"
+    },
+    {
+      "id": "8d63",
+      "characterId": 18,
+      "message": "Increíble desarrollo de personaje. \n\nLa evolución a lo largo de la serie es impresionante, pasando de ser un personaje unidimensional a alguien con capas y profundidad.",
+      "createdAt": "2025-03-25T12:01:37.654Z"
+    },
+    {
+      "id": "8b22",
+      "characterId": 18,
+      "message": "Siempre me ha gustado su sentido del humor. Aunque a veces puede ser un poco sarcástico, creo que es lo que lo hace destacar en la historia.\n\nGracias.",
+      "createdAt": "2025-03-25T12:02:01.186Z"
+    },
+    {
+      "id": "6505",
+      "characterId": 18,
+      "message": "Su arco narrativo es uno de los más satisfactorios. Comienza de una manera y termina de otra completamente distinta, lo cual hace que su viaje sea memorable.\n\nSu arco narrativo es uno de los más satisfactorios. Comienza de una manera y termina de otra completamente distinta, lo cual hace que su viaje sea memorable.",
+      "createdAt": "2025-03-25T12:04:05.953Z"
+    },
+    {
+      "id": "413f",
+      "characterId": 18,
+      "message": "Nunca pensé que este personaje me llegaría tanto. Hay momentos en los que de verdad me identifiqué con sus luchas y decisiones.",
+      "createdAt": "2025-03-25T12:05:17.538Z"
+    },
+    {
+      "id": "2a23",
+      "characterId": 18,
+      "message": "Tiene una de las mejores frases de la serie. Cada vez que dice algo importante, deja una marca en la historia.",
+      "createdAt": "2025-03-25T12:05:35.265Z"
+    },
+    {
+      "id": "e2b2",
+      "characterId": 18,
+      "message": "Me encanta la relación que tiene con los otros personajes. Es un balance perfecto entre comedia, drama y crecimiento personal.",
+      "createdAt": "2025-03-25T12:05:47.816Z"
+    },
+    {
+      "id": "90b7",
+      "characterId": 18,
+      "message": "A veces sus decisiones me frustran, pero creo que eso lo hace más realista. No todos los personajes tienen que ser perfectos.",
+      "createdAt": "2025-03-25T12:06:08.345Z"
+    },
+    {
+      "id": "f1d8",
+      "characterId": 23,
+      "message": "A veces sus decisiones me frustran, pero creo que eso lo hace más realista. No todos los personajes tienen que ser perfectos.\n\n\nA veces sus decisiones me frustran, pero creo que eso lo hace más realista. No todos los personajes tienen que ser perfectos.",
+      "createdAt": "2025-03-25T12:07:41.321Z"
+    },
+    {
+      "id": "a548",
+      "characterId": 13,
+      "message": "asdasdas\nd\nasd\na\nsd",
+      "createdAt": "2025-03-25T12:09:15.509Z"
+    },
+    {
+      "id": "9292",
+      "characterId": 15,
+      "message": "Chau",
+      "createdAt": "2025-03-25T12:18:53.195Z"
+    },
+    {
+      "id": "6661",
+      "characterId": 18,
+      "message": "asdasdasd\n\nasda\nsd\nda",
+      "createdAt": "2025-03-25T12:28:22.149Z"
     }
   ],
   "history": [
@@ -1214,6 +1286,26 @@
       "currentData": {
         "type": "sadasdads"
       }
+    },
+    {
+      "id": "3d35",
+      "characterId": 826,
+      "createdAt": "2025-03-25T12:24:32.551Z",
+      "type": "UPDATE",
+      "previousData": {
+        "name": "Butter Robot",
+        "type": "Passing Butter Robot",
+        "species": "Robot",
+        "status": "Alive",
+        "location": {
+          "name": "Earth (Replacement Dimension)",
+          "url": "https://rickandmortyapi.com/api/location/20"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/826.jpeg"
+      },
+      "currentData": {
+        "name": "Butter"
+      }
     }
   ],
   "character": [
@@ -1620,7 +1712,8 @@
       "name": "Alien Googah",
       "species": "Alien",
       "status": "Dead",
-      "type": ""
+      "type": "",
+      "deletedAt": "2025-03-25T12:09:18.046Z"
     },
     {
       "id": "11",
@@ -2141,6 +2234,92 @@
       "species": "Disease",
       "status": "Dead",
       "type": ""
+    },
+    {
+      "id": "23",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/13",
+        "https://rickandmortyapi.com/api/episode/19",
+        "https://rickandmortyapi.com/api/episode/21",
+        "https://rickandmortyapi.com/api/episode/25",
+        "https://rickandmortyapi.com/api/episode/26"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/23.jpeg",
+      "location": {
+        "name": "Immortality Field Resort",
+        "url": "https://rickandmortyapi.com/api/location/7"
+      },
+      "name": "Arcade Alien",
+      "species": "Alien",
+      "status": "unknown",
+      "type": ""
+    },
+    {
+      "id": "87",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/4"
+      ],
+      "gender": "Female",
+      "image": "https://rickandmortyapi.com/api/character/avatar/87.jpeg",
+      "location": {
+        "name": "Zigerion's Base",
+        "url": "https://rickandmortyapi.com/api/location/46"
+      },
+      "name": "Cynthia",
+      "species": "Alien",
+      "status": "Dead",
+      "type": "Zigerion",
+      "deletedAt": "2025-03-25T12:19:55.989Z"
+    },
+    {
+      "id": "825",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/51"
+      ],
+      "gender": "Male",
+      "image": "https://rickandmortyapi.com/api/character/avatar/825.jpeg",
+      "location": {
+        "name": "Earth (Unknown dimension)",
+        "url": "https://rickandmortyapi.com/api/location/30"
+      },
+      "name": "Young Jerry",
+      "species": "Human",
+      "status": "unknown",
+      "type": ""
+    },
+    {
+      "id": "826",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/9"
+      ],
+      "gender": "Genderless",
+      "image": "https://rickandmortyapi.com/api/character/avatar/826.jpeg",
+      "location": {
+        "name": "Earth (Replacement Dimension)",
+        "url": "https://rickandmortyapi.com/api/location/20"
+      },
+      "name": "Butter",
+      "species": "Robot",
+      "status": "Alive",
+      "type": "Passing Butter Robot",
+      "deletedAt": "2025-03-25T12:26:16.443Z"
+    },
+    {
+      "id": 142,
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/26"
+      ],
+      "gender": "unknown",
+      "image": "https://rickandmortyapi.com/api/character/avatar/142.jpeg",
+      "location": {
+        "name": "Resort Planet",
+        "url": "https://rickandmortyapi.com/api/location/37"
+      },
+      "name": "Gibble Snake",
+      "species": "Alien",
+      "status": "Dead",
+      "type": "Animal"
     }
   ]
 }

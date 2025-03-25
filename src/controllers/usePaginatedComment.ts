@@ -17,14 +17,14 @@ const usePaginatedComment = (characterId?: number) => {
         },
         getNextPageParam: (lastPage, pages) => lastPage.info.next,
         initialPageParam: '1',
-        staleTime: 5_000,
+        staleTime: 60_000,
         refetchOnMount: true,
         refetchOnReconnect: false,
         refetchOnWindowFocus: false,
         refetchInterval: false,
         retryOnMount: false,
         retry: false,
-        enabled: Boolean(characterId)
+        enabled: Boolean(characterId),
     })
 
     const r = useMemo(() => {

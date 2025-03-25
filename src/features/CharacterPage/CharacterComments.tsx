@@ -29,9 +29,20 @@ const CharacterComments = (character: Character) => {
                 Comentarios
             </Typography>
             <Divider variant="fullWidth" component="div" />
-            {paginatedComment.r && paginatedComment.r?.length > 0 && <List sx={{ width: '100%', maxWidth: 360 }}>
+            {Boolean(character.deletedAt) && <Typography variant="subtitle1" component="div" gutterBottom color='error'>
+                No podes dejar un comentario porque el personaje fue eliminado.
+            </Typography>}
+            {<Button
+                onClick={handleOpen}
+                variant="outlined"
+                startIcon={<AddCommentIcon />}
+                disabled={isDeleted}
+            >
+                Escribir
+            </Button>}
+            {paginatedComment.r && paginatedComment.r?.length > 0 && <><List sx={{ width: '100%', maxWidth: 360 }}>
                 {
-                    paginatedComment.r?.map((comment) => <Fragment key={comment.id}>
+                    paginatedComment.r?.map((comment, length) => <Fragment key={comment.id}>
                         <ListItem alignItems="flex-start" sx={{ px: 0 }}>
                             <ListItemAvatar>
                                 <Avatar alt="Remy Sharp" >
@@ -49,23 +60,24 @@ const CharacterComments = (character: Character) => {
                                 }
                             />
                         </ListItem>
-                        <Divider variant="fullWidth" component="li" />
+                        {paginatedComment.r?.length! - 1 > length && <Divider variant="fullWidth" component="li" />}
                     </Fragment>)
                 }
-            </List>}
+            </List>
+                <Button
+                    onClick={() => paginatedComment.fetchNextPage()}
+                    disabled={!paginatedComment.hasNextPage}
+                >
+                    Ver más
+                </Button>
+            </>
+            }
+
             {
                 paginatedComment.r && paginatedComment.r?.length === 0 && <Typography variant="h6" component="div" sx={{ textAlign: 'center' }} marginBottom={'5rem'} marginTop={'5rem'} color=''>
                     No hay comentarios
                 </Typography>
             }
-            <Button
-                onClick={handleOpen}
-                variant="outlined"
-                startIcon={<AddCommentIcon />}
-                disabled={isDeleted}
-            >
-                Escribir
-            </Button>
             <Modal
                 open={open}
                 onClose={handleClose}

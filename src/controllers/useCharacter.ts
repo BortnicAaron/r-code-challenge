@@ -17,7 +17,7 @@ interface IConfig {
 }
 
 const configDefault: IConfig = {
-    staleTime: 0,
+    staleTime: 30_000,
     refetchOnMount: true,
     refetchOnReconnect: false,
     refetchOnWindowFocus: false,

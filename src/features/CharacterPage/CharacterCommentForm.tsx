@@ -54,11 +54,11 @@ const CharacterCommentForm = ({ character, handleClose }: ICharacterCommentForm)
                     multiline
                     minRows={5}
                     maxRows={10}
-                    maxLength={200}
+                    maxLength={400}
                     placeholder="Escribe un comentario sobre este personaje..."
                     errorMessages={{
                         required: 'Campo requerido.',
-                        maxLength: `Máximo ${200} caracteres permitidos.`
+                        maxLength: `Máximo ${400} caracteres permitidos.`
                     }}
                 />
                 <Box display="flex" width={'100%'} flexDirection="row" justifyContent={'space-between'} marginTop={'1rem'}>

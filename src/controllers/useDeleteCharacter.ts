@@ -15,6 +15,9 @@ const useDeleteCharacter = (id?: number) => {
         },
         onSuccess: (character) => {
             queryClient.setQueryData(queries.getCharacter(id), character)
+            queryClient.invalidateQueries({
+                queryKey: queries.getPaginatedComment(id)
+            })
         }
     })
 

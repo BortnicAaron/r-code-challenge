@@ -1,7 +1,8 @@
-import { useMutation } from '@tanstack/react-query'
+import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { Character } from '../interfaces/Character'
 import { Internal } from '../interfaces/Errors/Internal'
 import { LocalCharacterRepository } from '../services/localCharacterServices'
+import { queries } from './queries'
 
 
 interface Data {
@@ -15,6 +16,7 @@ interface Data {
 }
 
 const useUptadeCharacter = (character?: Partial<Character>) => {
+    const queryClient = useQueryClient()
 
     const { data, mutateAsync, status, error } = useMutation({
         mutationFn: async (data: Data) => {
@@ -29,6 +31,15 @@ const useUptadeCharacter = (character?: Partial<Character>) => {
 
             return await LocalCharacterRepository.updateCharacter(character.id, r)
         },
+        onSuccess: (character) => {
+            queryClient.setQueryData(queries.getCharacter(character?.id), character)
+            queryClient.invalidateQueries({
+                queryKey: queries.getCharacter(character?.id)
+            })
+            queryClient.invalidateQueries({
+                queryKey: queries.getPaginatedComment(character?.id)
+            })
+        }
     })
 
     return {
