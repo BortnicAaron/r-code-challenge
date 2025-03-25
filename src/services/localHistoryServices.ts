@@ -1,16 +1,43 @@
 import { localApi } from '../config/api'
-import { Character } from '../interfaces/Character'
-import { History } from '../interfaces/History'
+import { Location } from '../interfaces/Character'
+import { Data, History } from '../interfaces/History'
 import { PaginatedResponse } from '../interfaces/PaginatedResponse'
 import { httpErrorHandler } from './httpErrorHandler'
+
+interface DataMsg {
+    name: string
+    status: 'Alive' | 'Dead' | 'unknown',
+    species: string,
+    type: string,
+    image: string,
+    episode: string[]
+    location: Location
+}
 
 interface HistoryMsg {
     id: number,
     characterId: number,
     createdAt: string
     type: 'UPDATE'
-    previousData: Partial<Character>,
-    currentData: Partial<Character>
+    previousData: Partial<DataMsg>,
+    currentData: Partial<DataMsg>
+}
+
+
+const buildData = (characterMsg: Partial<DataMsg>): Data => {
+    return {
+        episode: characterMsg.episode,
+        image: characterMsg.image,
+        location: {
+            name: characterMsg.location?.name,
+            url: characterMsg.location?.url,
+        },
+        name: characterMsg.name,
+        species: characterMsg.species,
+        status: characterMsg.status,
+        type: characterMsg.type,
+
+    }
 }
 
 
@@ -20,8 +47,8 @@ const buildHistory = (historyMsg: HistoryMsg): History => {
         id: historyMsg.id,
         createdAt: historyMsg.createdAt,
         type: historyMsg.type,
-        currentData: historyMsg.currentData,
-        previousData: historyMsg.previousData
+        currentData: buildData(historyMsg.currentData),
+        previousData: buildData(historyMsg.previousData)
     }
 }
 
