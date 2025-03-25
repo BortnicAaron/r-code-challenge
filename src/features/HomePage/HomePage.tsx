@@ -28,10 +28,17 @@ function HomePage() {
       search: nameCharacter
     }
   })
+
+
+
   const search = watch('search')
 
   const handlePageChange = (page: number) => {
-    navigate(`?page=${page}`)
+    if (nameCharacter) {
+      navigate(`?name=${nameCharacter}&page=${page}`)
+    } else {
+      navigate(`?page=${page}`)
+    }
   }
 
   const changeNameCharacter = useCallback((value: string) => {
@@ -48,8 +55,8 @@ function HomePage() {
   }
 
   useEffect(() => {
-    if (search === '') navigate('')
-  }, [navigate, search])
+    if (formState.submitCount > 0 && search === '') navigate('')
+  }, [navigate, search, formState.submitCount])
 
 
 

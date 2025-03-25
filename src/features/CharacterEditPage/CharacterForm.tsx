@@ -22,10 +22,6 @@ interface FieldValues {
     location: Option
 }
 
-const sameValues = () => {
-
-}
-
 const CharacterForm = (character: Partial<Character>) => {
     const navigate = useNavigate()
     const isFormDisabled = Boolean(!character || character.deletedAt)
