@@ -43,9 +43,7 @@ const CharacterDetails = (character: Partial<Character>) => {
         <CardContent>
             <Box sx={{ display: "flex", flexDirection: "column", alignItems: "start", gap: '1rem', m: '1rem', textAlign: 'start', overflowWrap: 'break-word', wordBreak: 'break-word' }}>
                 <Box sx={{ width: "100%", position: "relative" }}>
-                    {/* Contenedor para mantener el aspect ratio 1:1 */}
                     <Box sx={{ width: "100%", paddingTop: "100%", }} />
-
                     <Avatar
                         src={character.image}
                         variant="circular"
