@@ -1,5 +1,22 @@
 {
   "comment": [],
   "history": [],
-  "character": []
+  "character": [
+    {
+      "id": 13,
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/31"
+      ],
+      "gender": "unknown",
+      "image": "https://rickandmortyapi.com/api/character/avatar/13.jpeg",
+      "location": {
+        "name": "Earth (Replacement Dimension)",
+        "url": "https://rickandmortyapi.com/api/location/20"
+      },
+      "name": "Alien Googah",
+      "species": "Alien",
+      "status": "unknown",
+      "type": ""
+    }
+  ]
 }

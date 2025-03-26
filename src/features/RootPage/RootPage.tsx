@@ -6,9 +6,9 @@ import Typography from '@mui/material/Typography'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { HomeIcon } from './HomeIcon'
 
-function Layout() {
-    const navigate = useNavigate()
 
+function RootPage() {
+    const navigate = useNavigate()
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="fixed">
@@ -35,4 +35,4 @@ function Layout() {
 
 
 
-export { Layout }
+export { RootPage }
