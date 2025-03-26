@@ -2,10 +2,10 @@ import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
 import HideImageIcon from '@mui/icons-material/HideImageOutlined'
 import { Avatar, Box, Button, Card, CardContent, Typography } from "@mui/material"
-import { useMemo } from "react"
+import { useMemo, useState } from "react"
 import { Link } from 'react-router-dom'
-import { useDeleteCharacter } from '../../controllers/useDeleteCharacter'
 import { Character } from "../../interfaces/Character"
+import { ConfirmDeleteCharacter } from './ConfirmDeleteCharacter'
 import { HistoryModal } from './HistoryModal'
 
 function getEpisodeNumberFromUrl(url: string) {
@@ -18,7 +18,7 @@ const formatterList = (items: string[]) => new Intl.ListFormat("es", { style: "l
 
 
 const CharacterDetails = (character: Partial<Character>) => {
-    const deleteCharacter = useDeleteCharacter(character.id)
+    const [openConfirmDeleteCharacter, setOpenConfirmDeleteCharacter] = useState(false)
 
     const episodesText = useMemo(() => {
         const episodes = character.episode
@@ -33,9 +33,6 @@ const CharacterDetails = (character: Partial<Character>) => {
         return numberOfEpisodes.length > 0 ? formatterList(numberOfEpisodes) : undefined
     }, [character.episode])
 
-    const handleDelete = async () => {
-        await deleteCharacter.mutateAsync()
-    }
 
 
     const isDeleted = Boolean(character.deletedAt)
@@ -75,13 +72,18 @@ const CharacterDetails = (character: Partial<Character>) => {
                         Editar
                     </Button>
                     <Button
-                        onClick={() => handleDelete()}
+                        onClick={() => setOpenConfirmDeleteCharacter(true)}
                         variant="outlined"
                         startIcon={<DeleteIcon />}
                         disabled={isDeleted}
                     >
                         Eliminar
                     </Button>
+                    <ConfirmDeleteCharacter
+                        handleClose={() => setOpenConfirmDeleteCharacter(false)}
+                        open={openConfirmDeleteCharacter}
+                        character={character}
+                    />
                     <HistoryModal disabled={isDeleted} characterId={character?.id} />
                 </Box>
                 <Typography variant="h5" component="div" gutterBottom>
