@@ -1,12 +1,13 @@
 import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
 import HideImageIcon from '@mui/icons-material/HideImageOutlined'
+import HistoryIcon from '@mui/icons-material/History'
 import { Avatar, Box, Button, Card, CardContent, Typography } from "@mui/material"
 import { useMemo, useState } from "react"
 import { Link } from 'react-router-dom'
 import { Character } from "../../interfaces/Character"
-import { ConfirmDeleteCharacter } from './ConfirmDeleteCharacter'
-import { HistoryModal } from './HistoryModal'
+import { ConfirmDelete } from './ConfirmDelete'
+import { Histories } from './Histories'
 
 function getEpisodeNumberFromUrl(url: string) {
     const episodeNumber = url.split('/').pop()
@@ -18,7 +19,8 @@ const formatterList = (items: string[]) => new Intl.ListFormat("es", { style: "l
 
 
 const CharacterDetails = (character: Partial<Character>) => {
-    const [openConfirmDeleteCharacter, setOpenConfirmDeleteCharacter] = useState(false)
+    const [openConfirmDelete, setOpenConfirmDelete] = useState(false)
+    const [openHistories, setOpenHistories] = useState(false)
 
     const episodesText = useMemo(() => {
         const episodes = character.episode
@@ -72,19 +74,30 @@ const CharacterDetails = (character: Partial<Character>) => {
                         Editar
                     </Button>
                     <Button
-                        onClick={() => setOpenConfirmDeleteCharacter(true)}
+                        onClick={() => setOpenConfirmDelete(true)}
                         variant="outlined"
                         startIcon={<DeleteIcon />}
                         disabled={isDeleted}
                     >
                         Eliminar
                     </Button>
-                    <ConfirmDeleteCharacter
-                        handleClose={() => setOpenConfirmDeleteCharacter(false)}
-                        open={openConfirmDeleteCharacter}
+                    <ConfirmDelete
+                        handleClose={() => setOpenConfirmDelete(false)}
+                        open={openConfirmDelete}
                         character={character}
                     />
-                    <HistoryModal disabled={isDeleted} characterId={character?.id} />
+                    <Button
+                        onClick={() => setOpenHistories(true)}
+                        startIcon={<HistoryIcon />}
+                        variant="outlined"
+                        style={{ display: 'flex' }}
+                        disabled={isDeleted}
+                    >Historial</Button>
+                    <Histories
+                        character={character}
+                        handleClose={() => setOpenHistories(false)}
+                        open={openHistories}
+                    />
                 </Box>
                 <Typography variant="h5" component="div" gutterBottom>
                     {character.name}
