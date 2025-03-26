@@ -18,6 +18,7 @@ function RootPage() {
                         color={'inherit'}
                         textTransform={'none'}
                         sx={{ display: 'flex', gap: '0.5rem' }}
+                        aria-hidden='false'
                         onClick={() => navigate('', { replace: true })}
 
                     >

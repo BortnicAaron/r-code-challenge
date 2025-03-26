@@ -52,6 +52,11 @@ const CharacterComments = (character: Character) => {
                             <ListItemText
                                 primary={formattedDate(String(comment.createdAt))}
                                 sx={{ whiteSpace: 'pre-line' }}
+                                slotProps={{
+                                    secondary: {
+                                        component: "div",
+                                    },
+                                }}
                                 secondary={
                                     <Fragment>
 
@@ -83,7 +88,9 @@ const CharacterComments = (character: Character) => {
                 onClose={handleClose}
                 sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             >
-                <CharacterCommentForm character={character} handleClose={handleClose} />
+                <Fragment>
+                    <CharacterCommentForm character={character} handleClose={handleClose} />
+                </Fragment>
             </Modal>
         </CardContent>
     </Card>
