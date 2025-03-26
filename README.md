@@ -14,6 +14,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+### `npm run server`
+
+Runs the development server with json-server and nodemon, watching for changes in data/db.json.\
+Access the API at [http://localhost:3004](http://localhost:3004).
+
+The server will automatically reload if you make changes to the data file.
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
